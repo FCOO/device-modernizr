@@ -114,7 +114,7 @@
 	for (var i=1; i<4; i=i+0.1 )
 		if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+i+')') ){
 			dpr = i;
-			break;
+			//break;
 		}
 
 
