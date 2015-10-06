@@ -94,6 +94,9 @@
   log('<li>device-height <b>' + h + 'px / '  + h / 16 + 'em</b></li>');
   log('<li>device-pixel-ratio <b>' + ratio + '</b></li>');
 */
+	var info = '';
+
+
 	var dpi = 96;
 	for (var i=1; i<400; i++ )
 		if ( Modernizr.mq('(resolution: '+i+'dpi)') ){
@@ -101,10 +104,11 @@
 			break;
 		}
 	
-	console.log(dpi);
+	info += '<br>resolution='+dpi+'dpi';
 
 	window.NIELS.dpi = dpi;
 	$('#adjust_buttons').css('font-size', dpi/96 + 'rem');
+	$('html').css('font-size', dpi/96*100 + '%');
 
 	var dpr = 1;
 	for (var i=1; i<2; i=i+0.1 )
@@ -112,7 +116,9 @@
 			dpr = i;
 			break;
 		}
-	console.log(dpr);
+
+
+	info += '<br>-webkit-device-pixel-ratio='+dpr;
 	/*
 	http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 	Google: > 30% has 1366*768
@@ -125,7 +131,7 @@
 
 		console.log(window.NIELS);
 
-		
+	$('#info').html(info);		
 
 
 /*! modernizr 3.1.0 (Custom Build) | MIT *
