@@ -84,7 +84,6 @@
 		$.extend(window.NIELS , {
 			screen_width_em		: window.NIELS.screen_width/16,
 			screen_height_em	:	window.NIELS.screen_height/16,
-
 		});
 
 /*
@@ -94,8 +93,10 @@
   log('<li>device-height <b>' + h + 'px / '  + h / 16 + 'em</b></li>');
   log('<li>device-pixel-ratio <b>' + ratio + '</b></li>');
 */
-	var info = '';
+	var info = '<table border=0>';
 
+	info += '<tr><td>screen width</td><td>'+NIELS.screen_width +'</td></tr>';
+	info += '<tr><td>screen height</td><td>'+NIELS.screen_height	 +'</td></tr>';
 
 	var dpi = 96;
 	for (var i=1; i<400; i++ )
@@ -104,7 +105,7 @@
 			break;
 		}
 	
-	info += '<br>resolution='+dpi+'dpi';
+	info += '<tr><td>resolution</td><td>'+dpi+'dpi</td></tr>';
 
 	window.NIELS.dpi = dpi;
 //	$('#adjust_buttons').css('font-size', dpi/96 + 'rem');
@@ -114,23 +115,28 @@
 	for (var i=1; i<4; i=i+0.1 )
 		if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+i+')') ){
 			dpr = i;
-			//break;
+			break;
 		}
 
+	NIELS.screen_dim_width_cm = NIELS.screen_width/dpi*2.54;
 
-	info += '<br>-webkit-device-pixel-ratio='+dpr;
+	info += '<tr><td>Screen width</td><td>'+NIELS.screen_dim_width_cm+' cm</td></tr>';
+
+
+	info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+dpr +'</td></tr>';
 	/*
 	http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 	Google: > 30% has 1366*768
 
 	*/
 
-	window.NIELS.screen_dim_width_cm = window.NIELS.screen_width/dpi*2.54;
+
 
 
 
 		console.log(window.NIELS);
 
+	info += '</table>';
 	$('#info').html(info);		
 
 
