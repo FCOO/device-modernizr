@@ -107,11 +107,11 @@
 	info += '<br>resolution='+dpi+'dpi';
 
 	window.NIELS.dpi = dpi;
-	$('#adjust_buttons').css('font-size', dpi/96 + 'rem');
+//	$('#adjust_buttons').css('font-size', dpi/96 + 'rem');
 	$('html').css('font-size', dpi/96*100 + '%');
 
 	var dpr = 1;
-	for (var i=1; i<2; i=i+0.1 )
+	for (var i=1; i<4; i=i+0.1 )
 		if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+i+')') ){
 			dpr = i;
 			break;
