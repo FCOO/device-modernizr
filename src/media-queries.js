@@ -119,7 +119,18 @@
 
 	window.NIELS.dpi = dpi;
 //	$('#adjust_buttons').css('font-size', dpi/96 + 'rem');
-	$('html').css('font-size', dpi/96*100 + '%');
+	var screen_diagonal = Math.sqrt(NIELS.screen_width*NIELS.screen_width + NIELS.screen_height*NIELS.screen_height);
+	var screen_diagonal_cm = screen_diagonal/dpi*2.54;
+//	if (dpi > 96){
+		var ref_screen_diagonal_cm = 20*2.54;
+		var ref_screen_diagonal = Math.sqrt(1366*1366 + 768*768);;
+		var ref_dpcm = ref_screen_diagonal/ref_screen_diagonal_cm;
+		var screen_dpcm = screen_diagonal/screen_diagonal_cm;
+console.log(ref_screen_diagonal/ref_screen_diagonal_cm, screen_diagonal/screen_diagonal_cm);		
+		var rem = ref_dpcm / screen_dpcm ;
+//		$('html').css('font-size', dpi/96*100 + '%');
+		$('html').css('font-size', rem*100 + '%');
+//	}
 
 	var dpr = 1;
 	for (var i=1; i<4; i=i+0.1 )
@@ -130,7 +141,7 @@
 
 	NIELS.screen_dim_width_cm = NIELS.screen_width/dpi*2.54;
 
-	info += '<tr><td>Screen width</td><td>'+NIELS.screen_dim_width_cm+' cm</td></tr>';
+	info += '<tr><td>Screen diagonal</td><td>'+screen_diagonal_cm+' cm</td></tr>';
 
 
 	info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+dpr +'</td></tr>';
