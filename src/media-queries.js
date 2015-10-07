@@ -126,8 +126,10 @@
 		var ref_screen_diagonal = Math.sqrt(1366*1366 + 768*768);;
 		var ref_dpcm = ref_screen_diagonal/ref_screen_diagonal_cm;
 		var screen_dpcm = screen_diagonal/screen_diagonal_cm;
-console.log(ref_screen_diagonal/ref_screen_diagonal_cm, screen_diagonal/screen_diagonal_cm);		
-		var rem = ref_dpcm / screen_dpcm ;
+		var rem = screen_dpcm / ref_dpcm;
+	info += '<tr><td>ref_dpcm</td><td>'+ref_dpcm+'</td></tr>';
+	info += '<tr><td>screen_dpcm</td><td>'+screen_dpcm+'</td></tr>';
+
 //		$('html').css('font-size', dpi/96*100 + '%');
 		$('html').css('font-size', rem*100 + '%');
 //	}
