@@ -1,0 +1,27 @@
+/***********************************************
+	media-queries.scss
+
+	https://github.com/FCOO/media-queries
+	https://github.com/FCOO
+
+	Media Queries
+	Based on the queries created by ZURB Foundation
+	See http://foundation.zurb.com/docs/media-queries.html
+
+************************************************/
+//@import "../import";
+//@import "../user-interface/user-interface";
+//@import "leaflet-mixin";
+
+
+//$include-accessibility-classes: false;
+@import "../bower_components/foundation/scss/foundation/functions";
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+
+
+@if $include-accessibility-classes == false {
+	html { color:false; }
+}
+@if $include-accessibility-classes != false {
+	html { color:true; }
+}

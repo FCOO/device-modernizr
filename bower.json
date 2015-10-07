@@ -6,7 +6,11 @@
     "Niels Holt <nho@fcoo.dk>"
   ],
   "description": "",
-  "main": "",
+  "main": [
+    "dist/media-queries.min.js",
+    "dist/media-queries.min.css"
+  ],
+
   "moduleType": [],
   "license": "MIT",
   "ignore": [
@@ -19,5 +23,8 @@
   "dependencies": {
     "jquery-mobile": "~1.4.5",
     "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "foundation": "~5.5.3"
   }
 }

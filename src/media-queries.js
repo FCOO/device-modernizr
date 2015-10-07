@@ -98,6 +98,16 @@
 	info += '<tr><td>screen width</td><td>'+NIELS.screen_width +'</td></tr>';
 	info += '<tr><td>screen height</td><td>'+NIELS.screen_height	 +'</td></tr>';
 
+	var deviceWidth = 300;
+	for (var i=0; i<4000; i++ )
+		if ( Modernizr.mq('(device-width: '+i+'px)') ){
+			deviceWidth = i;
+			break;
+		}
+	info += '<tr><td>device-width</td><td>'+deviceWidth	 +'</td></tr>';
+
+	
+	
 	var dpi = 96;
 	for (var i=1; i<400; i++ )
 		if ( Modernizr.mq('(resolution: '+i+'dpi)') ){
