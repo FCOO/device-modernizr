@@ -23,20 +23,19 @@
 @media only screen and (min-width: 40.063em) { 
 } /* min-width 641px, medium screens */
 
-	
+		div {
+			margin: 10px;
+			padding: 10px;
+		}
 	</style>
 </head>
 <body>
 	<h1>FCOO Media Queries</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
-	<h2 class="show-for-landscape hide-for-portrait">This device is in LANDSCAPE mode</h2>
-	<h2 class="hide-for-landscape show-for-portrait">This device is in PORTRAIT mode</h2>
+	<h4 class="show-for-landscape hide-for-portrait">This device is in LANDSCAPE mode</h4>
+	<h4 class="hide-for-landscape show-for-portrait">This device is in PORTRAIT mode</h4>
 
-
-var mq = new window.fcoo.MediaQueries();
-
-	
   <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
   <!-- <strong class="show-for-medium-up">This text is shown on medium screens and up.</strong> -->
   <strong class="show-for-medium-only">This text is shown only on a medium screen.</strong>
@@ -45,9 +44,10 @@ var mq = new window.fcoo.MediaQueries();
   <!-- <strong class="show-for-xlarge-up">This text is shown on xlarge screens and up.</strong> -->
   <strong class="show-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
   <!-- <strong class="show-for-xxlarge-up">This text is shown on xxlarge screens and up.</strong> -->
-	<h3 class="dpi96">resolution = 96dpi</h3>
 
-	<h3 id="info"></h3>
+	<!-- <div class="dpi96">resolution = 96dpi</div> -->
+
+	<div id="info"></div>
 
 
 	<div style="width:95%; border:1px solid blue; font-size:100%">
@@ -68,53 +68,54 @@ var mq = new window.fcoo.MediaQueries();
 	<script src="../src/media-queries.js"></script>
 
 	<script>
-	(function ($, window, document, undefined) {
-	/******************************************
-	Initialize/ready 
-	*******************************************/
-	$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
-/*		
-		//Events to detect orientation
-		$( window ).on( "orientationchange", function( event ) {
-			$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
-		});
+		(function ($, window, document, undefined) {
+			/******************************************
+			Initialize/ready 
+			*******************************************/
+			$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
+		/*		
+				//Events to detect orientation
+				$( window ).on( "orientationchange", function( event ) {
+					$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+				});
  
-		 You can also manually force this event to fire.
-		$( window ).orientationchange();
-*/
+				 You can also manually force this event to fire.
+				$( window ).orientationchange();
+		*/
 
-	var mq = new window.fcoo.MediaQueries();
+			var mq = new window.fcoo.MediaQueries();
 
-	var info = '<table border=0>';
+			var info = '<table border=0>';
 
-	info += '<tr><td>screen width</td><td>'+mq.screen_width +'</td></tr>';
-	info += '<tr><td>screen height</td><td>'+mq.screen_height	 +'</td></tr>';
+			info += '<tr><td>screen width</td><td>'+mq.screen_width +'</td></tr>';
+			info += '<tr><td>screen height</td><td>'+mq.screen_height	 +'</td></tr>';
 
-	var deviceWidth = 300;
-	for (var i=0; i<4000; i++ )
-		if ( Modernizr.mq('(device-width: '+i+'px)') ){
-			deviceWidth = i;
-			break;
-		}
-	info += '<tr><td>device-width</td><td>'+deviceWidth+'</td></tr>';
+			var deviceWidth = 300;
+			for (var i=0; i<4000; i++ )
+				if ( Modernizr.mq('(device-width: '+i+'px)') ){
+					deviceWidth = i;
+					break;
+				}
+			info += '<tr><td>device-width</td><td>'+deviceWidth+'</td></tr>';
 
-	info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
+			info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
 
-	info += '<tr><td>mq.scale</td><td>'+mq.scale+'</td></tr>';
-
-
-	info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
-
-	/*
-	http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
-	Google: > 30% has 1366*768
-	*/
+			info += '<tr><td>mq.scale</td><td>'+mq.scale+'</td></tr>';
 
 
-	info += '</table>';
-	$('#info').html(info);		
+			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
 
-	
+			/*
+			http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
+			Google: > 30% has 1366*768
+			*/
+
+			info += '</table>';
+			$('#info').html(info);		
+
+
+			$('#scaled').css('font-size', mq.scale+'%');
+
 		}); //End of initialize/ready
 	}(jQuery, this, document));	
 </script>
