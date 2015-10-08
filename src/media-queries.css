@@ -5,7 +5,7 @@
 	https://github.com/FCOO
 
 	Media Queries
-	Based on the queries created by ZURB Foundation
+	Using the scss-files created by ZURB Foundation
 	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
@@ -22,20 +22,20 @@ meta.foundation-mq-small {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003440}}
 meta.foundation-mq-small-only {
-  font-family: "/only screen and (max-width: 40em)/";
+  font-family: "/only screen and (max-width: 39em)/";
   width: 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003445}}
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:40.0625em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:39.0625em)/";
+  width: 39.0625em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003450}}
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.0625em) and (max-width:64em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:39.0625em) and (max-width:64em)/";
+  width: 39.0625em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003455}}
@@ -201,24 +201,6 @@ select {
     display: none !important;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003251}}
-  .visible-for-small-only, .visible-for-small-up, .visible-for-small, .visible-for-small-down, .hidden-for-medium-only, .hidden-for-medium-up, .hidden-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down {
-    position: static !important;
-    height: auto;
-    width: auto;
-    overflow: visible;
-    clip: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003254}}
-  .hidden-for-small-only, .hidden-for-small-up, .hidden-for-small, .hidden-for-small-down, .visible-for-medium-only, .visible-for-medium-up, .visible-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    width: 1px;
-  }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
   table.show-for-small-only, table.show-for-small-up, table.show-for-small, table.show-for-small-down, table.hide-for-medium-only, table.hide-for-medium-up, table.hide-for-medium, table.show-for-medium-down, table.hide-for-large-only, table.hide-for-large-up, table.hide-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
     display: table !important;
@@ -245,7 +227,7 @@ select {
   }
 }
 /* medium displays */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 39.0625em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
     display: inherit !important;
@@ -254,24 +236,6 @@ select {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
   .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
     display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003251}}
-  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .visible-for-medium-only, .visible-for-medium-up, .visible-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down {
-    position: static !important;
-    height: auto;
-    width: auto;
-    overflow: visible;
-    clip: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003254}}
-  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .hidden-for-medium-only, .hidden-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    width: 1px;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
@@ -311,24 +275,6 @@ select {
     display: none !important;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003251}}
-  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down {
-    position: static !important;
-    height: auto;
-    width: auto;
-    overflow: visible;
-    clip: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003254}}
-  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    width: 1px;
-  }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.show-for-large-only, table.show-for-large-up, table.show-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
     display: table !important;
@@ -366,24 +312,6 @@ select {
     display: none !important;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003251}}
-  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .hidden-for-large-only, .visible-for-large-up, .hidden-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down {
-    position: static !important;
-    height: auto;
-    width: auto;
-    overflow: visible;
-    clip: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003254}}
-  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .visible-for-large-only, .hidden-for-large-up, .visible-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    width: 1px;
-  }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-large-only, table.show-for-large-up, table.hide-for-large, table.hide-for-large-down, table.show-for-xlarge-only, table.show-for-xlarge-up, table.show-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
     display: table !important;
@@ -419,24 +347,6 @@ select {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
   .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .show-for-xlarge-only, .hide-for-xlarge-up, .show-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .hide-for-xxlarge-down {
     display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003251}}
-  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .hidden-for-large-only, .visible-for-large-up, .hidden-for-large, .hidden-for-large-down, .hidden-for-xlarge-only, .visible-for-xlarge-up, .hidden-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .visible-for-xxlarge-down {
-    position: static !important;
-    height: auto;
-    width: auto;
-    overflow: visible;
-    clip: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003254}}
-  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .visible-for-large-only, .hidden-for-large-up, .visible-for-large, .visible-for-large-down, .visible-for-xlarge-only, .hidden-for-xlarge-up, .visible-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .hidden-for-xxlarge-down {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-    width: 1px;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
@@ -748,7 +658,7 @@ th.hide-for-touch {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000326}}
 html {
-  color: true;
+  color: false;
 }
 
 /*# sourceMappingURL=media-queries.css.map */

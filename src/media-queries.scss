@@ -5,17 +5,20 @@
 	https://github.com/FCOO
 
 	Media Queries
-	Based on the queries created by ZURB Foundation
+	Using the scss-files created by ZURB Foundation
 	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
-//@import "../import";
-//@import "../user-interface/user-interface";
-//@import "leaflet-mixin";
 
-
-//$include-accessibility-classes: false;
 @import "../bower_components/foundation/scss/foundation/functions";
+
+//Setting 
+	$include-accessibility-classes: false;
+	$small-breakpoint:  em-calc(624);
+	$medium-breakpoint: em-calc(1024);
+	$large-breakpoint:  em-calc(1440);
+	$xlarge-breakpoint: em-calc(1920);
+
 @import "../bower_components/foundation/scss/foundation/components/visibility";
 
 

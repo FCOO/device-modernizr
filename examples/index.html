@@ -33,8 +33,8 @@
 	<h1>FCOO Media Queries</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
-	<h4 class="show-for-landscape hide-for-portrait">This device is in LANDSCAPE mode</h4>
-	<h4 class="hide-for-landscape show-for-portrait">This device is in PORTRAIT mode</h4>
+	<h4 class="show-for-landscape">This device is in LANDSCAPE mode</h4>
+	<h4 class="show-for-portrait">This device is in PORTRAIT mode</h4>
 
   <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
   <!-- <strong class="show-for-medium-up">This text is shown on medium screens and up.</strong> -->
@@ -63,7 +63,6 @@
 	</div>
 
 	<script src="../bower_components/jquery/dist/jquery.js"></script>
-	<script src="../XXbower_components/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../src/modernizr-custom.js"></script>
 	<script src="../src/media-queries.js"></script>
 
@@ -73,7 +72,7 @@
 			Initialize/ready 
 			*******************************************/
 			$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
-		/*		
+			/*		
 				//Events to detect orientation
 				$( window ).on( "orientationchange", function( event ) {
 					$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
@@ -81,7 +80,7 @@
  
 				 You can also manually force this event to fire.
 				$( window ).orientationchange();
-		*/
+			*/
 
 			var mq = new window.fcoo.MediaQueries();
 
@@ -100,7 +99,7 @@
 
 			info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
 
-			info += '<tr><td>mq.scale</td><td>'+mq.scale+'</td></tr>';
+			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
 
 
 			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';

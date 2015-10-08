@@ -10,7 +10,6 @@
     "dist/media-queries.min.js",
     "dist/media-queries.min.css"
   ],
-
   "moduleType": [],
   "license": "MIT",
   "ignore": [
@@ -21,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-mobile": "~1.4.5",
     "jquery": "~2.1.4"
   },
   "devDependencies": {
