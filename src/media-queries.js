@@ -12,25 +12,83 @@
 	"use strict";
 
 
-	var plugin_count = 1000;
-
-	function mediaQueries( $elem, options, plugin_count) {
-		this.plugin_count = plugin_count;
+	function MediaQueries( options ) {
 		this.options = $.extend({
-			//Default options
+			//Default options = Standard desttop screen
+			referenceScreen: { 
+				width				: 1366,
+				height			: 768,
+				diagonal_inc: 20
+			}
 		}, options || {} );
 
+		var docEl = document.documentElement;
+		this.ua		= navigator.userAgent;
+		this.devicePixelRatio = ('devicePixelRatio' in window) ? devicePixelRatio : 'unsupported';
+		this.screen_width		= screen.width;
+		this.screen_height	=	screen.height;
+		this.client_width		= docEl.clientWidth;
+		this.client_width		= docEl.clientHeight;
+		
+		this.screen_width_em	= this.screen_width/16;
+		this.screen_height_em	=	this.screen_height/16;
 
+		this.dpi = 96;
+		for (var dpi=1; dpi<400; dpi++ )
+			if ( Modernizr.mq('(resolution: '+dpi+'dpi)') ){
+				this.dpi = dpi;
+				break;
+			}
+		this.dpr = 1;
+		for (var dpr=1; dpr<4; dpr=dpr+0.1 )
+			if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ){
+				this.dpr = dpr;
+				break;
+			}
+
+		this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
+		this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
+
+//		this.screen_diagonal_dpi = this.screen_diagonal/this.screen_diagonal_inc;
+//console.log(this.dpi, this.screen_diagonal_dpi);
+
+		//Calculate the diagonal and dpi for the reference screen
+		var ref_screen_diagonal = Math.sqrt( Math.pow(this.options.referenceScreen.width, 2) + Math.pow(this.options.referenceScreen.height, 2) );
+		this.ref_dpi = ref_screen_diagonal/this.options.referenceScreen.diagonal_inc;
+		
+		this.scale = (this.dpi / this.ref_dpi)*100;
+
+
+	/*
+		var ref_screen_diagonal_cm = 20*2.54;
+		var ref_screen_diagonal = Math.sqrt(1366*1366 + 768*768);;
+		var ref_dpcm = ref_screen_diagonal/ref_screen_diagonal_cm;
+		var screen_dpcm = screen_diagonal/screen_diagonal_cm;
+
+		var rem = screen_dpcm / ref_dpcm;
+	info += '<tr><td>ref_dpcm</td><td>'+ref_dpcm+'</td></tr>';
+	info += '<tr><td>screen_dpcm</td><td>'+screen_dpcm+'</td></tr>';
+
+//		$('html').css('font-size', dpi/96*100 + '%');
+		$('html').css('font-size', rem*100 + '%');
+//	}
+
+
+	NIELS.screen_dim_width_cm = NIELS.screen_width/dpi*2.54;
+*/
+	
+
+	
 	
 	}
   
   // expose access to the constructor
 	window.fcoo = window.fcoo || {};
-	window.fcoo.mediaQueries = mediaQueries;
+	window.fcoo.MediaQueries = MediaQueries;
 
 
 	//Extend the prototype
-	window.fcoo.mediaQueries.prototype = {
+	window.fcoo.MediaQueries.prototype = {
 
 		//myMethod
 		myMethod: function( arg1, arg2 ){
@@ -50,6 +108,7 @@
 			$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
 		});
  
+var mq = new window.fcoo.MediaQueries();
 		// You can also manually force this event to fire.
 		$( window ).orientationchange();
 
@@ -129,6 +188,9 @@
 		var rem = screen_dpcm / ref_dpcm;
 	info += '<tr><td>ref_dpcm</td><td>'+ref_dpcm+'</td></tr>';
 	info += '<tr><td>screen_dpcm</td><td>'+screen_dpcm+'</td></tr>';
+
+	info += '<tr><td>rem*100</td><td>'+rem*100+'</td></tr>';
+	info += '<tr><td>mq.scale</td><td>'+mq.scale+'</td></tr>';
 
 //		$('html').css('font-size', dpi/96*100 + '%');
 		$('html').css('font-size', rem*100 + '%');
