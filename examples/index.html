@@ -30,7 +30,11 @@
 	<h1>FCOO Media Queries</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
-	<h2 id="orientation">orientationchange Not Supported on this Device.</h2>
+	<h2 class="show-for-landscape hide-for-portrait">This device is in LANDSCAPE mode</h2>
+	<h2 class="hide-for-landscape show-for-portrait">This device is in PORTRAIT mode</h2>
+
+
+var mq = new window.fcoo.MediaQueries();
 
 	
   <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
@@ -46,16 +50,75 @@
 	<h3 id="info"></h3>
 
 
-
-	<button style="">This is a 'default' button</button>
-	<button style="font-size:0.833rem">This is a '0.833rem' button</button>
-	<button style="font-size:1rem">This is a '1rem' button</button>	
-
-	<button style="font-size:2rem">This is a '2rem' button</button>
+	<div style="width:95%; border:1px solid blue; font-size:100%">
+		<h3>Normal contents</h3>
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		<button>This is a 'normal' button</button>
+	</div>
+	<br>
+	<div id="scaled" style="width:95%; border:1px solid red; font-size:100%">
+		<h3>Scaled contents</h3>
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		<button style="font-size:0.833em">This is a 'normal' button</button>
+	</div>
 
 	<script src="../bower_components/jquery/dist/jquery.js"></script>
-	<script src="../bower_components/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../XXbower_components/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
 	<script src="../src/modernizr-custom.js"></script>
 	<script src="../src/media-queries.js"></script>
+
+	<script>
+	(function ($, window, document, undefined) {
+	/******************************************
+	Initialize/ready 
+	*******************************************/
+	$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
+/*		
+		//Events to detect orientation
+		$( window ).on( "orientationchange", function( event ) {
+			$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+		});
+ 
+		 You can also manually force this event to fire.
+		$( window ).orientationchange();
+*/
+
+	var mq = new window.fcoo.MediaQueries();
+
+	var info = '<table border=0>';
+
+	info += '<tr><td>screen width</td><td>'+mq.screen_width +'</td></tr>';
+	info += '<tr><td>screen height</td><td>'+mq.screen_height	 +'</td></tr>';
+
+	var deviceWidth = 300;
+	for (var i=0; i<4000; i++ )
+		if ( Modernizr.mq('(device-width: '+i+'px)') ){
+			deviceWidth = i;
+			break;
+		}
+	info += '<tr><td>device-width</td><td>'+deviceWidth+'</td></tr>';
+
+	info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
+
+	info += '<tr><td>mq.scale</td><td>'+mq.scale+'</td></tr>';
+
+
+	info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
+
+	/*
+	http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
+	Google: > 30% has 1366*768
+	*/
+
+
+	info += '</table>';
+	$('#info').html(info);		
+
+	
+		}); //End of initialize/ready
+	}(jQuery, this, document));	
+</script>
+
+
 </body>
 </html>
