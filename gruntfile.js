@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 
 	//Capture the log.header function to remove the 'Running tast SOMETHING" message
 	grunt.log.header = function(txt){
-		//grunt.log.writeln('-'+txt+'-');
+		grunt.log.writeln('-'+txt+'-');
 	};
 
 	//merge: Merge all the options given into a new object
@@ -493,6 +493,8 @@ module.exports = function(grunt) {
 
 	//_github_merge
 	grunt.registerTask('_github_merge', function(){
+		grunt.log.writeln('ghpages='+grunt.config('ghpages'));
+
 		if (grunt.config('ghpages'))
 			grunt.task.run([
 				'exec:git_checkout_ghpages',
