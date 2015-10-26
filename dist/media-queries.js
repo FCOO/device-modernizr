@@ -38,7 +38,7 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 
 		var docEl = document.documentElement;
 		this.ua		= navigator.userAgent;
-		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
+  		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 		this.client_width		= docEl.clientWidth;
