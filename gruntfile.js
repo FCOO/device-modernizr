@@ -245,7 +245,7 @@ module.exports = function(grunt) {
 			
 			git_merge: {
 				cmd:	function(){
-								return grunt.config('ghpages') ? 'echo opn' : 'echo off';
+								return grunt.config('ghpages') ? 'echo "ON"' : 'echo "off"';
 								
 								grunt.log.writeln('Hej do');
 								grunt.log.writeln('ghpages='+grunt.config('ghpages'));
