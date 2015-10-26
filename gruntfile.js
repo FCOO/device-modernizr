@@ -372,7 +372,7 @@ module.exports = function(grunt) {
 
 				beforeBump		: [],								// optional grunt tasks to run before file versions are bumped 
 				afterBump			: ['replace:dist_indexhtml_version'],	// optional grunt tasks to run after file versions are bumped 
-				beforeRelease	: ['exec:git_add_all', 'NIELS','github_merge'],									// optional grunt tasks to run after release version is bumped up but before release is packaged 
+				beforeRelease	: ['exec:git_add_all', 'exec:git_checkout_ghpages', 'NIELS','github_merge'],									// optional grunt tasks to run after release version is bumped up but before release is packaged 
 				afterRelease	: [],																	// optional grunt tasks to run after release is packaged 
 				updateVars		: ['bwr'],														// optional grunt config objects to update (this will update/set the version property on the object specified) 
 /*************************
@@ -493,6 +493,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('NIELS', function(){ 
 		grunt.log.writeln('NIELS');
+
 	});
 
 	//github_merge
