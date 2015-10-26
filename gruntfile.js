@@ -245,9 +245,9 @@ module.exports = function(grunt) {
 			
 			git_merge: {
 				cmd:	function(){
-								if (grunt.config('ghpages'))
+								//if (grunt.config('ghpages'))
 									return 'git checkout gh-pages && git merge master && git checkout master';
-								else
+								//else
 									return '';
 							}
 			}
