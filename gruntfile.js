@@ -492,7 +492,7 @@ module.exports = function(grunt) {
 
 
 	//_github_merge
-	grunt.registerTask('_github_merge', function(){
+	grunt.registerTask('_github_merge', function(){ davs();
 		grunt.log.writeln('ghpages='+grunt.config('ghpages'));
 
 		if (grunt.config('ghpages'))
