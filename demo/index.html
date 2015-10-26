@@ -12,7 +12,7 @@
 
 
   <link rel="stylesheet" type="text/css" href="../src/media-queries.css" />
-  <link rel="stylesheet" type="text/css" href="media-queries-examples.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="media-queries-examples.css" /> -->
 	<style>
 
 .dpi96 { background-color: red; }
@@ -63,7 +63,8 @@
 	</div>
 
 	<script src="../bower_components/jquery/dist/jquery.js"></script>
-	<script src="../src/modernizr-custom.js"></script>
+	<script src="../src/_modernizr-custom.js"></script>
+	<script src="../bower_components/mobile-detect/mobile-detect.js"></script>
 	<script src="../src/media-queries.js"></script>
 
 	<script>
@@ -81,6 +82,20 @@
 				 You can also manually force this event to fire.
 				$( window ).orientationchange();
 			*/
+
+			var md = new MobileDetect(window.navigator.userAgent);
+console.log( md.mobile() );          // 'Sony'
+console.log( md.phone() );           // 'Sony'
+console.log( md.tablet() );          // null
+console.log( md.userAgent() );       // 'Safari'
+console.log( md.os() );              // 'AndroidOS'
+console.log( md.is('iPhone') );      // false
+console.log( md.is('bot') );         // false
+console.log( md.version('Webkit') );         // 534.3
+console.log( md.versionStr('Build') );       // '4.1.A.0.562'
+console.log( md.match('playstation|xbox') ); // false
+
+
 
 			var mq = new window.fcoo.MediaQueries();
 

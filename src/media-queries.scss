@@ -1,30 +1,19 @@
 /***********************************************
-	media-queries.scss
+	media-queries.scss, 
+
+	(c) 2015, FCOO
 
 	https://github.com/FCOO/media-queries
 	https://github.com/FCOO
 
-	Media Queries
-	Using the scss-files created by ZURB Foundation
-	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
+//BOURBON - http://bourbon.io/
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
-@import "../bower_components/foundation/scss/foundation/functions";
+//MODERNIZR-MIXIN - https://github.com/danielguillan/modernizr-mixin
+@import "../bower_components/modernizr-mixin/stylesheets/modernizr";
 
-//Setting 
-	$include-accessibility-classes: false;
-	$small-breakpoint:  em-calc(624);
-	$medium-breakpoint: em-calc(1024);
-	$large-breakpoint:  em-calc(1440);
-	$xlarge-breakpoint: em-calc(1920);
+//MATHSASS - https://github.com/terkel/mathsass
+@import "../bower_components/mathsass/dist/math";
 
-@import "../bower_components/foundation/scss/foundation/components/visibility";
-
-
-@if $include-accessibility-classes == false {
-	html { color:false; }
-}
-@if $include-accessibility-classes != false {
-	html { color:true; }
-}

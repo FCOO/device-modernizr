@@ -1,16 +1,29 @@
 {
   "name": "media-queries",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "homepage": "https://github.com/FCOO/media-queries",
   "authors": [
-    "Niels Holt <nho@fcoo.dk>"
+    "Niels Holt niels@steenbuchholt.dk"
   ],
   "description": "",
   "main": [
     "dist/media-queries.min.js",
     "dist/media-queries.min.css"
   ],
-  "moduleType": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FCOO/media-queries.git"
+  },
+  "dependencies": {
+    "jquery": "latest",
+    "moment": "latest",
+    "mobile-detect": "hgoebl/mobile-detect.js#~1.3.0"
+  },
+  "devDependencies": {
+    "bourbon": "latest",
+    "modernizr-mixin": "latest",
+    "mathsass": "latest"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -19,10 +32,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "jquery": "~2.1.4"
-  },
-  "devDependencies": {
-    "foundation": "~5.5.3"
-  }
+  "moduleType": [
+    "es6"
+  ]
 }

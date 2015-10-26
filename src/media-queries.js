@@ -1,5 +1,5 @@
 /****************************************************************************
-	media-queries.js
+	media-queries.js, 
 
 	(c) 2015, FCOO
 
@@ -10,9 +10,19 @@
 
 ;(function ($, window, document, undefined) {
 	"use strict";
+	
+	//Create fcoo-namespace
+	window.fcoo = window.fcoo || {};
 
+	//If fcoo.namespace() is defined create a name-space
+	var ns = window.fcoo.namespace ? window.fcoo.namespace(''/*Enter the fcoo-namespace here*/) : window.fcoo; 
+	//or var ns = window;
 
-	function MediaQueries( options ) {
+	var plugin_count = 1000;
+
+	function MediaQueries( $elem, options, plugin_count) {
+		this.plugin_count = plugin_count;
+
 		this.options = $.extend({
 			//Default options = Standard desttop screen
 			referenceScreen: { 
@@ -24,7 +34,7 @@
 
 		var docEl = document.documentElement;
 		this.ua		= navigator.userAgent;
-		this.devicePixelRatio = ('devicePixelRatio' in window) ? devicePixelRatio : 'unsupported';
+		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 		this.client_width		= docEl.clientWidth;
@@ -58,20 +68,31 @@
 	}
   
   // expose access to the constructor
-	window.fcoo = window.fcoo || {};
-	window.fcoo.MediaQueries = MediaQueries;
+  ns.MediaQueries = MediaQueries;
+
+
+	//mediaQueries as jQuery prototype
+	$.fn.mediaQueries = function (options) {
+		return this.each(function() {
+			if (!$.data(this, "mediaQueries"))
+				$.data(this, "mediaQueries", new window.MediaQueries(this, options, plugin_count++));
+		});
+	};
 
 
 	//Extend the prototype
-	window.fcoo.MediaQueries.prototype = {
+	ns.MediaQueries.prototype = {
 
 		//myMethod
-		//myMethod: function( arg1, arg2 ){
-		//},
+		myMethod: function( /*arg1, arg2*/ ){
+		},
 		
 
 
 	};
+
+	//If MediaQueries is a extention of class "ParentClass" include the next line 
+	//window.MediaQueries.prototype = $.extend( {}, window.ParentClass.prototype, window.MediaQueries.prototype );
 
 
 	/******************************************
@@ -84,6 +105,7 @@
 	
 	}); //End of initialize/ready
 	//******************************************
+
 
 
 }(jQuery, this, document));
