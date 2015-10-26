@@ -243,14 +243,19 @@ module.exports = function(grunt) {
 			git_checkout_ghpages: 'git checkout gh-pages',
 			git_merge_master		: 'git merge master',
 			
-			git_merge: function(){
-				grunt.log.writeln('ghpages='+grunt.config('ghpages'));
-				if (grunt.config('ghpages'))
-				grunt.task.run([
-					'exec:git_checkout_ghpages',
-					'exec:git_merge_master',
-					'exec:git_checkout_master'
-				]);
+			git_merge: {
+				cmd:	function(){
+								return grunt.config('ghpages') ? 'echo opn' : 'echo off';
+								
+								grunt.log.writeln('Hej do');
+								grunt.log.writeln('ghpages='+grunt.config('ghpages'));
+								if (grunt.config('ghpages'))
+								grunt.task.run([
+									'exec:git_checkout_ghpages',
+									'exec:git_merge_master',
+									'exec:git_checkout_master'
+								]);
+							}
 			}
 		},
 
