@@ -379,11 +379,26 @@ module.exports = function(grunt) {
 				commitMessage	: 'Release <%= version %>',
 				tagMessage		: 'Version <%= version %>', 
 
-				beforeBump		: [],								// optional grunt tasks to run before file versions are bumped 
-				afterBump			: ['replace:dist_indexhtml_version'],	// optional grunt tasks to run after file versions are bumped 
-				beforeRelease	: ['exec:git_add_all', 'exec:git_merge' /*'github_merge'*/],									// optional grunt tasks to run after release version is bumped up but before release is packaged 
-				afterRelease	: [],																	// optional grunt tasks to run after release is packaged 
-				updateVars		: ['bwr'],														// optional grunt config objects to update (this will update/set the version property on the object specified) 
+				//beforeBump = optional grunt tasks to run before file versions are bumped 
+				beforeBump		: [],
+
+				//afterBump = optional grunt tasks to run after file versions are bumped 
+				afterBump			: ['replace:dist_indexhtml_version'],
+
+				//beforeRelease = optional grunt tasks to run after release version is bumped up but before release is packaged 
+				beforeRelease	: [
+					'exec:git_add_all', 
+					'exec:git_checkout_ghpages',
+					'exec:git_merge_master',
+					'exec:git_checkout_master'
+				],					
+					
+				//afterRelease = optional grunt tasks to run after release is packaged 
+				afterRelease	: [],
+
+				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
+				updateVars		: ['bwr'],
+
 /*************************
 //github: {..} obmitted  
 				github: {
@@ -487,6 +502,8 @@ module.exports = function(grunt) {
 
 		if (grunt.config('ghpages'))
 			grunt.log.writeln('- Merge "master" branch into "gh-pages" branch');
+		else
+			grunt.config.set('release.options.beforeRelease', ['exec:git_add_all']); //Remove all git merge commands
 
 		if (grunt.config('newVersion') != 'none')
 			grunt.log.writeln('- Push all branches and tags to GitHub');
@@ -499,23 +516,6 @@ module.exports = function(grunt) {
 		grunt.log.writeln('**************************************************');
 	});
 
-
-	grunt.registerTask('NIELS', function(){ 
-		grunt.log.writeln('NIELS');
-
-	});
-
-	//github_merge
-	grunt.registerTask('github_merge', function(){ 
-		grunt.log.writeln('ghpages='+grunt.config('ghpages'));
-
-		if (grunt.config('ghpages'))
-			grunt.task.run([
-				'exec:git_checkout_ghpages',
-				'exec:git_merge_master',
-				'exec:git_checkout_master'
-			]);
-	});
 
 	//_github_run_tasks: if confirm is true => run the github tasks (githubTasks)
 	grunt.registerTask('_github_run_tasks', function() {  
