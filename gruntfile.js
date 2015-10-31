@@ -241,16 +241,7 @@ module.exports = function(grunt) {
 			git_add_all					: 'git add -A',
 			git_checkout_master	: 'git checkout master',
 			git_checkout_ghpages: 'git checkout gh-pages',
-			git_merge_master		: 'git merge master',
-			
-			git_merge: {
-				cmd:	function(){
-								//if (grunt.config('ghpages'))
-									return 'git checkout gh-pages && git merge master && git checkout master';
-								//else
-									return '';
-							}
-			}
+			git_merge_master		: 'git merge master'
 		},
 
 		// ** replace **
@@ -398,6 +389,13 @@ module.exports = function(grunt) {
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr'],
+
+	      remote: '--all origin', //used in "git push [remote] HEAD" original = 'origin'. "--all" added to pussh all branches
+
+/*
+grunt.log.writeln('git.exe push --all --progress "origin"');
+*/
+
 
 /*************************
 //github: {..} obmitted  
