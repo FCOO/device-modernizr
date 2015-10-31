@@ -242,8 +242,7 @@ module.exports = function(grunt) {
 			git_checkout_master	: 'git checkout master',
 			git_checkout_ghpages: 'git checkout gh-pages',
 			git_merge_master		: 'git merge master',
-
-			'git_push_gh-pages'	: 'git push "origin" gh-pages'		
+			c		: 'git push "origin" gh-pages'		
 		},
 
 		// ** replace **
@@ -383,11 +382,12 @@ module.exports = function(grunt) {
 					'exec:git_add_all', 
 					'exec:git_checkout_ghpages',
 					'exec:git_merge_master',
-					'exec:git_checkout_master'
+					'exec:git_checkout_master',
+					'exec:git_push_gh_pages'
 				],					
 					
 				//afterRelease = optional grunt tasks to run after release is packaged 
-				afterRelease	: ['exec:git_push_gh-pages'],
+				afterRelease	: [/*'exec:git_push_gh_pages'*/],
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr']
