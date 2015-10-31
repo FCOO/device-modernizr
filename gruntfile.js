@@ -390,7 +390,7 @@ module.exports = function(grunt) {
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr'],
 
-	      remote: '--all origin', //used in "git push [remote] HEAD" original = 'origin'. "--all" added to pussh all branches
+	      remote: '--all --progress "origin"', //used in "git push [remote] HEAD" original = 'origin'. "--all" added to pussh all branches
 
 /*
 grunt.log.writeln('git.exe push --all --progress "origin"');
