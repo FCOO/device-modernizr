@@ -390,9 +390,8 @@ module.exports = function(grunt) {
 				afterRelease	: ['exec:git_push_gh-pages'],
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
-				updateVars		: ['bwr'],
+				updateVars		: ['bwr']
 
-	      remote: '--all --progress "origin"', //used in "git push [remote] HEAD" original = 'origin'. "--all" added to pussh all branches
 
 /*
 grunt.log.writeln('git.exe push --all --progress "origin"');
