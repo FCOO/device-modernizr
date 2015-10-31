@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 
 	//Capture the log.header function to remove the 'Running tast SOMETHING" message
 	grunt.log.header = function(txt){
-		grunt.log.writeln('-'+txt+'-');
+		//only for test: grunt.log.writeln('-'+txt+'-');
 	};
 
 	//merge: Merge all the options given into a new object
@@ -378,13 +378,7 @@ module.exports = function(grunt) {
 				afterBump			: ['replace:dist_indexhtml_version'],
 
 				//beforeRelease = optional grunt tasks to run after release version is bumped up but before release is packaged 
-				beforeRelease	: [
-					'exec:git_add_all', 
-//					'exec:git_checkout_ghpages',
-//					'exec:git_merge_master',
-//					'exec:git_checkout_master',
-//					'exec:git_push_ghpages'
-				],					
+				beforeRelease	: [ 'exec:git_add_all' ],					
 					
 				//afterRelease = optional grunt tasks to run after release is packaged 
 				afterRelease	: [
@@ -396,12 +390,6 @@ module.exports = function(grunt) {
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr']
-
-
-/*
-grunt.log.writeln('git.exe push --all --progress "origin"');
-*/
-
 
 /*************************
 //github: {..} obmitted  
@@ -507,7 +495,6 @@ grunt.log.writeln('git.exe push --all --progress "origin"');
 		if (grunt.config('ghpages'))
 			grunt.log.writeln('- Merge "master" branch into "gh-pages" branch');
 		else
-//			grunt.config.set('release.options.beforeRelease', ['exec:git_add_all']); //Remove all git merge commands
 			grunt.config.set('release.options.afterRelease', []); //Remove all git merge commands
 
 		if (grunt.config('newVersion') != 'none')
