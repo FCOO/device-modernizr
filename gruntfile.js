@@ -380,14 +380,19 @@ module.exports = function(grunt) {
 				//beforeRelease = optional grunt tasks to run after release version is bumped up but before release is packaged 
 				beforeRelease	: [
 					'exec:git_add_all', 
-					'exec:git_checkout_ghpages',
-					'exec:git_merge_master',
-					'exec:git_checkout_master',
+//					'exec:git_checkout_ghpages',
+//					'exec:git_merge_master',
+//					'exec:git_checkout_master',
 //					'exec:git_push_ghpages'
 				],					
 					
 				//afterRelease = optional grunt tasks to run after release is packaged 
-				afterRelease	: ['exec:git_push_ghpages'],
+				afterRelease	: [
+					'exec:git_checkout_ghpages',
+					'exec:git_merge_master',
+					'exec:git_checkout_master',
+					'exec:git_push_ghpages'
+				],
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr']
@@ -502,7 +507,8 @@ grunt.log.writeln('git.exe push --all --progress "origin"');
 		if (grunt.config('ghpages'))
 			grunt.log.writeln('- Merge "master" branch into "gh-pages" branch');
 		else
-			grunt.config.set('release.options.beforeRelease', ['exec:git_add_all']); //Remove all git merge commands
+//			grunt.config.set('release.options.beforeRelease', ['exec:git_add_all']); //Remove all git merge commands
+			grunt.config.set('release.options.afterRelease', []); //Remove all git merge commands
 
 		if (grunt.config('newVersion') != 'none')
 			grunt.log.writeln('- Push all branches and tags to GitHub');
