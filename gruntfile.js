@@ -383,11 +383,11 @@ module.exports = function(grunt) {
 					'exec:git_checkout_ghpages',
 					'exec:git_merge_master',
 					'exec:git_checkout_master',
-					'exec:git_push_ghpages'
+//					'exec:git_push_ghpages'
 				],					
 					
 				//afterRelease = optional grunt tasks to run after release is packaged 
-				afterRelease	: [/*'exec:git_push_ghpages'*/],
+				afterRelease	: ['exec:git_push_ghpages'],
 
 				//updateVars = optional grunt config objects to update (this will update/set the version property on the object specified) 
 				updateVars		: ['bwr']
