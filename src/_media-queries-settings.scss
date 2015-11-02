@@ -10,6 +10,8 @@
 ************************************************/
 
 //Setting the classes to include
+$include-js-meta-styles						: true;		
+$include-html-global-classes			: false;	
 $include-accessibility-classes		: false;	//true to include classes for screen readers (eq. "hidden-for-small", "visible-for-small")
 $include-table-visibility-classes	: true;		//true to include .show/hide-for-[size] for table-, tr- and td-elements
 $include-legacy-visibility-classes: true;		//true to include .show/hide-for-[size] and .show/hide-for-[size]-down classes for small, medium, and large breakpoints only
