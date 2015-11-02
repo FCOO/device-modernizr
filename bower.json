@@ -22,7 +22,8 @@
   "devDependencies": {
     "bourbon": "latest",
     "modernizr-mixin": "latest",
-    "mathsass": "latest"
+    "mathsass": "latest",
+    "foundation": "~5.5.3"
   },
   "license": "MIT",
   "ignore": [

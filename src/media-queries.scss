@@ -6,14 +6,35 @@
 	https://github.com/FCOO/media-queries
 	https://github.com/FCOO
 
+	Media Queries
+	Using the scss-files created by ZURB Foundation
+	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
 //BOURBON - http://bourbon.io/
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+// @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 //MODERNIZR-MIXIN - https://github.com/danielguillan/modernizr-mixin
-@import "../bower_components/modernizr-mixin/stylesheets/modernizr";
+// @import "../bower_components/modernizr-mixin/stylesheets/modernizr";
 
 //MATHSASS - https://github.com/terkel/mathsass
-@import "../bower_components/mathsass/dist/math";
+// @import "../bower_components/mathsass/dist/math";
 
+
+
+//Foundation by ZURB - foundation.zurb.com - Basic sass-functions
+@import "../bower_components/foundation/scss/foundation/functions";
+
+//media-queries-settings - The settings of breakpoint etc. 
+@import "media-queries-settings";
+
+//Foundation by ZURB - foundation.zurb.com - Contains all the scss varaibles 
+@import "../bower_components/foundation/scss/foundation/components/global";
+
+//Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+
+
+@media #{$small-only} { 
+	.small { background-color: green; }
+}

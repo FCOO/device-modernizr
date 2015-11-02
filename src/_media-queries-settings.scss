@@ -1,0 +1,27 @@
+/***********************************************
+	_media-queries-settings.scss, 
+
+	(c) 2015, FCOO
+
+	Media Queries
+	Using the scss-files created by ZURB Foundation
+	See http://foundation.zurb.com/docs/media-queries.html
+
+************************************************/
+
+//Setting the classes to include
+$include-accessibility-classes		: false;	//true to include classes for screen readers (eq. "hidden-for-small", "visible-for-small")
+$include-table-visibility-classes	: true;		//true to include .show/hide-for-[size] for table-, tr- and td-elements
+$include-legacy-visibility-classes: true;		//true to include .show/hide-for-[size] and .show/hide-for-[size]-down classes for small, medium, and large breakpoints only
+
+
+
+
+//Setting breakpoints
+$small-breakpoint:  em-calc(624);
+$medium-breakpoint: em-calc(1024);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
+
+
+

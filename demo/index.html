@@ -15,11 +15,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="media-queries-examples.css" /> -->
 	<style>
 
-.dpi96 { background-color: red; }
 
-@media screen and (resolution: 96dpi) {
-	.dpi96 { background-color: green; }
-}
 @media only screen and (min-width: 40.063em) { 
 } /* min-width 641px, medium screens */
 
@@ -29,12 +25,15 @@
 		}
 	</style>
 </head>
+
 <body>
 	<h1>FCOO Media Queries TEST</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
 	<h4 class="show-for-landscape">This device is in LANDSCAPE mode</h4>
 	<h4 class="show-for-portrait">This device is in PORTRAIT mode</h4>
+	<h4 class="show-for-touch">This device is touch-enabled.</h4>
+	<h4 class="hide-for-touch">This device is not touch-enabled.</h4>
 
   <strong class="show-for-small-only">This text is shown only on a small screen.</strong>
   <!-- <strong class="show-for-medium-up">This text is shown on medium screens and up.</strong> -->
@@ -44,8 +43,6 @@
   <!-- <strong class="show-for-xlarge-up">This text is shown on xlarge screens and up.</strong> -->
   <strong class="show-for-xlarge-only">This text is shown only on an xlarge screen.</strong>
   <!-- <strong class="show-for-xxlarge-up">This text is shown on xxlarge screens and up.</strong> -->
-
-	<!-- <div class="dpi96">resolution = 96dpi</div> -->
 
 	<div id="info"></div>
 
@@ -117,16 +114,11 @@ console.log( md.match('playstation|xbox') ); // false
 			info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
 
 			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
-
-
-			info += '<tr><td>md</td><td>'+md.mobileGrade +'</td></tr>';
-
 			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
-			info += '<tr><td>md.mobile()</td><td>'+md.mobile()+'</td></tr>';
+			info += '<tr><td>mobile</td><td>'+md.mobile()+'</td></tr>';
 			info += '<tr><td>md.phone()</td><td>'+md.phone()+'</td></tr>';
 			info += '<tr><td>md.tablet()</td><td>'+md.tablet()+'</td></tr>';
 			info += '<tr><td>md.userAgent()</td><td>'+md.userAgent()+'</td></tr>';
-			info += '<tr><td>window.navigator.userAgent</td><td>'+window.navigator.userAgent+'</td></tr>';
 			/*
 			http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 			Google: > 30% has 1366*768
