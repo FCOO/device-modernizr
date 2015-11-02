@@ -65,7 +65,6 @@
 	<!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
 	<script src="bower_components.js"></script>
 	<script src="../src/_modernizr-custom.js"></script>
-	<!-- <script src="../bower_components/mobile-detect/mobile-detect.js"></script> -->
 	<script src="../src/media-queries.js"></script>
 
 	<script>
@@ -85,10 +84,11 @@
 			*/
 
 			var md = new MobileDetect(window.navigator.userAgent);
+console.log(window.navigator.userAgent);
 console.log( md.mobile() );          // 'Sony'
 console.log( md.phone() );           // 'Sony'
 console.log( md.tablet() );          // null
-console.log( md.userAgent() );       // 'Safari'
+console.log( 'userAgent()=',md.userAgent() );       // 'Safari'
 console.log( md.os() );              // 'AndroidOS'
 console.log( md.is('iPhone') );      // false
 console.log( md.is('bot') );         // false

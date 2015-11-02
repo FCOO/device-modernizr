@@ -20,7 +20,7 @@
 
 	var plugin_count = 1000;
 
-	function MediaQueries( $elem, options, plugin_count) {
+	function MediaQueries( options, plugin_count) {
 		this.plugin_count = plugin_count;
 
 		this.options = $.extend({
@@ -110,9 +110,12 @@
 
 }(jQuery, this, document));
 
-(function (window, Modernizr) {
+(function (window, Modernizr) { 
     'use strict';
-    var md = new MobileDetect(navigator.userAgent),
+if (!Modernizr)
+	return;  
+
+    var md = new window.MobileDetect(navigator.userAgent),
         grade = md.mobileGrade();
     Modernizr.addTest({
         mobile: !!md.mobile(),
@@ -121,5 +124,5 @@
         mobilegradea: grade === 'A'
     });
     window.mobileDetect = md;
-})(window, Modernizr);
+})(this, this.Modernizr);
 

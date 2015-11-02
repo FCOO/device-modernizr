@@ -24,7 +24,7 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 
 	var plugin_count = 1000;
 
-	function MediaQueries( $elem, options, plugin_count) {
+	function MediaQueries( options, plugin_count) {
 		this.plugin_count = plugin_count;
 
 		this.options = $.extend({
@@ -113,3 +113,20 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 
 
 }(jQuery, this, document));
+
+(function (window, Modernizr) { 
+    'use strict';
+if (!Modernizr)
+	return;  
+
+    var md = new window.MobileDetect(navigator.userAgent),
+        grade = md.mobileGrade();
+    Modernizr.addTest({
+        mobile: !!md.mobile(),
+        phone: !!md.phone(),
+        tablet: !!md.tablet(),
+        mobilegradea: grade === 'A'
+    });
+    window.mobileDetect = md;
+})(this, this.Modernizr);
+
