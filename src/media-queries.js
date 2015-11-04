@@ -49,12 +49,14 @@
 				this.dpi = dpi;
 				break;
 			}
+		this.calcDpr = Math.round(100*this.dpi / 96)/100;
 		this.dpr = 1;
 		for (var dpr=1; dpr<4; dpr=dpr+0.1 )
 			if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ){
 				this.dpr = dpr;
 				break;
 			}
+		this.dpr = Math.round(100*this.dpr)/100;
 
 		this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
 		this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
