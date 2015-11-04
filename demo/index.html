@@ -12,22 +12,11 @@
 
 
   <link rel="stylesheet" type="text/css" href="../src/media-queries.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="media-queries-examples.css" /> -->
-	<style>
 
-
-@media only screen and (min-width: 40.063em) { 
-} /* min-width 641px, medium screens */
-
-		div {
-			margin: 10px;
-			padding: 10px;
-		}
-	</style>
 </head>
 
 <body>
-	<h1>FCOO Media Queries TEST #6</h1>
+	<h1>FCOO Media Queries TEST #7</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
 	<h4 class="show-for-landscape">This device is in LANDSCAPE mode</h4>
@@ -115,10 +104,12 @@ console.log( md.match('playstation|xbox') ); // false
 
 			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
 			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
-			info += '<tr><td>Calculated device-pixel-ratio</td><td>'+mq.calcDpr +'</td></tr>';
-			if (mq.dpr != mq.calcDpr){
-				info += '<tr><td>device-pixel-ratio DIFFER</td><td>'+mq.dpr +' vs '+mq.calcDpr +'</td></tr>';			  
-			}
+
+
+			info += '<tr><td>window.devicePixelRatio</td><td>'+window.devicePixelRatio+'</td></tr>';
+
+			
+			
 			info += '<tr><td>mobile</td><td>'+mq.mobile+'</td></tr>';
 			info += '<tr><td>phone</td><td>'+mq.phone+'</td></tr>';
 			info += '<tr><td>tablet</td><td>'+mq.tablet+'</td></tr>';
