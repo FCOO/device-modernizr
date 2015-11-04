@@ -10,20 +10,20 @@
 ************************************************/
 
 //Setting the classes to include
-$include-js-meta-styles						: true;		
-$include-html-global-classes			: false;	
-$include-accessibility-classes		: false;	//true to include classes for screen readers (eq. "hidden-for-small", "visible-for-small")
-$include-table-visibility-classes	: true;		//true to include .show/hide-for-[size] for table-, tr- and td-elements
-$include-legacy-visibility-classes: true;		//true to include .show/hide-for-[size] and .show/hide-for-[size]-down classes for small, medium, and large breakpoints only
+$include-js-meta-styles						: true	!default;		
+$include-html-global-classes			: false	!default;	
+$include-accessibility-classes		: false	!default;	//true to include classes for screen readers (eq. "hidden-for-small", "visible-for-small")
+$include-table-visibility-classes	: true	!default;	//true to include .show/hide-for-[size] for table-, tr- and td-elements
+$include-legacy-visibility-classes: true	!default;	//true to include .show/hide-for-[size] and .show/hide-for-[size]-down classes for small, medium, and large breakpoints only
 
 
 
 
 //Setting breakpoints
-$small-breakpoint:  em-calc(624);
-$medium-breakpoint: em-calc(1024);
-$large-breakpoint:  em-calc(1440);
-$xlarge-breakpoint: em-calc(1920);
+$small-breakpoint:  em-calc(624)	!default;
+$medium-breakpoint: em-calc(1024) !default;
+$large-breakpoint:  em-calc(1440) !default;
+$xlarge-breakpoint: em-calc(1920) !default;
 
 
 

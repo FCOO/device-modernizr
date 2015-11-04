@@ -1,0 +1,29 @@
+/***********************************************
+	media-queries-demo.scss
+
+	Example on how to use _media-queries-import.scss to build your own media-queries
+
+	https://github.com/FCOO/media-queries
+	https://github.com/FCOO
+************************************************/
+
+//media-queries-settings - The settings of breakpoint etc. 
+@import "../bower_components/media-queries/src/media-queries-import";
+
+
+//Foundation by ZURB - foundation.zurb.com - Basic sass-functions
+@import "../bower_components/foundation/scss/foundation/functions";
+
+//media-queries-settings - The settings of breakpoint etc. 
+@import "media-queries-settings";
+
+//Foundation by ZURB - foundation.zurb.com - Contains all the scss varaibles 
+@import "../bower_components/foundation/scss/foundation/components/global";
+
+//Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+
+
+@media #{$small-only} { 
+	.small { background-color: green; }
+}
