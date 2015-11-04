@@ -49,6 +49,15 @@
 				this.dpi = dpi;
 				break;
 			}
+		this.dppx = 1;
+		for (var dppx=1; dppx<4; dppx=dppx+0.1 )
+			if ( Modernizr.mq('(resolution: '+dppx+'dppx)') ){
+				this.dppx = dppx;
+				break;
+			}
+
+		
+		
 		this.calcDpr = Math.round(100*this.dpi / 96)/100;
 		this.dpr = 1;
 		for (var dpr=1; dpr<4; dpr=dpr+0.1 )

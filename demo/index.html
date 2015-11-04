@@ -27,7 +27,7 @@
 </head>
 
 <body>
-	<h1>FCOO Media Queries TEST #3</h1>
+	<h1>FCOO Media Queries TEST #4</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
 	<h4 class="show-for-landscape">This device is in LANDSCAPE mode</h4>
@@ -109,7 +109,8 @@ console.log( md.match('playstation|xbox') ); // false
 				}
 			info += '<tr><td>device-width</td><td>'+deviceWidth+'</td></tr>';
 
-			info += '<tr><td>resolution</td><td>'+mq.dpi+'dpi</td></tr>';
+			info += '<tr><td>dpi resolution</td><td>'+mq.dpi+'dpi</td></tr>';
+			info += '<tr><td>dppx resolution</td><td>'+mq.dppx+'dppx</td></tr>';
 
 			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
 			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
