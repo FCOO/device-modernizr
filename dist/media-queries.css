@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /***********************************************
 	media-queries.scss, 
 
@@ -12,19 +11,6 @@
 	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
-/*
-//Foundation by ZURB - foundation.zurb.com - Basic sass-functions
-@import "../bower_components/foundation/scss/foundation/functions";
-
-//media-queries-settings - The settings of breakpoint etc. 
-@import "media-queries-settings";
-
-//Foundation by ZURB - foundation.zurb.com - Contains all the scss varaibles 
-@import "../bower_components/foundation/scss/foundation/components/global";
-
-//Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
-@import "../bower_components/foundation/scss/foundation/components/visibility";
-*/
 html.screen-small .show-for-screen-small,
 html.screen-small .hide-for-no-screen-small {
   display: inherit !important; }
@@ -525,6 +511,106 @@ html.no-screen-xxlarge-down th.show-for-no-screen-xxlarge-down,
 html.no-screen-xxlarge-down th.hide-for-screen-xxlarge-down {
   display: table-cell !important; }
 
+html.portrait .show-for-portrait,
+html.portrait .hide-for-no-portrait {
+  display: inherit !important; }
+
+html.portrait .hide-for-portrait,
+html.portrait .show-for-no-portrait {
+  display: none !important; }
+
+html.portrait table.show-for-portrait, html.portrait table.hide-for-no-portrait {
+  display: table !important; }
+
+html.portrait thead.show-for-portrait, html.portrait thead.hide-for-no-portrait {
+  display: table-header-group !important; }
+
+html.portrait tbody.show-for-portrait, html.portrait tbody.hide-for-no-portrait {
+  display: table-row-group !important; }
+
+html.portrait tr.show-for-portrait, html.portrait tr.hide-for-no-portrait {
+  display: table-row !important; }
+
+html.portrait td.show-for-portrait, html.portrait td.hide-for-no-portrait,
+html.portrait th.show-for-portrait,
+html.portrait th.hide-for-no-portrait {
+  display: table-cell !important; }
+
+html.no-portrait .show-for-no-portrait,
+html.no-portrait .hide-for-portrait {
+  display: inherit !important; }
+
+html.no-portrait .hide-for-no-portrait,
+html.no-portrait .show-for-portrait {
+  display: none !important; }
+
+html.no-portrait table.show-for-no-portrait, html.no-portrait table.hide-for-portrait {
+  display: table !important; }
+
+html.no-portrait thead.show-for-no-portrait, html.no-portrait thead.hide-for-portrait {
+  display: table-header-group !important; }
+
+html.no-portrait tbody.show-for-no-portrait, html.no-portrait tbody.hide-for-portrait {
+  display: table-row-group !important; }
+
+html.no-portrait tr.show-for-no-portrait, html.no-portrait tr.hide-for-portrait {
+  display: table-row !important; }
+
+html.no-portrait td.show-for-no-portrait, html.no-portrait td.hide-for-portrait,
+html.no-portrait th.show-for-no-portrait,
+html.no-portrait th.hide-for-portrait {
+  display: table-cell !important; }
+
+html.landscape .show-for-landscape,
+html.landscape .hide-for-no-landscape {
+  display: inherit !important; }
+
+html.landscape .hide-for-landscape,
+html.landscape .show-for-no-landscape {
+  display: none !important; }
+
+html.landscape table.show-for-landscape, html.landscape table.hide-for-no-landscape {
+  display: table !important; }
+
+html.landscape thead.show-for-landscape, html.landscape thead.hide-for-no-landscape {
+  display: table-header-group !important; }
+
+html.landscape tbody.show-for-landscape, html.landscape tbody.hide-for-no-landscape {
+  display: table-row-group !important; }
+
+html.landscape tr.show-for-landscape, html.landscape tr.hide-for-no-landscape {
+  display: table-row !important; }
+
+html.landscape td.show-for-landscape, html.landscape td.hide-for-no-landscape,
+html.landscape th.show-for-landscape,
+html.landscape th.hide-for-no-landscape {
+  display: table-cell !important; }
+
+html.no-landscape .show-for-no-landscape,
+html.no-landscape .hide-for-landscape {
+  display: inherit !important; }
+
+html.no-landscape .hide-for-no-landscape,
+html.no-landscape .show-for-landscape {
+  display: none !important; }
+
+html.no-landscape table.show-for-no-landscape, html.no-landscape table.hide-for-landscape {
+  display: table !important; }
+
+html.no-landscape thead.show-for-no-landscape, html.no-landscape thead.hide-for-landscape {
+  display: table-header-group !important; }
+
+html.no-landscape tbody.show-for-no-landscape, html.no-landscape tbody.hide-for-landscape {
+  display: table-row-group !important; }
+
+html.no-landscape tr.show-for-no-landscape, html.no-landscape tr.hide-for-landscape {
+  display: table-row !important; }
+
+html.no-landscape td.show-for-no-landscape, html.no-landscape td.hide-for-landscape,
+html.no-landscape th.show-for-no-landscape,
+html.no-landscape th.hide-for-landscape {
+  display: table-cell !important; }
+
 html.mobile .show-for-mobile,
 html.mobile .hide-for-no-mobile {
   display: inherit !important; }
@@ -725,85 +811,12 @@ html.no-mobilegradea th.show-for-no-mobilegradea,
 html.no-mobilegradea th.hide-for-mobilegradea {
   display: table-cell !important; }
 
-/* Orientation targeting */
-.show-for-landscape,
-.hide-for-portrait {
-  display: inherit !important; }
-
-.hide-for-landscape,
-.show-for-portrait {
-  display: none !important; }
-
-/* Specific visibility for tables */
-table.hide-for-landscape, table.show-for-portrait {
-  display: table !important; }
-
-thead.hide-for-landscape, thead.show-for-portrait {
-  display: table-header-group !important; }
-
-tbody.hide-for-landscape, tbody.show-for-portrait {
-  display: table-row-group !important; }
-
-tr.hide-for-landscape, tr.show-for-portrait {
-  display: table-row !important; }
-
-td.hide-for-landscape, td.show-for-portrait,
-th.hide-for-landscape,
-th.show-for-portrait {
-  display: table-cell !important; }
-
-@media only screen and (orientation: landscape) {
-  .show-for-landscape,
-  .hide-for-portrait {
-    display: inherit !important; }
-  .hide-for-landscape,
-  .show-for-portrait {
-    display: none !important; }
-  /* Specific visibility for tables */
-  table.show-for-landscape, table.hide-for-portrait {
-    display: table !important; }
-  thead.show-for-landscape, thead.hide-for-portrait {
-    display: table-header-group !important; }
-  tbody.show-for-landscape, tbody.hide-for-portrait {
-    display: table-row-group !important; }
-  tr.show-for-landscape, tr.hide-for-portrait {
-    display: table-row !important; }
-  td.show-for-landscape, td.hide-for-portrait,
-  th.show-for-landscape,
-  th.hide-for-portrait {
-    display: table-cell !important; } }
-
-@media only screen and (orientation: portrait) {
-  .show-for-portrait,
-  .hide-for-landscape {
-    display: inherit !important; }
-  .hide-for-portrait,
-  .show-for-landscape {
-    display: none !important; }
-  /* Specific visibility for tables */
-  table.show-for-portrait, table.hide-for-landscape {
-    display: table !important; }
-  thead.show-for-portrait, thead.hide-for-landscape {
-    display: table-header-group !important; }
-  tbody.show-for-portrait, tbody.hide-for-landscape {
-    display: table-row-group !important; }
-  tr.show-for-portrait, tr.hide-for-landscape {
-    display: table-row !important; }
-  td.show-for-portrait, td.hide-for-landscape,
-  th.show-for-portrait,
-  th.hide-for-landscape {
-    display: table-cell !important; } }
-
-/* Print visibility TODO: m�ske kun show-for-print + hide-for-print */
-.print-only,
 .show-for-print {
   display: none !important; }
 
 @media print {
-  .print-only,
   .show-for-print {
     display: block !important; }
-  .hide-on-print,
   .hide-for-print {
     display: none !important; }
   table.show-for-print {

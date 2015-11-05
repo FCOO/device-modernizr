@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /***********************************************
 	media-queries.scss, 
 
@@ -812,105 +811,12 @@ html.no-mobilegradea th.show-for-no-mobilegradea,
 html.no-mobilegradea th.hide-for-mobilegradea {
   display: table-cell !important; }
 
-/*
-.show-for-landscape,
-.hide-for-portrait { display: inherit !important; }
-.hide-for-landscape,
-.show-for-portrait { display: none !important; }
-
-// Specific visibility for tables
-table {
-	&.hide-for-landscape,
-	&.show-for-portrait { display: table !important; }
-}
-thead {
-	&.hide-for-landscape,
-	&.show-for-portrait { display: table-header-group !important; }
-}
-tbody {
-	&.hide-for-landscape,
-	&.show-for-portrait { display: table-row-group !important; }
-}
-tr {
-	&.hide-for-landscape,
-	&.show-for-portrait { display: table-row !important; }
-}
-td,
-th {
-	&.hide-for-landscape,
-	&.show-for-portrait { display: table-cell !important; }
-}
-
-@media only screen and (orientation: landscape) {
-	.show-for-landscape,
-	.hide-for-portrait { display: inherit !important; }
-	.hide-for-landscape,
-	.show-for-portrait { display: none !important; }
-
-	// Specific visibility for tables
-	table {
-		&.show-for-landscape,
-		&.hide-for-portrait { display: table !important; }
-	}
-	thead {
-		&.show-for-landscape,
-		&.hide-for-portrait { display: table-header-group !important; }
-	}
-	tbody {
-		&.show-for-landscape,
-		&.hide-for-portrait { display: table-row-group !important; }
-	}
-	tr {
-		&.show-for-landscape,
-		&.hide-for-portrait { display: table-row !important; }
-	}
-	td,
-	th {
-		&.show-for-landscape,
-		&.hide-for-portrait { display: table-cell !important; }
-	}
-}
-
-@media only screen and (orientation: portrait) {
-	.show-for-portrait,
-	.hide-for-landscape { display: inherit !important; }
-	.hide-for-portrait,
-	.show-for-landscape { display: none !important; }
-
-	// Specific visibility for tables 
-	table {
-		&.show-for-portrait,
-		&.hide-for-landscape { display: table !important; }
-	}
-	thead {
-		&.show-for-portrait,
-		&.hide-for-landscape { display: table-header-group !important; }
-	}
-	tbody {
-		&.show-for-portrait,
-		&.hide-for-landscape { display: table-row-group !important; }
-	}
-	tr {
-		&.show-for-portrait,
-		&.hide-for-landscape { display: table-row !important; }
-	}
-	td,
-	th {
-		&.show-for-portrait,
-		&.hide-for-landscape { display: table-cell !important; }
-	}
-}
-*/
-/* Print visibility TODO: måske kun show-for-print + hide-for-print */
-.print-only,
 .show-for-print {
   display: none !important; }
 
 @media print {
-  .print-only,
   .show-for-print {
     display: block !important; }
-  .hide-on-print,
   .hide-for-print {
     display: none !important; }
   table.show-for-print {

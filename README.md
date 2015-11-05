@@ -5,13 +5,10 @@
 
 ## Description
 
-This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different orientations (portrait/landscape), screen dimensions, and print
+This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print
+
 [Modernizr] must be included.
 
-### MediaQueries
-Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
-
-(Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
 ## Installation
 ### bower
@@ -22,13 +19,14 @@ http://FCOO.github.io/media-queries/demo/
 
 ## Usage
 
-### MediaQueries-class (media-queries.js)
+### MediaQueries-object (media-queries.js)
+Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
+
+(Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
 ```var myMediaQueries = new MediaQueries( options );```
 
-#### options
-Default options
-
+#### Default options
 	{
 	  referenceScreen: { 
 	    width		: 1366,
@@ -38,7 +36,7 @@ Default options
 	}
 
 
-#### Properties (TODO)
+#### Properties
 <table>
 <tr>
   <th>Id</th>
@@ -73,13 +71,34 @@ All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` o
 ### media-queries.css
 
 The css-classes is based on the visibility classes by [ZURB Foundation](http://foundation.zurb.com/docs/components/visibility.html) and the syntax used by [Modernizr].
-The name of the different css-classes has the following syntax
+
+A number of different 'states' or device 'settings' - named `MQNAME` in the syntax - is set in the css as in [Modernizr] by adding or removing the classes `MQNAME` and `no-MQNAME` to/from the `<html>` element
+
+Example: 
+
+The device is a tablet : `<html class="tablet ...">`
+
+The device is not a tablet : `<html class="no-tablet ...">`
+
+All the `MQNAME` and `no-MQNAME` classes are added to or removed from `<html>`by [Modernizr] or `media-queries.js`
+
+#### Hide/Show classes
+To control if a element is displayed (show) or hidden (hide) when a given 'state' is on or off there are the following classes defined for each 'state'
 
 	(hide|show)-for[-no]-MQNAME[-down]
 
-The `[-down]` is only for **screen sizes** and `[-no]` is not used for **orientation** or **print** 
+The `[-down]` is only for **screen sizes** and `[-no]` is not used for **print** 
 
-#### Screen size
+#### States
+
+There are four 'groups' of 'states' in 
+
+- **Screen size** - show or hide for different screen sizes
+- **Device** - mobile device and type (phone/tablet)
+- **Orientation** - landscape or portrate
+- **Print** - show or hide on print
+
+##### Screen size
 
 To avoid problems with breakpoints when the device changes orientation the "size" of the screen is the minimum of the `screen.height` and `screen.width`
 
@@ -108,31 +127,44 @@ Example
 
 	<p class="show-for-no-screen-small">The screen width and height is > 624px</p> 
 
-#### Device
+##### Device
 Test if the device is a `mobile` device and subsequently if it is a `phone` or a `tablet`
 
-	show/for-mobile/hide-for-mobile
-	show-for-no-mobile/hide-for-no-mobile 
+	show-for-mobile / hide-for-mobile
+	show-for-no-mobile / hide-for-no-mobile 
 	
-	show-for-phone/hide-for-phone
-	show-for-tablet/hide-for-tablet
+	show-for-phone / hide-for-phone
+	show-for-tablet / hide-for-tablet
 
 
-#### Orientation
+##### Orientation
 Four classes are provided
 	
-	show-for-portrait
-	hide-for-portrait
-	show-for-landscape
-	hide-for-landscape
+	show-for-portrait / hide-for-portrait
+	show-for-landscape / hide-for-landscape
 
 
-#### Print
+##### Print
 Two classes are provided
 
-	show-for-print
-	hide-on-print
+	show-for-print / hide-for-print
 
+
+#### Additional css and scss
+
+The classes in `media-queries.css` only controls the display of elements under certent conditions.
+But other properties can be controled by using the `MQNAME` and `noMQNAME` classes
+
+Example: To define a class `green-when-in-portrait` that displayes a element in green when orientation is portrait:
+
+	css:
+	.portrait .green-when-in-portrait { color: green; }
+
+	scss:
+	.portrait {
+	  .green-when-in-portrait { color: green; }
+	  ...
+	}
 
 
 #### Examples
