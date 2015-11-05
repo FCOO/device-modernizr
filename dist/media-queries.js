@@ -15,6 +15,15 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 ;(function ($, window, document, undefined) {
 	"use strict";
 	
+	var screenBreakPoints = [
+		{name:'screen-small',		value:  624 },
+		{name:'screen-medium',	value: 1024 },
+		{name:'screen-large',		value: 1440 },
+		{name:'screen-xlarge',	value: 1920 },
+		{name:'screen-xxlarge',	value:99999 }
+	];
+
+
 	//Create fcoo-namespace
 	window.fcoo = window.fcoo || {};
 
@@ -53,12 +62,32 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 				this.dpi = dpi;
 				break;
 			}
-		this.dpr = 1;
-		for (var dpr=1; dpr<4; dpr=dpr+0.1 )
-			if ( Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ){
-				this.dpr = dpr;
+
+/*
+		this.dppx = 1;
+		for (var dppx=1; dppx<4; dppx=dppx+0.1 )
+			if ( Modernizr.mq('(resolution: '+dppx+'dppx)') ){
+				this.dppx = dppx;
 				break;
 			}
+*/
+		
+		this.dpr = window.devicePixelRatio;		
+		if (!this.dpr){
+			this.dpr = 1;
+			for (var dpr=1; dpr<4; dpr=dpr+0.1 )
+				if ( 
+					Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ||
+					Modernizr.mq('(min--moz-device-pixel-ratio: '+dpr+')') ||
+					Modernizr.mq('(-o-min-device-pixel-ratio: '+dpr+'/1)')
+				){
+					this.dpr = dpr;
+					break;
+				}
+		}
+	
+		this.dpr = Math.round(100*this.dpr)/100;
+
 
 		this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
 		this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
@@ -68,10 +97,12 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 		this.ref_dpi = ref_screen_diagonal/this.options.referenceScreen.diagonal_inc;
 		
 		//The scale is best guest for a scale (eq. html.style.font-size=this.scale) of the screen to have elements the same size as on the reference screen
-		this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
+		this.scale = 100;
+		if ((this.dpr != 1) || (this.dpi != 96))
+			this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
 
 
-		//CDreate own instance of MobileDetect
+		//Dreate own instance of MobileDetect
 		this.mobileDetect = new window.MobileDetect( this.wnua );
 		
 		this.mobile				= this.mobileDetect.mobile();
@@ -102,15 +133,39 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 	//window.MediaQueries.prototype = $.extend( {}, window.ParentClass.prototype, window.MediaQueries.prototype );
 
 
+	//*****************************************************************
 	//Add tests to Modernizr
-	var md		= new window.MobileDetect(window.navigator.userAgent),
-			grade = md.mobileGrade();
+	var screenDim	= Math.min(screen.width, screen.height),
+			bpIndex,
+			bpName,
+			md					= new window.MobileDetect(window.navigator.userAgent),
+			grade				= md.mobileGrade();
+			
+	
 	Modernizr.addTest({
 		mobile			: !!md.mobile(),
 		phone				: !!md.phone(),
 		tablet			: !!md.tablet(),
 		mobilegradea: grade === 'A'
 	});
+	
+	//Find the first index in screenBreakPoints where screenDim < value
+	for (bpIndex=0; bpIndex<screenBreakPoints.length; bpIndex++ )
+		if (screenBreakPoints[bpIndex].value >= screenDim)
+			break;
+		
+	for (var i=0; i<screenBreakPoints.length; i++ ){
+		bpName = screenBreakPoints[i].name;
+
+		//Test for exact size
+		Modernizr.addTest( bpName, i == bpIndex );
+	
+		//Test for max size
+		Modernizr.addTest( bpName+'-down', i >= bpIndex );
+	
+	}
+	
+	
 	
 	/******************************************
 	Initialize/ready 

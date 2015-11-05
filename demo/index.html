@@ -19,19 +19,32 @@
 	<h1>FCOO Media Queries TEST #7</h1>
 	<p>This is a test of the media queries to be used in FCOOs applications</p>
 
-	<h4 class="show-for-landscape">This device is in LANDSCAPE mode</h4>
-	<h4 class="show-for-portrait">This device is in PORTRAIT mode</h4>
-	<h4 class="show-for-mobile">This device is a MOBILE device.</h4>
-	<h5 class="show-for-phone">..and it is a PHONE</h5>
-	<h5 class="show-for-tablet">..and it is a TABLET</h5>
-	<h4 class="show-for-no-mobile">This device is *NOT* a MOBILE device.</h4>
+	<strong class="show-for-landscape">This device is in LANDSCAPE mode. <code>class="show-for-landscape"</code></strong>
+	<strong class="show-for-portrait">This device is in PORTRAIT mode. <code>class="show-for-portrait"</code></strong>
+	<strong class="show-for-mobile">This device is a MOBILE device.. <code>class="show-for-mobile"</code></strong>
+	<strong class="show-for-phone">..and it is a PHONE. <code>class="show-for-phone"</code></strong>
+	<strong class="show-for-tablet">..and it is a TABLET. <code>class="show-for-tablet"</code></strong>
+	<strong class="show-for-no-mobile">This device is *NOT* a MOBILE device.. <code>class="show-for-no-mobile"</code></strong>
 
-  <strong class="show-for-small-only">The screen is a SMALL screen.</strong>
-  <strong class="show-for-medium-only">The screen is a MEDIUM screen.</strong>
-  <strong class="show-for-large-only">The screen is a LARGE screen.</strong>
-  <strong class="show-for-xlarge-only">The screen is a XLARGE screen.</strong>
-  <strong class="show-for-xxlarge-only">The screen is a XXLARGE screen.</strong>
+  <strong class="show-for-screen-small">The screen is a SMALL screen.</strong>
 
+	<strong class="show-for-screen-medium">The screen is a MEDIUM screen. <code>class="show-for-screen-medium"</code></strong>
+	<strong class="show-for-screen-medium-down">The screen is a MEDIUM OR smaller screen. <code>class="show-for-screen-medium-down"</code></strong>
+
+	<strong class="show-for-screen-large">The screen is a LARGE screen. <code>class="show-for-screen-large"</code></strong>
+	<strong class="show-for-screen-large-down">The screen is a LARGE OR smaller screen. <code>class="show-for-screen-large-down"</code></strong>
+
+	<strong class="show-for-screen-xlarge">The screen is a XLARGE screen. <code>class="show-for-screen-xlarge"</code></strong>
+	<strong class="show-for-screen-xlarge-down">The screen is a XLARGE OR smaller screen. <code>class="show-for-screen-xlarge-down"</code></strong>
+
+	<strong class="show-for-screen-xxlarge">The screen is a XXLARGE screen. <code>class="show-for-screen-xxlarge"</code></strong>
+	<strong class="show-for-screen-xxlarge-down">The screen is a XXLARGE OR smaller screen. <code>class="show-for-screen-xxlarge-down"</code></strong>
+
+	<strong class="hide-for-print">This text is only on the SCREEN. <code>class="hide-for-print"</code></strong>
+	<strong class="show-for-print">This text is only on the PRINT. <code>class="show-for-print"</code></strong>
+	
+	<br>
+	<br>
 	<div id="info"></div>
 
 	<div style="width:95%; border:1px solid blue; font-size:100%">
@@ -100,16 +113,11 @@ console.log( md.match('playstation|xbox') ); // false
 			info += '<tr><td>device-width</td><td>'+deviceWidth+'</td></tr>';
 
 			info += '<tr><td>dpi resolution</td><td>'+mq.dpi+'dpi</td></tr>';
-			info += '<tr><td>dppx resolution</td><td>'+mq.dppx+'dppx</td></tr>';
+//			info += '<tr><td>dppx resolution</td><td>'+mq.dppx+'dppx</td></tr>';
 
 			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
 			info += '<tr><td>-webkit-device-pixel-ratio</td><td>'+mq.dpr +'</td></tr>';
 
-
-			info += '<tr><td>window.devicePixelRatio</td><td>'+window.devicePixelRatio+'</td></tr>';
-
-			
-			
 			info += '<tr><td>mobile</td><td>'+mq.mobile+'</td></tr>';
 			info += '<tr><td>phone</td><td>'+mq.phone+'</td></tr>';
 			info += '<tr><td>tablet</td><td>'+mq.tablet+'</td></tr>';

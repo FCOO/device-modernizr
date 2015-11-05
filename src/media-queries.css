@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***********************************************
 	media-queries.scss, 
 
@@ -11,1054 +12,809 @@
 	See http://foundation.zurb.com/docs/media-queries.html
 
 ************************************************/
-/***********************************************
-	_media-queries-settings.scss, 
-
-	(c) 2015, FCOO
-
-	Media Queries
-	Using the scss-files created by ZURB Foundation
-	See http://foundation.zurb.com/docs/media-queries.html
-
-************************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003431}}
-meta.foundation-version {
-  font-family: "/5.5.3/";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003435}}
-meta.foundation-mq-small {
-  font-family: "/only screen/";
-  width: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003440}}
-meta.foundation-mq-small-only {
-  font-family: "/only screen and (max-width: 39em)/";
-  width: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003445}}
-meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:39.0625em)/";
-  width: 39.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003450}}
-meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:39.0625em) and (max-width:64em)/";
-  width: 39.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003455}}
-meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.0625em)/";
-  width: 64.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003460}}
-meta.foundation-mq-large-only {
-  font-family: "/only screen and (min-width:64.0625em) and (max-width:90em)/";
-  width: 64.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003465}}
-meta.foundation-mq-xlarge {
-  font-family: "/only screen and (min-width:90.0625em)/";
-  width: 90.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003470}}
-meta.foundation-mq-xlarge-only {
-  font-family: "/only screen and (min-width:90.0625em) and (max-width:120em)/";
-  width: 90.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003475}}
-meta.foundation-mq-xxlarge {
-  font-family: "/only screen and (min-width:120.0625em)/";
-  width: 120.0625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003480}}
-meta.foundation-data-attribute-namespace {
-  font-family: false;
-}
-
-/* small displays */
-@media only screen {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
-  .show-for-small-only, .show-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
-  .hide-for-small-only, .hide-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
-  table.show-for-small-only, table.show-for-small-up, table.show-for-small, table.show-for-small-down, table.hide-for-medium-only, table.hide-for-medium-up, table.hide-for-medium, table.show-for-medium-down, table.hide-for-large-only, table.hide-for-large-up, table.hide-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003262}}
-  thead.show-for-small-only, thead.show-for-small-up, thead.show-for-small, thead.show-for-small-down, thead.hide-for-medium-only, thead.hide-for-medium-up, thead.hide-for-medium, thead.show-for-medium-down, thead.hide-for-large-only, thead.hide-for-large-up, thead.hide-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xlarge, thead.show-for-xlarge-down, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge, thead.show-for-xxlarge-down {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003265}}
-  tbody.show-for-small-only, tbody.show-for-small-up, tbody.show-for-small, tbody.show-for-small-down, tbody.hide-for-medium-only, tbody.hide-for-medium-up, tbody.hide-for-medium, tbody.show-for-medium-down, tbody.hide-for-large-only, tbody.hide-for-large-up, tbody.hide-for-large, tbody.show-for-large-down, tbody.hide-for-xlarge-only, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge, tbody.show-for-xlarge-down, tbody.hide-for-xxlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge, tbody.show-for-xxlarge-down {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003268}}
-  tr.show-for-small-only, tr.show-for-small-up, tr.show-for-small, tr.show-for-small-down, tr.hide-for-medium-only, tr.hide-for-medium-up, tr.hide-for-medium, tr.show-for-medium-down, tr.hide-for-large-only, tr.hide-for-large-up, tr.hide-for-large, tr.show-for-large-down, tr.hide-for-xlarge-only, tr.hide-for-xlarge-up, tr.hide-for-xlarge, tr.show-for-xlarge-down, tr.hide-for-xxlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge, tr.show-for-xxlarge-down {
-    display: table-row;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003271}}
-  th.show-for-small-only, td.show-for-small-only, th.show-for-small-up, td.show-for-small-up, th.show-for-small, td.show-for-small, th.show-for-small-down, td.show-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.hide-for-medium-up, td.hide-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down {
-    display: table-cell !important;
-  }
-}
-/* medium displays */
-@media only screen and (min-width: 39.0625em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
-  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
-  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
-  table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.show-for-medium-only, table.show-for-medium-up, table.show-for-medium, table.show-for-medium-down, table.hide-for-large-only, table.hide-for-large-up, table.hide-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003262}}
-  thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.show-for-medium-only, thead.show-for-medium-up, thead.show-for-medium, thead.show-for-medium-down, thead.hide-for-large-only, thead.hide-for-large-up, thead.hide-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xlarge, thead.show-for-xlarge-down, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge, thead.show-for-xxlarge-down {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003265}}
-  tbody.hide-for-small-only, tbody.show-for-small-up, tbody.hide-for-small, tbody.hide-for-small-down, tbody.show-for-medium-only, tbody.show-for-medium-up, tbody.show-for-medium, tbody.show-for-medium-down, tbody.hide-for-large-only, tbody.hide-for-large-up, tbody.hide-for-large, tbody.show-for-large-down, tbody.hide-for-xlarge-only, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge, tbody.show-for-xlarge-down, tbody.hide-for-xxlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge, tbody.show-for-xxlarge-down {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003268}}
-  tr.hide-for-small-only, tr.show-for-small-up, tr.hide-for-small, tr.hide-for-small-down, tr.show-for-medium-only, tr.show-for-medium-up, tr.show-for-medium, tr.show-for-medium-down, tr.hide-for-large-only, tr.hide-for-large-up, tr.hide-for-large, tr.show-for-large-down, tr.hide-for-xlarge-only, tr.hide-for-xlarge-up, tr.hide-for-xlarge, tr.show-for-xlarge-down, tr.hide-for-xxlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge, tr.show-for-xxlarge-down {
-    display: table-row;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003271}}
-  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.show-for-medium-only, td.show-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.show-for-medium, td.show-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down {
-    display: table-cell !important;
-  }
-}
-/* large displays */
-@media only screen and (min-width: 64.0625em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
-  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
-  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
-  table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.show-for-large-only, table.show-for-large-up, table.show-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003262}}
-  thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.show-for-large-only, thead.show-for-large-up, thead.show-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xlarge, thead.show-for-xlarge-down, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge, thead.show-for-xxlarge-down {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003265}}
-  tbody.hide-for-small-only, tbody.show-for-small-up, tbody.hide-for-small, tbody.hide-for-small-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.show-for-large-only, tbody.show-for-large-up, tbody.show-for-large, tbody.show-for-large-down, tbody.hide-for-xlarge-only, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge, tbody.show-for-xlarge-down, tbody.hide-for-xxlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge, tbody.show-for-xxlarge-down {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003268}}
-  tr.hide-for-small-only, tr.show-for-small-up, tr.hide-for-small, tr.hide-for-small-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.hide-for-medium, tr.hide-for-medium-down, tr.show-for-large-only, tr.show-for-large-up, tr.show-for-large, tr.show-for-large-down, tr.hide-for-xlarge-only, tr.hide-for-xlarge-up, tr.hide-for-xlarge, tr.show-for-xlarge-down, tr.hide-for-xxlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge, tr.show-for-xxlarge-down {
-    display: table-row;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003271}}
-  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.show-for-large-only, td.show-for-large-only, th.show-for-large-up, td.show-for-large-up, th.show-for-large, td.show-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down {
-    display: table-cell !important;
-  }
-}
-/* xlarge displays */
-@media only screen and (min-width: 90.0625em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
-  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
-  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
-  table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-large-only, table.show-for-large-up, table.hide-for-large, table.hide-for-large-down, table.show-for-xlarge-only, table.show-for-xlarge-up, table.show-for-xlarge, table.show-for-xlarge-down, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge, table.show-for-xxlarge-down {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003262}}
-  thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-large-only, thead.show-for-large-up, thead.hide-for-large, thead.hide-for-large-down, thead.show-for-xlarge-only, thead.show-for-xlarge-up, thead.show-for-xlarge, thead.show-for-xlarge-down, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge, thead.show-for-xxlarge-down {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003265}}
-  tbody.hide-for-small-only, tbody.show-for-small-up, tbody.hide-for-small, tbody.hide-for-small-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.hide-for-large-only, tbody.show-for-large-up, tbody.hide-for-large, tbody.hide-for-large-down, tbody.show-for-xlarge-only, tbody.show-for-xlarge-up, tbody.show-for-xlarge, tbody.show-for-xlarge-down, tbody.hide-for-xxlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge, tbody.show-for-xxlarge-down {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003268}}
-  tr.hide-for-small-only, tr.show-for-small-up, tr.hide-for-small, tr.hide-for-small-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.hide-for-medium, tr.hide-for-medium-down, tr.hide-for-large-only, tr.show-for-large-up, tr.hide-for-large, tr.hide-for-large-down, tr.show-for-xlarge-only, tr.show-for-xlarge-up, tr.show-for-xlarge, tr.show-for-xlarge-down, tr.hide-for-xxlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge, tr.show-for-xxlarge-down {
-    display: table-row;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003271}}
-  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.show-for-large-up, td.show-for-large-up, th.hide-for-large, td.hide-for-large, th.hide-for-large-down, td.hide-for-large-down, th.show-for-xlarge-only, td.show-for-xlarge-only, th.show-for-xlarge-up, td.show-for-xlarge-up, th.show-for-xlarge, td.show-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down {
-    display: table-cell !important;
-  }
-}
-/* xxlarge displays */
-@media only screen and (min-width: 120.0625em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003244}}
-  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .hide-for-xlarge-only, .show-for-xlarge-up, .hide-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .show-for-xxlarge-down {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003247}}
-  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .show-for-xlarge-only, .hide-for-xlarge-up, .show-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .hide-for-xxlarge-down {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003259}}
-  table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-large-only, table.show-for-large-up, table.hide-for-large, table.hide-for-large-down, table.hide-for-xlarge-only, table.show-for-xlarge-up, table.hide-for-xlarge, table.hide-for-xlarge-down, table.show-for-xxlarge-only, table.show-for-xxlarge-up, table.show-for-xxlarge, table.show-for-xxlarge-down {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003262}}
-  thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-large-only, thead.show-for-large-up, thead.hide-for-large, thead.hide-for-large-down, thead.hide-for-xlarge-only, thead.show-for-xlarge-up, thead.hide-for-xlarge, thead.hide-for-xlarge-down, thead.show-for-xxlarge-only, thead.show-for-xxlarge-up, thead.show-for-xxlarge, thead.show-for-xxlarge-down {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003265}}
-  tbody.hide-for-small-only, tbody.show-for-small-up, tbody.hide-for-small, tbody.hide-for-small-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.hide-for-large-only, tbody.show-for-large-up, tbody.hide-for-large, tbody.hide-for-large-down, tbody.hide-for-xlarge-only, tbody.show-for-xlarge-up, tbody.hide-for-xlarge, tbody.hide-for-xlarge-down, tbody.show-for-xxlarge-only, tbody.show-for-xxlarge-up, tbody.show-for-xxlarge, tbody.show-for-xxlarge-down {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003268}}
-  tr.hide-for-small-only, tr.show-for-small-up, tr.hide-for-small, tr.hide-for-small-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.hide-for-medium, tr.hide-for-medium-down, tr.hide-for-large-only, tr.show-for-large-up, tr.hide-for-large, tr.hide-for-large-down, tr.hide-for-xlarge-only, tr.show-for-xlarge-up, tr.hide-for-xlarge, tr.hide-for-xlarge-down, tr.show-for-xxlarge-only, tr.show-for-xxlarge-up, tr.show-for-xxlarge, tr.show-for-xxlarge-down {
-    display: table-row;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003271}}
-  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.show-for-large-up, td.show-for-large-up, th.hide-for-large, td.hide-for-large, th.hide-for-large-down, td.hide-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.show-for-xlarge-up, td.show-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.hide-for-xlarge-down, td.hide-for-xlarge-down, th.show-for-xxlarge-only, td.show-for-xxlarge-only, th.show-for-xxlarge-up, td.show-for-xxlarge-up, th.show-for-xxlarge, td.show-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down {
-    display: table-cell !important;
-  }
-}
-/* Orientation targeting */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003285}}
-.show-for-landscape,
-.hide-for-portrait {
-  display: inherit !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003287}}
-.hide-for-landscape,
-.show-for-portrait {
-  display: none !important;
-}
-
-/* Specific visibility for tables */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003292}}
-table.hide-for-landscape, table.show-for-portrait {
-  display: table !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003296}}
-thead.hide-for-landscape, thead.show-for-portrait {
-  display: table-header-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003300}}
-tbody.hide-for-landscape, tbody.show-for-portrait {
-  display: table-row-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003304}}
-tr.hide-for-landscape, tr.show-for-portrait {
-  display: table-row !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003309}}
-td.hide-for-landscape, td.show-for-portrait,
-th.hide-for-landscape,
-th.show-for-portrait {
-  display: table-cell !important;
-}
-
-@media only screen and (orientation: landscape) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003314}}
-  .show-for-landscape,
-  .hide-for-portrait {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003316}}
-  .hide-for-landscape,
-  .show-for-portrait {
-    display: none !important;
-  }
-
-  /* Specific visibility for tables */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003321}}
-  table.show-for-landscape, table.hide-for-portrait {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003325}}
-  thead.show-for-landscape, thead.hide-for-portrait {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003329}}
-  tbody.show-for-landscape, tbody.hide-for-portrait {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003333}}
-  tr.show-for-landscape, tr.hide-for-portrait {
-    display: table-row !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003338}}
-  td.show-for-landscape, td.hide-for-portrait,
-  th.show-for-landscape,
-  th.hide-for-portrait {
-    display: table-cell !important;
-  }
-}
-@media only screen and (orientation: portrait) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003344}}
-  .show-for-portrait,
-  .hide-for-landscape {
-    display: inherit !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003346}}
-  .hide-for-portrait,
-  .show-for-landscape {
-    display: none !important;
-  }
-
-  /* Specific visibility for tables */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003351}}
-  table.show-for-portrait, table.hide-for-landscape {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003355}}
-  thead.show-for-portrait, thead.hide-for-landscape {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003359}}
-  tbody.show-for-portrait, tbody.hide-for-landscape {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003363}}
-  tr.show-for-portrait, tr.hide-for-landscape {
-    display: table-row !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003368}}
-  td.show-for-portrait, td.hide-for-landscape,
-  th.show-for-portrait,
-  th.hide-for-landscape {
-    display: table-cell !important;
-  }
-}
-/* Touch-enabled device targeting */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003374}}
-.show-for-touch {
-  display: none !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003375}}
-.hide-for-touch {
-  display: inherit !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003376}}
-.touch .show-for-touch {
-  display: inherit !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003377}}
-.touch .hide-for-touch {
-  display: none !important;
-}
-
-/* Specific visibility for tables */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003380}}
-table.hide-for-touch {
-  display: table !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003381}}
-.touch table.show-for-touch {
-  display: table !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003382}}
-thead.hide-for-touch {
-  display: table-header-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003383}}
-.touch thead.show-for-touch {
-  display: table-header-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003384}}
-tbody.hide-for-touch {
-  display: table-row-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003385}}
-.touch tbody.show-for-touch {
-  display: table-row-group !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003386}}
-tr.hide-for-touch {
-  display: table-row !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003387}}
-.touch tr.show-for-touch {
-  display: table-row !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003388}}
-td.hide-for-touch {
-  display: table-cell !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003389}}
-.touch td.show-for-touch {
-  display: table-cell !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003390}}
-th.hide-for-touch {
-  display: table-cell !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003391}}
-.touch th.show-for-touch {
-  display: table-cell !important;
-}
-
-/* Screen reader-specific classes */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003394}}
-.show-for-sr {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003397}}
-.show-on-focus {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003400}}
-.show-on-focus:focus, .show-on-focus:active {
-  position: static !important;
-  height: auto;
-  width: auto;
-  overflow: visible;
-  clip: auto;
-}
-
-/* Print visibility */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003408}}
-.print-only,
-.show-for-print {
-  display: none !important;
-}
-
-@media print {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003411}}
-  .print-only,
-  .show-for-print {
-    display: block !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003413}}
-  .hide-on-print,
-  .hide-for-print {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003416}}
-  table.show-for-print {
-    display: table !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003417}}
-  thead.show-for-print {
-    display: table-header-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003418}}
-  tbody.show-for-print {
-    display: table-row-group !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003419}}
-  tr.show-for-print {
-    display: table-row !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003420}}
-  td.show-for-print {
-    display: table-cell !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/bower_components\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003421}}
-  th.show-for-print {
-    display: table-cell !important;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000349}}
+/*
+//Foundation by ZURB - foundation.zurb.com - Basic sass-functions
+@import "../bower_components/foundation/scss/foundation/functions";
+
+//media-queries-settings - The settings of breakpoint etc. 
+@import "media-queries-settings";
+
+//Foundation by ZURB - foundation.zurb.com - Contains all the scss varaibles 
+@import "../bower_components/foundation/scss/foundation/components/global";
+
+//Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+*/
+html.screen-small .show-for-screen-small,
+html.screen-small .hide-for-no-screen-small {
+  display: inherit !important; }
+
+html.screen-small .hide-for-screen-small,
+html.screen-small .show-for-no-screen-small {
+  display: none !important; }
+
+html.screen-small table.show-for-screen-small, html.screen-small table.hide-for-no-screen-small {
+  display: table !important; }
+
+html.screen-small thead.show-for-screen-small, html.screen-small thead.hide-for-no-screen-small {
+  display: table-header-group !important; }
+
+html.screen-small tbody.show-for-screen-small, html.screen-small tbody.hide-for-no-screen-small {
+  display: table-row-group !important; }
+
+html.screen-small tr.show-for-screen-small, html.screen-small tr.hide-for-no-screen-small {
+  display: table-row !important; }
+
+html.screen-small td.show-for-screen-small, html.screen-small td.hide-for-no-screen-small,
+html.screen-small th.show-for-screen-small,
+html.screen-small th.hide-for-no-screen-small {
+  display: table-cell !important; }
+
+html.no-screen-small .show-for-no-screen-small,
+html.no-screen-small .hide-for-screen-small {
+  display: inherit !important; }
+
+html.no-screen-small .hide-for-no-screen-small,
+html.no-screen-small .show-for-screen-small {
+  display: none !important; }
+
+html.no-screen-small table.show-for-no-screen-small, html.no-screen-small table.hide-for-screen-small {
+  display: table !important; }
+
+html.no-screen-small thead.show-for-no-screen-small, html.no-screen-small thead.hide-for-screen-small {
+  display: table-header-group !important; }
+
+html.no-screen-small tbody.show-for-no-screen-small, html.no-screen-small tbody.hide-for-screen-small {
+  display: table-row-group !important; }
+
+html.no-screen-small tr.show-for-no-screen-small, html.no-screen-small tr.hide-for-screen-small {
+  display: table-row !important; }
+
+html.no-screen-small td.show-for-no-screen-small, html.no-screen-small td.hide-for-screen-small,
+html.no-screen-small th.show-for-no-screen-small,
+html.no-screen-small th.hide-for-screen-small {
+  display: table-cell !important; }
+
+html.screen-small-down .show-for-screen-small-down,
+html.screen-small-down .hide-for-no-screen-small-down {
+  display: inherit !important; }
+
+html.screen-small-down .hide-for-screen-small-down,
+html.screen-small-down .show-for-no-screen-small-down {
+  display: none !important; }
+
+html.screen-small-down table.show-for-screen-small-down, html.screen-small-down table.hide-for-no-screen-small-down {
+  display: table !important; }
+
+html.screen-small-down thead.show-for-screen-small-down, html.screen-small-down thead.hide-for-no-screen-small-down {
+  display: table-header-group !important; }
+
+html.screen-small-down tbody.show-for-screen-small-down, html.screen-small-down tbody.hide-for-no-screen-small-down {
+  display: table-row-group !important; }
+
+html.screen-small-down tr.show-for-screen-small-down, html.screen-small-down tr.hide-for-no-screen-small-down {
+  display: table-row !important; }
+
+html.screen-small-down td.show-for-screen-small-down, html.screen-small-down td.hide-for-no-screen-small-down,
+html.screen-small-down th.show-for-screen-small-down,
+html.screen-small-down th.hide-for-no-screen-small-down {
+  display: table-cell !important; }
+
+html.no-screen-small-down .show-for-no-screen-small-down,
+html.no-screen-small-down .hide-for-screen-small-down {
+  display: inherit !important; }
+
+html.no-screen-small-down .hide-for-no-screen-small-down,
+html.no-screen-small-down .show-for-screen-small-down {
+  display: none !important; }
+
+html.no-screen-small-down table.show-for-no-screen-small-down, html.no-screen-small-down table.hide-for-screen-small-down {
+  display: table !important; }
+
+html.no-screen-small-down thead.show-for-no-screen-small-down, html.no-screen-small-down thead.hide-for-screen-small-down {
+  display: table-header-group !important; }
+
+html.no-screen-small-down tbody.show-for-no-screen-small-down, html.no-screen-small-down tbody.hide-for-screen-small-down {
+  display: table-row-group !important; }
+
+html.no-screen-small-down tr.show-for-no-screen-small-down, html.no-screen-small-down tr.hide-for-screen-small-down {
+  display: table-row !important; }
+
+html.no-screen-small-down td.show-for-no-screen-small-down, html.no-screen-small-down td.hide-for-screen-small-down,
+html.no-screen-small-down th.show-for-no-screen-small-down,
+html.no-screen-small-down th.hide-for-screen-small-down {
+  display: table-cell !important; }
+
+html.screen-medium .show-for-screen-medium,
+html.screen-medium .hide-for-no-screen-medium {
+  display: inherit !important; }
+
+html.screen-medium .hide-for-screen-medium,
+html.screen-medium .show-for-no-screen-medium {
+  display: none !important; }
+
+html.screen-medium table.show-for-screen-medium, html.screen-medium table.hide-for-no-screen-medium {
+  display: table !important; }
+
+html.screen-medium thead.show-for-screen-medium, html.screen-medium thead.hide-for-no-screen-medium {
+  display: table-header-group !important; }
+
+html.screen-medium tbody.show-for-screen-medium, html.screen-medium tbody.hide-for-no-screen-medium {
+  display: table-row-group !important; }
+
+html.screen-medium tr.show-for-screen-medium, html.screen-medium tr.hide-for-no-screen-medium {
+  display: table-row !important; }
+
+html.screen-medium td.show-for-screen-medium, html.screen-medium td.hide-for-no-screen-medium,
+html.screen-medium th.show-for-screen-medium,
+html.screen-medium th.hide-for-no-screen-medium {
+  display: table-cell !important; }
+
+html.no-screen-medium .show-for-no-screen-medium,
+html.no-screen-medium .hide-for-screen-medium {
+  display: inherit !important; }
+
+html.no-screen-medium .hide-for-no-screen-medium,
+html.no-screen-medium .show-for-screen-medium {
+  display: none !important; }
+
+html.no-screen-medium table.show-for-no-screen-medium, html.no-screen-medium table.hide-for-screen-medium {
+  display: table !important; }
+
+html.no-screen-medium thead.show-for-no-screen-medium, html.no-screen-medium thead.hide-for-screen-medium {
+  display: table-header-group !important; }
+
+html.no-screen-medium tbody.show-for-no-screen-medium, html.no-screen-medium tbody.hide-for-screen-medium {
+  display: table-row-group !important; }
+
+html.no-screen-medium tr.show-for-no-screen-medium, html.no-screen-medium tr.hide-for-screen-medium {
+  display: table-row !important; }
+
+html.no-screen-medium td.show-for-no-screen-medium, html.no-screen-medium td.hide-for-screen-medium,
+html.no-screen-medium th.show-for-no-screen-medium,
+html.no-screen-medium th.hide-for-screen-medium {
+  display: table-cell !important; }
+
+html.screen-medium-down .show-for-screen-medium-down,
+html.screen-medium-down .hide-for-no-screen-medium-down {
+  display: inherit !important; }
+
+html.screen-medium-down .hide-for-screen-medium-down,
+html.screen-medium-down .show-for-no-screen-medium-down {
+  display: none !important; }
+
+html.screen-medium-down table.show-for-screen-medium-down, html.screen-medium-down table.hide-for-no-screen-medium-down {
+  display: table !important; }
+
+html.screen-medium-down thead.show-for-screen-medium-down, html.screen-medium-down thead.hide-for-no-screen-medium-down {
+  display: table-header-group !important; }
+
+html.screen-medium-down tbody.show-for-screen-medium-down, html.screen-medium-down tbody.hide-for-no-screen-medium-down {
+  display: table-row-group !important; }
+
+html.screen-medium-down tr.show-for-screen-medium-down, html.screen-medium-down tr.hide-for-no-screen-medium-down {
+  display: table-row !important; }
+
+html.screen-medium-down td.show-for-screen-medium-down, html.screen-medium-down td.hide-for-no-screen-medium-down,
+html.screen-medium-down th.show-for-screen-medium-down,
+html.screen-medium-down th.hide-for-no-screen-medium-down {
+  display: table-cell !important; }
+
+html.no-screen-medium-down .show-for-no-screen-medium-down,
+html.no-screen-medium-down .hide-for-screen-medium-down {
+  display: inherit !important; }
+
+html.no-screen-medium-down .hide-for-no-screen-medium-down,
+html.no-screen-medium-down .show-for-screen-medium-down {
+  display: none !important; }
+
+html.no-screen-medium-down table.show-for-no-screen-medium-down, html.no-screen-medium-down table.hide-for-screen-medium-down {
+  display: table !important; }
+
+html.no-screen-medium-down thead.show-for-no-screen-medium-down, html.no-screen-medium-down thead.hide-for-screen-medium-down {
+  display: table-header-group !important; }
+
+html.no-screen-medium-down tbody.show-for-no-screen-medium-down, html.no-screen-medium-down tbody.hide-for-screen-medium-down {
+  display: table-row-group !important; }
+
+html.no-screen-medium-down tr.show-for-no-screen-medium-down, html.no-screen-medium-down tr.hide-for-screen-medium-down {
+  display: table-row !important; }
+
+html.no-screen-medium-down td.show-for-no-screen-medium-down, html.no-screen-medium-down td.hide-for-screen-medium-down,
+html.no-screen-medium-down th.show-for-no-screen-medium-down,
+html.no-screen-medium-down th.hide-for-screen-medium-down {
+  display: table-cell !important; }
+
+html.screen-large .show-for-screen-large,
+html.screen-large .hide-for-no-screen-large {
+  display: inherit !important; }
+
+html.screen-large .hide-for-screen-large,
+html.screen-large .show-for-no-screen-large {
+  display: none !important; }
+
+html.screen-large table.show-for-screen-large, html.screen-large table.hide-for-no-screen-large {
+  display: table !important; }
+
+html.screen-large thead.show-for-screen-large, html.screen-large thead.hide-for-no-screen-large {
+  display: table-header-group !important; }
+
+html.screen-large tbody.show-for-screen-large, html.screen-large tbody.hide-for-no-screen-large {
+  display: table-row-group !important; }
+
+html.screen-large tr.show-for-screen-large, html.screen-large tr.hide-for-no-screen-large {
+  display: table-row !important; }
+
+html.screen-large td.show-for-screen-large, html.screen-large td.hide-for-no-screen-large,
+html.screen-large th.show-for-screen-large,
+html.screen-large th.hide-for-no-screen-large {
+  display: table-cell !important; }
+
+html.no-screen-large .show-for-no-screen-large,
+html.no-screen-large .hide-for-screen-large {
+  display: inherit !important; }
+
+html.no-screen-large .hide-for-no-screen-large,
+html.no-screen-large .show-for-screen-large {
+  display: none !important; }
+
+html.no-screen-large table.show-for-no-screen-large, html.no-screen-large table.hide-for-screen-large {
+  display: table !important; }
+
+html.no-screen-large thead.show-for-no-screen-large, html.no-screen-large thead.hide-for-screen-large {
+  display: table-header-group !important; }
+
+html.no-screen-large tbody.show-for-no-screen-large, html.no-screen-large tbody.hide-for-screen-large {
+  display: table-row-group !important; }
+
+html.no-screen-large tr.show-for-no-screen-large, html.no-screen-large tr.hide-for-screen-large {
+  display: table-row !important; }
+
+html.no-screen-large td.show-for-no-screen-large, html.no-screen-large td.hide-for-screen-large,
+html.no-screen-large th.show-for-no-screen-large,
+html.no-screen-large th.hide-for-screen-large {
+  display: table-cell !important; }
+
+html.screen-large-down .show-for-screen-large-down,
+html.screen-large-down .hide-for-no-screen-large-down {
+  display: inherit !important; }
+
+html.screen-large-down .hide-for-screen-large-down,
+html.screen-large-down .show-for-no-screen-large-down {
+  display: none !important; }
+
+html.screen-large-down table.show-for-screen-large-down, html.screen-large-down table.hide-for-no-screen-large-down {
+  display: table !important; }
+
+html.screen-large-down thead.show-for-screen-large-down, html.screen-large-down thead.hide-for-no-screen-large-down {
+  display: table-header-group !important; }
+
+html.screen-large-down tbody.show-for-screen-large-down, html.screen-large-down tbody.hide-for-no-screen-large-down {
+  display: table-row-group !important; }
+
+html.screen-large-down tr.show-for-screen-large-down, html.screen-large-down tr.hide-for-no-screen-large-down {
+  display: table-row !important; }
+
+html.screen-large-down td.show-for-screen-large-down, html.screen-large-down td.hide-for-no-screen-large-down,
+html.screen-large-down th.show-for-screen-large-down,
+html.screen-large-down th.hide-for-no-screen-large-down {
+  display: table-cell !important; }
+
+html.no-screen-large-down .show-for-no-screen-large-down,
+html.no-screen-large-down .hide-for-screen-large-down {
+  display: inherit !important; }
+
+html.no-screen-large-down .hide-for-no-screen-large-down,
+html.no-screen-large-down .show-for-screen-large-down {
+  display: none !important; }
+
+html.no-screen-large-down table.show-for-no-screen-large-down, html.no-screen-large-down table.hide-for-screen-large-down {
+  display: table !important; }
+
+html.no-screen-large-down thead.show-for-no-screen-large-down, html.no-screen-large-down thead.hide-for-screen-large-down {
+  display: table-header-group !important; }
+
+html.no-screen-large-down tbody.show-for-no-screen-large-down, html.no-screen-large-down tbody.hide-for-screen-large-down {
+  display: table-row-group !important; }
+
+html.no-screen-large-down tr.show-for-no-screen-large-down, html.no-screen-large-down tr.hide-for-screen-large-down {
+  display: table-row !important; }
+
+html.no-screen-large-down td.show-for-no-screen-large-down, html.no-screen-large-down td.hide-for-screen-large-down,
+html.no-screen-large-down th.show-for-no-screen-large-down,
+html.no-screen-large-down th.hide-for-screen-large-down {
+  display: table-cell !important; }
+
+html.screen-xlarge .show-for-screen-xlarge,
+html.screen-xlarge .hide-for-no-screen-xlarge {
+  display: inherit !important; }
+
+html.screen-xlarge .hide-for-screen-xlarge,
+html.screen-xlarge .show-for-no-screen-xlarge {
+  display: none !important; }
+
+html.screen-xlarge table.show-for-screen-xlarge, html.screen-xlarge table.hide-for-no-screen-xlarge {
+  display: table !important; }
+
+html.screen-xlarge thead.show-for-screen-xlarge, html.screen-xlarge thead.hide-for-no-screen-xlarge {
+  display: table-header-group !important; }
+
+html.screen-xlarge tbody.show-for-screen-xlarge, html.screen-xlarge tbody.hide-for-no-screen-xlarge {
+  display: table-row-group !important; }
+
+html.screen-xlarge tr.show-for-screen-xlarge, html.screen-xlarge tr.hide-for-no-screen-xlarge {
+  display: table-row !important; }
+
+html.screen-xlarge td.show-for-screen-xlarge, html.screen-xlarge td.hide-for-no-screen-xlarge,
+html.screen-xlarge th.show-for-screen-xlarge,
+html.screen-xlarge th.hide-for-no-screen-xlarge {
+  display: table-cell !important; }
+
+html.no-screen-xlarge .show-for-no-screen-xlarge,
+html.no-screen-xlarge .hide-for-screen-xlarge {
+  display: inherit !important; }
+
+html.no-screen-xlarge .hide-for-no-screen-xlarge,
+html.no-screen-xlarge .show-for-screen-xlarge {
+  display: none !important; }
+
+html.no-screen-xlarge table.show-for-no-screen-xlarge, html.no-screen-xlarge table.hide-for-screen-xlarge {
+  display: table !important; }
+
+html.no-screen-xlarge thead.show-for-no-screen-xlarge, html.no-screen-xlarge thead.hide-for-screen-xlarge {
+  display: table-header-group !important; }
+
+html.no-screen-xlarge tbody.show-for-no-screen-xlarge, html.no-screen-xlarge tbody.hide-for-screen-xlarge {
+  display: table-row-group !important; }
+
+html.no-screen-xlarge tr.show-for-no-screen-xlarge, html.no-screen-xlarge tr.hide-for-screen-xlarge {
+  display: table-row !important; }
+
+html.no-screen-xlarge td.show-for-no-screen-xlarge, html.no-screen-xlarge td.hide-for-screen-xlarge,
+html.no-screen-xlarge th.show-for-no-screen-xlarge,
+html.no-screen-xlarge th.hide-for-screen-xlarge {
+  display: table-cell !important; }
+
+html.screen-xlarge-down .show-for-screen-xlarge-down,
+html.screen-xlarge-down .hide-for-no-screen-xlarge-down {
+  display: inherit !important; }
+
+html.screen-xlarge-down .hide-for-screen-xlarge-down,
+html.screen-xlarge-down .show-for-no-screen-xlarge-down {
+  display: none !important; }
+
+html.screen-xlarge-down table.show-for-screen-xlarge-down, html.screen-xlarge-down table.hide-for-no-screen-xlarge-down {
+  display: table !important; }
+
+html.screen-xlarge-down thead.show-for-screen-xlarge-down, html.screen-xlarge-down thead.hide-for-no-screen-xlarge-down {
+  display: table-header-group !important; }
+
+html.screen-xlarge-down tbody.show-for-screen-xlarge-down, html.screen-xlarge-down tbody.hide-for-no-screen-xlarge-down {
+  display: table-row-group !important; }
+
+html.screen-xlarge-down tr.show-for-screen-xlarge-down, html.screen-xlarge-down tr.hide-for-no-screen-xlarge-down {
+  display: table-row !important; }
+
+html.screen-xlarge-down td.show-for-screen-xlarge-down, html.screen-xlarge-down td.hide-for-no-screen-xlarge-down,
+html.screen-xlarge-down th.show-for-screen-xlarge-down,
+html.screen-xlarge-down th.hide-for-no-screen-xlarge-down {
+  display: table-cell !important; }
+
+html.no-screen-xlarge-down .show-for-no-screen-xlarge-down,
+html.no-screen-xlarge-down .hide-for-screen-xlarge-down {
+  display: inherit !important; }
+
+html.no-screen-xlarge-down .hide-for-no-screen-xlarge-down,
+html.no-screen-xlarge-down .show-for-screen-xlarge-down {
+  display: none !important; }
+
+html.no-screen-xlarge-down table.show-for-no-screen-xlarge-down, html.no-screen-xlarge-down table.hide-for-screen-xlarge-down {
+  display: table !important; }
+
+html.no-screen-xlarge-down thead.show-for-no-screen-xlarge-down, html.no-screen-xlarge-down thead.hide-for-screen-xlarge-down {
+  display: table-header-group !important; }
+
+html.no-screen-xlarge-down tbody.show-for-no-screen-xlarge-down, html.no-screen-xlarge-down tbody.hide-for-screen-xlarge-down {
+  display: table-row-group !important; }
+
+html.no-screen-xlarge-down tr.show-for-no-screen-xlarge-down, html.no-screen-xlarge-down tr.hide-for-screen-xlarge-down {
+  display: table-row !important; }
+
+html.no-screen-xlarge-down td.show-for-no-screen-xlarge-down, html.no-screen-xlarge-down td.hide-for-screen-xlarge-down,
+html.no-screen-xlarge-down th.show-for-no-screen-xlarge-down,
+html.no-screen-xlarge-down th.hide-for-screen-xlarge-down {
+  display: table-cell !important; }
+
+html.screen-xxlarge .show-for-screen-xxlarge,
+html.screen-xxlarge .hide-for-no-screen-xxlarge {
+  display: inherit !important; }
+
+html.screen-xxlarge .hide-for-screen-xxlarge,
+html.screen-xxlarge .show-for-no-screen-xxlarge {
+  display: none !important; }
+
+html.screen-xxlarge table.show-for-screen-xxlarge, html.screen-xxlarge table.hide-for-no-screen-xxlarge {
+  display: table !important; }
+
+html.screen-xxlarge thead.show-for-screen-xxlarge, html.screen-xxlarge thead.hide-for-no-screen-xxlarge {
+  display: table-header-group !important; }
+
+html.screen-xxlarge tbody.show-for-screen-xxlarge, html.screen-xxlarge tbody.hide-for-no-screen-xxlarge {
+  display: table-row-group !important; }
+
+html.screen-xxlarge tr.show-for-screen-xxlarge, html.screen-xxlarge tr.hide-for-no-screen-xxlarge {
+  display: table-row !important; }
+
+html.screen-xxlarge td.show-for-screen-xxlarge, html.screen-xxlarge td.hide-for-no-screen-xxlarge,
+html.screen-xxlarge th.show-for-screen-xxlarge,
+html.screen-xxlarge th.hide-for-no-screen-xxlarge {
+  display: table-cell !important; }
+
+html.no-screen-xxlarge .show-for-no-screen-xxlarge,
+html.no-screen-xxlarge .hide-for-screen-xxlarge {
+  display: inherit !important; }
+
+html.no-screen-xxlarge .hide-for-no-screen-xxlarge,
+html.no-screen-xxlarge .show-for-screen-xxlarge {
+  display: none !important; }
+
+html.no-screen-xxlarge table.show-for-no-screen-xxlarge, html.no-screen-xxlarge table.hide-for-screen-xxlarge {
+  display: table !important; }
+
+html.no-screen-xxlarge thead.show-for-no-screen-xxlarge, html.no-screen-xxlarge thead.hide-for-screen-xxlarge {
+  display: table-header-group !important; }
+
+html.no-screen-xxlarge tbody.show-for-no-screen-xxlarge, html.no-screen-xxlarge tbody.hide-for-screen-xxlarge {
+  display: table-row-group !important; }
+
+html.no-screen-xxlarge tr.show-for-no-screen-xxlarge, html.no-screen-xxlarge tr.hide-for-screen-xxlarge {
+  display: table-row !important; }
+
+html.no-screen-xxlarge td.show-for-no-screen-xxlarge, html.no-screen-xxlarge td.hide-for-screen-xxlarge,
+html.no-screen-xxlarge th.show-for-no-screen-xxlarge,
+html.no-screen-xxlarge th.hide-for-screen-xxlarge {
+  display: table-cell !important; }
+
+html.screen-xxlarge-down .show-for-screen-xxlarge-down,
+html.screen-xxlarge-down .hide-for-no-screen-xxlarge-down {
+  display: inherit !important; }
+
+html.screen-xxlarge-down .hide-for-screen-xxlarge-down,
+html.screen-xxlarge-down .show-for-no-screen-xxlarge-down {
+  display: none !important; }
+
+html.screen-xxlarge-down table.show-for-screen-xxlarge-down, html.screen-xxlarge-down table.hide-for-no-screen-xxlarge-down {
+  display: table !important; }
+
+html.screen-xxlarge-down thead.show-for-screen-xxlarge-down, html.screen-xxlarge-down thead.hide-for-no-screen-xxlarge-down {
+  display: table-header-group !important; }
+
+html.screen-xxlarge-down tbody.show-for-screen-xxlarge-down, html.screen-xxlarge-down tbody.hide-for-no-screen-xxlarge-down {
+  display: table-row-group !important; }
+
+html.screen-xxlarge-down tr.show-for-screen-xxlarge-down, html.screen-xxlarge-down tr.hide-for-no-screen-xxlarge-down {
+  display: table-row !important; }
+
+html.screen-xxlarge-down td.show-for-screen-xxlarge-down, html.screen-xxlarge-down td.hide-for-no-screen-xxlarge-down,
+html.screen-xxlarge-down th.show-for-screen-xxlarge-down,
+html.screen-xxlarge-down th.hide-for-no-screen-xxlarge-down {
+  display: table-cell !important; }
+
+html.no-screen-xxlarge-down .show-for-no-screen-xxlarge-down,
+html.no-screen-xxlarge-down .hide-for-screen-xxlarge-down {
+  display: inherit !important; }
+
+html.no-screen-xxlarge-down .hide-for-no-screen-xxlarge-down,
+html.no-screen-xxlarge-down .show-for-screen-xxlarge-down {
+  display: none !important; }
+
+html.no-screen-xxlarge-down table.show-for-no-screen-xxlarge-down, html.no-screen-xxlarge-down table.hide-for-screen-xxlarge-down {
+  display: table !important; }
+
+html.no-screen-xxlarge-down thead.show-for-no-screen-xxlarge-down, html.no-screen-xxlarge-down thead.hide-for-screen-xxlarge-down {
+  display: table-header-group !important; }
+
+html.no-screen-xxlarge-down tbody.show-for-no-screen-xxlarge-down, html.no-screen-xxlarge-down tbody.hide-for-screen-xxlarge-down {
+  display: table-row-group !important; }
+
+html.no-screen-xxlarge-down tr.show-for-no-screen-xxlarge-down, html.no-screen-xxlarge-down tr.hide-for-screen-xxlarge-down {
+  display: table-row !important; }
+
+html.no-screen-xxlarge-down td.show-for-no-screen-xxlarge-down, html.no-screen-xxlarge-down td.hide-for-screen-xxlarge-down,
+html.no-screen-xxlarge-down th.show-for-no-screen-xxlarge-down,
+html.no-screen-xxlarge-down th.hide-for-screen-xxlarge-down {
+  display: table-cell !important; }
+
 html.mobile .show-for-mobile,
 html.mobile .hide-for-no-mobile {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000351}}
+  display: inherit !important; }
+
 html.mobile .hide-for-mobile,
 html.mobile .show-for-no-mobile {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000356}}
+  display: none !important; }
+
 html.mobile table.show-for-mobile, html.mobile table.hide-for-no-mobile {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000360}}
+  display: table !important; }
+
 html.mobile thead.show-for-mobile, html.mobile thead.hide-for-no-mobile {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000364}}
+  display: table-header-group !important; }
+
 html.mobile tbody.show-for-mobile, html.mobile tbody.hide-for-no-mobile {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000368}}
+  display: table-row-group !important; }
+
 html.mobile tr.show-for-mobile, html.mobile tr.hide-for-no-mobile {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000373}}
+  display: table-row !important; }
+
 html.mobile td.show-for-mobile, html.mobile td.hide-for-no-mobile,
 html.mobile th.show-for-mobile,
 html.mobile th.hide-for-no-mobile {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000380}}
 html.no-mobile .show-for-no-mobile,
 html.no-mobile .hide-for-mobile {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000382}}
+  display: inherit !important; }
+
 html.no-mobile .hide-for-no-mobile,
 html.no-mobile .show-for-mobile {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000387}}
+  display: none !important; }
+
 html.no-mobile table.show-for-no-mobile, html.no-mobile table.hide-for-mobile {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000391}}
+  display: table !important; }
+
 html.no-mobile thead.show-for-no-mobile, html.no-mobile thead.hide-for-mobile {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000395}}
+  display: table-header-group !important; }
+
 html.no-mobile tbody.show-for-no-mobile, html.no-mobile tbody.hide-for-mobile {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000399}}
+  display: table-row-group !important; }
+
 html.no-mobile tr.show-for-no-mobile, html.no-mobile tr.hide-for-mobile {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\00003104}}
+  display: table-row !important; }
+
 html.no-mobile td.show-for-no-mobile, html.no-mobile td.hide-for-mobile,
 html.no-mobile th.show-for-no-mobile,
 html.no-mobile th.hide-for-mobile {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-/*
-	@media only screen and (orientation: landscape) {
-    .show-for-landscape,
-    .hide-for-portrait { display: inherit !important; }
-    .hide-for-landscape,
-    .show-for-portrait { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table !important; }
-    }
-    thead {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-cell !important; }
-    }
-  }
-
-  @media only screen and (orientation: portrait) {
-    .show-for-portrait,
-    .hide-for-landscape { display: inherit !important; }
-    .hide-for-portrait,
-    .show-for-landscape { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table !important; }
-    }
-    thead {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-cell !important; }
-    }
-  }
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000349}}
 html.phone .show-for-phone,
 html.phone .hide-for-no-phone {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000351}}
+  display: inherit !important; }
+
 html.phone .hide-for-phone,
 html.phone .show-for-no-phone {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000356}}
+  display: none !important; }
+
 html.phone table.show-for-phone, html.phone table.hide-for-no-phone {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000360}}
+  display: table !important; }
+
 html.phone thead.show-for-phone, html.phone thead.hide-for-no-phone {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000364}}
+  display: table-header-group !important; }
+
 html.phone tbody.show-for-phone, html.phone tbody.hide-for-no-phone {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000368}}
+  display: table-row-group !important; }
+
 html.phone tr.show-for-phone, html.phone tr.hide-for-no-phone {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000373}}
+  display: table-row !important; }
+
 html.phone td.show-for-phone, html.phone td.hide-for-no-phone,
 html.phone th.show-for-phone,
 html.phone th.hide-for-no-phone {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000380}}
 html.no-phone .show-for-no-phone,
 html.no-phone .hide-for-phone {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000382}}
+  display: inherit !important; }
+
 html.no-phone .hide-for-no-phone,
 html.no-phone .show-for-phone {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000387}}
+  display: none !important; }
+
 html.no-phone table.show-for-no-phone, html.no-phone table.hide-for-phone {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000391}}
+  display: table !important; }
+
 html.no-phone thead.show-for-no-phone, html.no-phone thead.hide-for-phone {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000395}}
+  display: table-header-group !important; }
+
 html.no-phone tbody.show-for-no-phone, html.no-phone tbody.hide-for-phone {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000399}}
+  display: table-row-group !important; }
+
 html.no-phone tr.show-for-no-phone, html.no-phone tr.hide-for-phone {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\00003104}}
+  display: table-row !important; }
+
 html.no-phone td.show-for-no-phone, html.no-phone td.hide-for-phone,
 html.no-phone th.show-for-no-phone,
 html.no-phone th.hide-for-phone {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-/*
-	@media only screen and (orientation: landscape) {
-    .show-for-landscape,
-    .hide-for-portrait { display: inherit !important; }
-    .hide-for-landscape,
-    .show-for-portrait { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table !important; }
-    }
-    thead {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-cell !important; }
-    }
-  }
-
-  @media only screen and (orientation: portrait) {
-    .show-for-portrait,
-    .hide-for-landscape { display: inherit !important; }
-    .hide-for-portrait,
-    .show-for-landscape { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table !important; }
-    }
-    thead {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-cell !important; }
-    }
-  }
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000349}}
 html.tablet .show-for-tablet,
 html.tablet .hide-for-no-tablet {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000351}}
+  display: inherit !important; }
+
 html.tablet .hide-for-tablet,
 html.tablet .show-for-no-tablet {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000356}}
+  display: none !important; }
+
 html.tablet table.show-for-tablet, html.tablet table.hide-for-no-tablet {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000360}}
+  display: table !important; }
+
 html.tablet thead.show-for-tablet, html.tablet thead.hide-for-no-tablet {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000364}}
+  display: table-header-group !important; }
+
 html.tablet tbody.show-for-tablet, html.tablet tbody.hide-for-no-tablet {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000368}}
+  display: table-row-group !important; }
+
 html.tablet tr.show-for-tablet, html.tablet tr.hide-for-no-tablet {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000373}}
+  display: table-row !important; }
+
 html.tablet td.show-for-tablet, html.tablet td.hide-for-no-tablet,
 html.tablet th.show-for-tablet,
 html.tablet th.hide-for-no-tablet {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000380}}
 html.no-tablet .show-for-no-tablet,
 html.no-tablet .hide-for-tablet {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000382}}
+  display: inherit !important; }
+
 html.no-tablet .hide-for-no-tablet,
 html.no-tablet .show-for-tablet {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000387}}
+  display: none !important; }
+
 html.no-tablet table.show-for-no-tablet, html.no-tablet table.hide-for-tablet {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000391}}
+  display: table !important; }
+
 html.no-tablet thead.show-for-no-tablet, html.no-tablet thead.hide-for-tablet {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000395}}
+  display: table-header-group !important; }
+
 html.no-tablet tbody.show-for-no-tablet, html.no-tablet tbody.hide-for-tablet {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000399}}
+  display: table-row-group !important; }
+
 html.no-tablet tr.show-for-no-tablet, html.no-tablet tr.hide-for-tablet {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\00003104}}
+  display: table-row !important; }
+
 html.no-tablet td.show-for-no-tablet, html.no-tablet td.hide-for-tablet,
 html.no-tablet th.show-for-no-tablet,
 html.no-tablet th.hide-for-tablet {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-/*
-	@media only screen and (orientation: landscape) {
-    .show-for-landscape,
-    .hide-for-portrait { display: inherit !important; }
-    .hide-for-landscape,
-    .show-for-portrait { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table !important; }
-    }
-    thead {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-cell !important; }
-    }
-  }
-
-  @media only screen and (orientation: portrait) {
-    .show-for-portrait,
-    .hide-for-landscape { display: inherit !important; }
-    .hide-for-portrait,
-    .show-for-landscape { display: none !important; }
-
-    // Specific visibility for tables 
-    table {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table !important; }
-    }
-    thead {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-cell !important; }
-    }
-  }
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000349}}
 html.mobilegradea .show-for-mobilegradea,
 html.mobilegradea .hide-for-no-mobilegradea {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000351}}
+  display: inherit !important; }
+
 html.mobilegradea .hide-for-mobilegradea,
 html.mobilegradea .show-for-no-mobilegradea {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000356}}
+  display: none !important; }
+
 html.mobilegradea table.show-for-mobilegradea, html.mobilegradea table.hide-for-no-mobilegradea {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000360}}
+  display: table !important; }
+
 html.mobilegradea thead.show-for-mobilegradea, html.mobilegradea thead.hide-for-no-mobilegradea {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000364}}
+  display: table-header-group !important; }
+
 html.mobilegradea tbody.show-for-mobilegradea, html.mobilegradea tbody.hide-for-no-mobilegradea {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000368}}
+  display: table-row-group !important; }
+
 html.mobilegradea tr.show-for-mobilegradea, html.mobilegradea tr.hide-for-no-mobilegradea {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000373}}
+  display: table-row !important; }
+
 html.mobilegradea td.show-for-mobilegradea, html.mobilegradea td.hide-for-no-mobilegradea,
 html.mobilegradea th.show-for-mobilegradea,
 html.mobilegradea th.hide-for-no-mobilegradea {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000380}}
 html.no-mobilegradea .show-for-no-mobilegradea,
 html.no-mobilegradea .hide-for-mobilegradea {
-  display: inherit !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000382}}
+  display: inherit !important; }
+
 html.no-mobilegradea .hide-for-no-mobilegradea,
 html.no-mobilegradea .show-for-mobilegradea {
-  display: none !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000387}}
+  display: none !important; }
+
 html.no-mobilegradea table.show-for-no-mobilegradea, html.no-mobilegradea table.hide-for-mobilegradea {
-  display: table !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000391}}
+  display: table !important; }
+
 html.no-mobilegradea thead.show-for-no-mobilegradea, html.no-mobilegradea thead.hide-for-mobilegradea {
-  display: table-header-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000395}}
+  display: table-header-group !important; }
+
 html.no-mobilegradea tbody.show-for-no-mobilegradea, html.no-mobilegradea tbody.hide-for-mobilegradea {
-  display: table-row-group !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\0000399}}
+  display: table-row-group !important; }
+
 html.no-mobilegradea tr.show-for-no-mobilegradea, html.no-mobilegradea tr.hide-for-mobilegradea {
-  display: table-row !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/web-dev\/media-queries\/src\/media-queries\.scss}line{font-family:\00003104}}
+  display: table-row !important; }
+
 html.no-mobilegradea td.show-for-no-mobilegradea, html.no-mobilegradea td.hide-for-mobilegradea,
 html.no-mobilegradea th.show-for-no-mobilegradea,
 html.no-mobilegradea th.hide-for-mobilegradea {
-  display: table-cell !important;
-}
+  display: table-cell !important; }
 
-/*
-	@media only screen and (orientation: landscape) {
-    .show-for-landscape,
-    .hide-for-portrait { display: inherit !important; }
-    .hide-for-landscape,
-    .show-for-portrait { display: none !important; }
+/* Orientation targeting */
+.show-for-landscape,
+.hide-for-portrait {
+  display: inherit !important; }
 
-    // Specific visibility for tables 
-    table {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table !important; }
-    }
-    thead {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-landscape,
-      &.hide-for-portrait { display: table-cell !important; }
-    }
-  }
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important; }
 
-  @media only screen and (orientation: portrait) {
-    .show-for-portrait,
-    .hide-for-landscape { display: inherit !important; }
-    .hide-for-portrait,
-    .show-for-landscape { display: none !important; }
+/* Specific visibility for tables */
+table.hide-for-landscape, table.show-for-portrait {
+  display: table !important; }
 
-    // Specific visibility for tables 
-    table {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table !important; }
-    }
-    thead {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-header-group !important; }
-    }
-    tbody {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row-group !important; }
-    }
-    tr {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-row !important; }
-    }
-    td,
-    th {
-      &.show-for-portrait,
-      &.hide-for-landscape { display: table-cell !important; }
-    }
-  }
-*/
+thead.hide-for-landscape, thead.show-for-portrait {
+  display: table-header-group !important; }
 
-/*# sourceMappingURL=media-queries.css.map */
+tbody.hide-for-landscape, tbody.show-for-portrait {
+  display: table-row-group !important; }
+
+tr.hide-for-landscape, tr.show-for-portrait {
+  display: table-row !important; }
+
+td.hide-for-landscape, td.show-for-portrait,
+th.hide-for-landscape,
+th.show-for-portrait {
+  display: table-cell !important; }
+
+@media only screen and (orientation: landscape) {
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: inherit !important; }
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important; }
+  /* Specific visibility for tables */
+  table.show-for-landscape, table.hide-for-portrait {
+    display: table !important; }
+  thead.show-for-landscape, thead.hide-for-portrait {
+    display: table-header-group !important; }
+  tbody.show-for-landscape, tbody.hide-for-portrait {
+    display: table-row-group !important; }
+  tr.show-for-landscape, tr.hide-for-portrait {
+    display: table-row !important; }
+  td.show-for-landscape, td.hide-for-portrait,
+  th.show-for-landscape,
+  th.hide-for-portrait {
+    display: table-cell !important; } }
+
+@media only screen and (orientation: portrait) {
+  .show-for-portrait,
+  .hide-for-landscape {
+    display: inherit !important; }
+  .hide-for-portrait,
+  .show-for-landscape {
+    display: none !important; }
+  /* Specific visibility for tables */
+  table.show-for-portrait, table.hide-for-landscape {
+    display: table !important; }
+  thead.show-for-portrait, thead.hide-for-landscape {
+    display: table-header-group !important; }
+  tbody.show-for-portrait, tbody.hide-for-landscape {
+    display: table-row-group !important; }
+  tr.show-for-portrait, tr.hide-for-landscape {
+    display: table-row !important; }
+  td.show-for-portrait, td.hide-for-landscape,
+  th.show-for-portrait,
+  th.hide-for-landscape {
+    display: table-cell !important; } }
+
+/* Print visibility TODO: måske kun show-for-print + hide-for-print */
+.print-only,
+.show-for-print {
+  display: none !important; }
+
+@media print {
+  .print-only,
+  .show-for-print {
+    display: block !important; }
+  .hide-on-print,
+  .hide-for-print {
+    display: none !important; }
+  table.show-for-print {
+    display: table !important; }
+  thead.show-for-print {
+    display: table-header-group !important; }
+  tbody.show-for-print {
+    display: table-row-group !important; }
+  tr.show-for-print {
+    display: table-row !important; }
+  td.show-for-print {
+    display: table-cell !important; }
+  th.show-for-print {
+    display: table-cell !important; } }

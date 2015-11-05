@@ -21,7 +21,7 @@
 // @import "../bower_components/mathsass/dist/math";
 
 
-
+/*
 //Foundation by ZURB - foundation.zurb.com - Basic sass-functions
 @import "../bower_components/foundation/scss/foundation/functions";
 
@@ -33,11 +33,16 @@
 
 //Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
 @import "../bower_components/foundation/scss/foundation/components/visibility";
-
+*/
 
 //Create show/hide-for-TEST and show/hide-for-no-TEST, TEST = the Modernizr tests installed
 
 $modernizr-tests:
+	screen-small	,	screen-small-down,
+	screen-medium	,	screen-medium-down,
+	screen-large	,	screen-large-down,
+	screen-xlarge	,	screen-xlarge-down,
+	screen-xxlarge,	screen-xxlarge-down,
 	mobile,
 	phone,
 	tablet,
@@ -47,9 +52,9 @@ $modernizr-tests:
 	// Hide/show when test passed
 	html.#{$modernizr-test}{
 		.show-for-#{$modernizr-test},
-		.hide-for-no-#{$modernizr-test} { display: inherit !important; }
+		.hide-for-no-#{$modernizr-test}		{ display: inherit !important; }
 		.hide-for-#{$modernizr-test},
-		.show-for-no-#{$modernizr-test} { display: none !important; }
+		.show-for-no-#{$modernizr-test}		{ display: none !important; }
 
 		// Specific visibility for tables 
 		table {
@@ -78,9 +83,9 @@ $modernizr-tests:
 	// Hide/show when test failed
 	html.no-#{$modernizr-test}{
 		.show-for-no-#{$modernizr-test},
-		.hide-for-#{$modernizr-test} { display: inherit !important; }
+		.hide-for-#{$modernizr-test}		{ display: inherit !important; }
 		.hide-for-no-#{$modernizr-test},
-		.show-for-#{$modernizr-test} { display: none !important; }
+		.show-for-#{$modernizr-test}		{ display: none !important; }
 
 		// Specific visibility for tables 
 		table {
@@ -107,3 +112,112 @@ $modernizr-tests:
 	}
 
 } //end of @each $modernizr-test in $modernizr-tests {
+
+
+
+/* Orientation targeting */
+.show-for-landscape,
+.hide-for-portrait { display: inherit !important; }
+.hide-for-landscape,
+.show-for-portrait { display: none !important; }
+
+/* Specific visibility for tables */
+table {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table !important; }
+}
+thead {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-header-group !important; }
+}
+tbody {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-row-group !important; }
+}
+tr {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-row !important; }
+}
+td,
+th {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-cell !important; }
+}
+
+@media only screen and (orientation: landscape) {
+	.show-for-landscape,
+	.hide-for-portrait { display: inherit !important; }
+	.hide-for-landscape,
+	.show-for-portrait { display: none !important; }
+
+	/* Specific visibility for tables */
+	table {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table !important; }
+	}
+	thead {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-header-group !important; }
+	}
+	tbody {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-row-group !important; }
+	}
+	tr {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-row !important; }
+	}
+	td,
+	th {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-cell !important; }
+	}
+}
+
+@media only screen and (orientation: portrait) {
+	.show-for-portrait,
+	.hide-for-landscape { display: inherit !important; }
+	.hide-for-portrait,
+	.show-for-landscape { display: none !important; }
+
+	/* Specific visibility for tables */
+	table {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table !important; }
+	}
+	thead {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-header-group !important; }
+	}
+	tbody {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-row-group !important; }
+	}
+	tr {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-row !important; }
+	}
+	td,
+	th {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-cell !important; }
+	}
+}
+
+/* Print visibility TODO: måske kun show-for-print + hide-for-print */
+.print-only,
+.show-for-print { display: none !important; }
+
+@media print {
+	.print-only,
+	.show-for-print { display: block !important; }
+	.hide-on-print,
+	.hide-for-print { display: none !important; }
+
+	table.show-for-print { display: table !important; }
+	thead.show-for-print { display: table-header-group !important; }
+	tbody.show-for-print { display: table-row-group !important; }
+	tr.show-for-print { display: table-row !important; }
+	td.show-for-print { display: table-cell !important; }
+	th.show-for-print { display: table-cell !important; }
+}
