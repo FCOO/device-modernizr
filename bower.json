@@ -16,14 +16,12 @@
   },
   "dependencies": {
     "jquery": "latest",
-    "moment": "latest",
-    "mobile-detect": "hgoebl/mobile-detect.js#~1.3.0"
+    "mobile-detect": "hgoebl/mobile-detect.js#~1.3.0",
+    "jquery-mobile-bower": "~1.4.5"
   },
   "devDependencies": {
     "bourbon": "latest",
-    "modernizr-mixin": "latest",
-    "mathsass": "latest",
-    "foundation": "~5.5.3"
+    "modernizr-mixin": "latest"
   },
   "license": "MIT",
   "ignore": [

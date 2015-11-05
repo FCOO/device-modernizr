@@ -21,17 +21,28 @@
 // @import "../bower_components/mathsass/dist/math";
 
 
+/*
+//Foundation by ZURB - foundation.zurb.com - Basic sass-functions
+@import "../bower_components/foundation/scss/foundation/functions";
+
+//media-queries-settings - The settings of breakpoint etc. 
+@import "media-queries-settings";
+
+//Foundation by ZURB - foundation.zurb.com - Contains all the scss varaibles 
+@import "../bower_components/foundation/scss/foundation/components/global";
+
+//Foundation by ZURB - foundation.zurb.com - Creating all the show-for-SIZE classes = (show | hide) -for-SIZE[-only|-up|-down]
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+*/
+
 //Create show/hide-for-TEST and show/hide-for-no-TEST, TEST = the Modernizr tests installed
 
-//$modernizr-tests = the list of tests added to Modernizr by media-qieries.js
 $modernizr-tests:
 	screen-small	,	screen-small-down,
 	screen-medium	,	screen-medium-down,
 	screen-large	,	screen-large-down,
 	screen-xlarge	,	screen-xlarge-down,
 	screen-xxlarge,	screen-xxlarge-down,
-	portrait,
-	landscape,
 	mobile,
 	phone,
 	tablet,
@@ -104,14 +115,13 @@ $modernizr-tests:
 
 
 
-// Orientation targeting 
-/*
+/* Orientation targeting */
 .show-for-landscape,
 .hide-for-portrait { display: inherit !important; }
 .hide-for-landscape,
 .show-for-portrait { display: none !important; }
 
-// Specific visibility for tables
+/* Specific visibility for tables */
 table {
 	&.hide-for-landscape,
 	&.show-for-portrait { display: table !important; }
@@ -140,7 +150,7 @@ th {
 	.hide-for-landscape,
 	.show-for-portrait { display: none !important; }
 
-	// Specific visibility for tables
+	/* Specific visibility for tables */
 	table {
 		&.show-for-landscape,
 		&.hide-for-portrait { display: table !important; }
@@ -170,7 +180,7 @@ th {
 	.hide-for-portrait,
 	.show-for-landscape { display: none !important; }
 
-	// Specific visibility for tables 
+	/* Specific visibility for tables */
 	table {
 		&.show-for-portrait,
 		&.hide-for-landscape { display: table !important; }
@@ -193,7 +203,7 @@ th {
 		&.hide-for-landscape { display: table-cell !important; }
 	}
 }
-*/
+
 /* Print visibility TODO: måske kun show-for-print + hide-for-print */
 .print-only,
 .show-for-print { display: none !important; }

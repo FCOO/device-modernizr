@@ -1,49 +1,42 @@
 # media-queries
 
-[foundation-mq]: http://foundation.zurb.com/docs/media-queries.html
+[Modernizr]: https://modernizr.com/
+[mobile-detect.js]: http://hgoebl.github.io/mobile-detect.js/
 
 ## Description
-This package contains of tree parts:
 
+This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different orientations (portrait/landscape), screen dimensions, and print
+[Modernizr] must be included.
 
-1. **JS**: A javascript class `MediaQueries`, 
-1. **CSS**: A css-file `media-queries.css` with classes to hide or show elements for different portrait/landscape-mode and screen dimentions
-1. **SASS**: scss-file `_media-queries-import.scss` to include into a new scss-file if you want to create media queries css for other think than hide/show
+### MediaQueries
+Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
+
+(Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
 ## Installation
 ### bower
-For JS and CSS 
-
     bower install https://github.com/FCOO/media-queries.git --save
-
-For SASS use `--save-dev` instad of `--save`:
-
-    bower install https://github.com/FCOO/media-queries.git --save-dev
 
 ## Demo
 http://FCOO.github.io/media-queries/demo/ 
 
 ## Usage
 
-### JS
+### MediaQueries-class (media-queries.js)
+
 ```var myMediaQueries = new MediaQueries( options );```
 
 #### options
-<table>
-<tr>
-<th>Id</th>
-<th>Type</th> 
-<th>Default</th>
-<th>Description</th>
-</tr>
+Default options
 
-<tr>
-<td>options1</td>
-<td>boolean</td>
-<td>true</td>
-<td>If <code>true</code> the ...</td>
-</tr>
-</table>
+	{
+	  referenceScreen: { 
+	    width		: 1366,
+		height		: 768,
+		diagonal_inc: 20
+		}
+	}
+
 
 #### Properties (TODO)
 <table>
@@ -52,59 +45,127 @@ http://FCOO.github.io/media-queries/demo/
   <th>Description</th>
 </tr>
 <tr>
+<!--  
   <td><code>screen_width</code></td><td><td></td></tr>
   <td><code>screen_height</code></td><td></td></tr>
   <td><code>client_width</code></td><td></td></tr>
   <td><code>client_width</code></td><td></td></tr>
   <td><code>screen_width_em</code></td><td></td></tr>
   <td><code>screen_height_em</code></td><td></td></tr>
-  <td><code>dpi</code></td><td></td></tr>
-  <td><code>dpr</code></td><td>-webkit-device-pixel-ratio</td></tr>
+  <td><code>dpi</code></td><td>dots pro inc</td></tr>
+  <td><code>dpr</code></td><td>device pixel ratio</td></tr>
+-->
   <td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myMediaQueries.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
+ <td><code>mobile</code></td><td>Name of mobile device - <code>null</code> if not a mobile device</td></tr>
+ <td><code>phone</code></td><td>If a mobile device: Name of phone - <code>null</code> if not a phone</td></tr>
+ <td><code>tablet</code></td><td>If a mobile device: Name of table - <code>null</code> if not a table</td></tr>
+ <td><code>mobileGrade</code></td><td><a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a></td></tr>
+ <td><code>userAgent</code></td><td>Browser (only for mobile devices)</td></tr>
+ <td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
 </table>
 
 
 #### Methods
+All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` object,eq.: 
 
-    .methods1( arg1, arg2,...): Do something
-    .methods2( arg1, arg2,...): Do something else
+	var version = myMediaQueries.mobileDetect.version('Chrome');
 
 ### media-queries.css
 
-The css-classes is based on the media queries created by [ZURB Foundation](http://foundation.zurb.com/). There are five breakpoints for width named `small`, `medium`, `large`, `xlarge`, and `xxlarge`
+The css-classes is based on the visibility classes by [ZURB Foundation](http://foundation.zurb.com/docs/components/visibility.html) and the syntax used by [Modernizr].
+The name of the different css-classes has the following syntax
 
-The breakponts for this five groups are given in the SASS-file `src/_media-queries.-settings.scss`
-	$small-breakpoint:  em-calc(624);
-	$medium-breakpoint: em-calc(1024);
-	$large-breakpoint:  em-calc(1440);
-	$xlarge-breakpoint: em-calc(1920);
+	(hide|show)-for[-no]-MQNAME[-down]
 
-Se [documentation on foundation.zurb.com](http://foundation.zurb.com/docs/media-queries.html)
+The `[-down]` is only for **screen sizes** and `[-no]` is not used for **orientation** or **print** 
 
-There are classes to hide or show elements for different screen width, orientation aand print
+#### Screen size
 
-####Examples
+To avoid problems with breakpoints when the device changes orientation the "size" of the screen is the minimum of the `screen.height` and `screen.width`
 
-	<strong class="show-for-small-only">This text is shown only on a small screen.</strong>
+There are five breakpoints for screen size named `screen-small`, `screen-medium`, `screen-large`, `screen-xlarge`, and `screen-xxlarge`
+
+The breakpoints for this five groups are given in the `src/_media-queries.js`:
+<table>
+<tr><td>class</td><td>Screen size (min-<b>max</b>)</td></tr>
+<tr><td>screen-small</td><td>0-<b>624px<b></td></tr>
+<tr><td>screen-medium</td><td>625-<b>1024px</b></td></tr>
+<tr><td>screen-large</td><td>1025-<b>1440px</b></td></tr>
+<tr><td>screen-xlarge</td><td>1441-<b>1920px</b></td></tr>
+<tr><td>screen-xxlarge</td><td><b>>1920px</b></td></tr>
+</table>
+
+For each size-class `SCREENSIZE` there are the following classes
+
+	show-for-SCREENSIZE      //Displayed for screen size in range
+	hide-for-SCREENSIZE      //Hidden for screen size in range
+	show-for-SCREENSIZE-down //Displayed for all screen size in less than max
+	hide-for-SCREENSIZE-down //Hidden for all screen size in less than max
+	show-for-no-SCREENSIZE   //Displayed for screen size outside range
+	hide-for-no-SCREENSIZE   //Hidden for screen size outside range
+
+Example
+
+	<p class="show-for-no-screen-small">The screen width and height is > 624px</p> 
+
+#### Device
+Test if the device is a `mobile` device and subsequently if it is a `phone` or a `tablet`
+
+	show/for-mobile/hide-for-mobile
+	show-for-no-mobile/hide-for-no-mobile 
 	
-	<strong class="hide-for-medium-up">You are <em>not</em> on a medium, large, xlarge, or xxlarge screen.</strong>
+	show-for-phone/hide-for-phone
+	show-for-tablet/hide-for-tablet
+
+
+#### Orientation
+Four classes are provided
 	
-	<strong class="show-for-landscape">You are in landscape orientation.</strong>
-	<strong class="show-for-portrait">You are in portrait orientation.</strong>
+	show-for-portrait
+	hide-for-portrait
+	show-for-landscape
+	hide-for-landscape
 
-	.show-for-print , .print-only (Visible for printing)
-	.hide-for-print , .hide-on-print (Hidden while printing)
 
-Se [documentation on foundation.zurb.com](http://foundation.zurb.com/docs/components/visibility.html)
+#### Print
+Two classes are provided
 
-### SASS
+	show-for-print
+	hide-on-print
 
-To create css classes with other properties than hide/show you must create your own scss-file and compile it to a css-file
-If you have installed media-queries with bower and your scss-file is in `/src` it could look link this 
 
-	@import "../bower_components/media-queries/src/media-queries-import";
+
+#### Examples
+
+	<div class="show-for-landscape">This device is in LANDSCAPE mode</div>
+	<div class="show-for-portrait">This device is in PORTRAIT mode</div>
+
+	<div class="show-for-mobile">This device IS a MOBILE device</div>
+	<div class="show-for-phone">..and it is a PHONE</div>
+	<div class="show-for-tablet">..and it is a TABLET</div>
+	<div class="show-for-no-mobile">This device is NOT a MOBILE device</code></div>
+
+	<div class="show-for-screen-small">The screen IS a SMALL screen</div>
+	<div class="hide-for-screen-small">The screen is NOT a SMALL screen</div>
+	<div class="show-for-screen-medium">The screen IS a MEDIUM screen</div>
+	<div class="hide-for-screen-medium">The screen is NOT a MEDIUM screen</div>
+	<div class="show-for-screen-medium-down">The screen is a MEDIUM OR smaller screen</div>
+
+	<div class="show-for-screen-large">The screen IS a LARGE screen</div>
+	<div class="hide-for-screen-large">The screen is NOT a LARGE screen</div>
+	<div class="show-for-screen-large-down">The screen is a LARGE OR smaller screen</div>
+
+	<div class="show-for-screen-xlarge">The screen IS a XLARGE screen</div>
+	<div class="hide-for-screen-xlarge">The screen is NOT a XLARGE screen</div>
+	<div class="show-for-screen-xlarge-down">The screen is a XLARGE OR smaller screen</div>
+
+	<div class="show-for-screen-xxlarge">The screen IS a XXLARGE screen</div>
+	<div class="hide-for-screen-xxlarge">The screen is NOT a XXLARGE screen</div>
+	<div class="show-for-screen-xxlarge-down">The screen is a XXLARGE OR smaller screen</div>
+
+	<div class="hide-for-print">This text is only on the SCREEN</div>
+	<div class="show-for-print">This text is only on the PRINT</div>
 	
-
 
 
 ## Copyright and License
