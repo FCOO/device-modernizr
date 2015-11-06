@@ -106,13 +106,15 @@
 
 			info += '<tr><td>dpi resolution</td><td>'+mq.dpi+'dpi</td></tr>';
 
-			info += '<tr><td>Scale</td><td>'+Math.round(mq.scale)+'</td></tr>';
+			info += '<tr><td>Scale</td><td>'+mq.scale+'</td></tr>';
 			info += '<tr><td>device pixel ratio</td><td>'+mq.dpr +'</td></tr>';
 
-			info += '<tr><td>mobile</td><td>'+mq.mobile+'</td></tr>';
-			info += '<tr><td>phone</td><td>'+mq.phone+'</td></tr>';
-			info += '<tr><td>tablet</td><td>'+mq.tablet+'</td></tr>';
-			info += '<tr><td>userAgent</td><td>'+mq.userAgent+'</td></tr>';
+			var property, propertyList = ['isDesktop', 'isMobile', 'mobileName', 'isPhone', 'phoneName', 'isTablet', 'tabletName', 'mobileGrade', 'userAgent', 'os', 'mobileGrade'];
+			for (var i=0; i<propertyList.length; i++ ){
+				property = propertyList[i];
+				info += '<tr><td>'+property+'</td><td>'+mq[property]+'</td></tr>';			
+			}
+			
 			/*
 			http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 			Google: > 30% has 1366*768
