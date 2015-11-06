@@ -1,9 +1,9 @@
 /***************************************************************************
-	media-queries.js, 
+	device-modernizr.js, 
 
 	(c) 2015, FCOO
 
-	https://github.com/FCOO/media-queries
+	https://github.com/FCOO/device-modernizr
 	https://github.com/FCOO
 
 ****************************************************************************/
@@ -29,7 +29,7 @@
 
 	var plugin_count = 1000;
 
-	function MediaQueries( options) {
+	function DeviceModernizr( options) {
 		this.plugin_count = plugin_count++;
 
 		//Extend with device (https://github.com/matthewhudson/device.js.git)
@@ -142,41 +142,41 @@
 	}
   
   // expose access to the constructor
-  ns.MediaQueries = MediaQueries;
+  ns.DeviceModernizr = DeviceModernizr;
 
 
 
 	//Extend the prototype
-	ns.MediaQueries.prototype = {
+	ns.DeviceModernizr.prototype = {
 
 		//myMethod
-		myMethod: function( /*arg1, arg2*/ ){
-		},
+//		myMethod: function( /*arg1, arg2*/ ){
+//		},
 		
 
 
 	};
 
-	//If MediaQueries is a extention of class "ParentClass" include the next line 
-	//window.MediaQueries.prototype = $.extend( {}, window.ParentClass.prototype, window.MediaQueries.prototype );
+	//If DeviceModernizr is a extention of class "ParentClass" include the next line 
+	//ns.DeviceModernizr.prototype = $.extend( {}, window.ParentClass.prototype, ns.DeviceModernizr.prototype );
 
 
 	//*****************************************************************
 	//Add tests to Modernizr
 	var screenDim	= Math.min(screen.width, screen.height),
-			mq				= new ns.MediaQueries(),
+			dm				= new ns.DeviceModernizr(),
 			bpIndex,
 			bpName;
 			
 	Modernizr.addTest({
-		desktop			: mq.isDesktop,
-		mobile			: mq.isMobile,
-		phone				: mq.isPhone,
-		tablet			: mq.isTablet,
-		mobilegradea: mq.mobileGrade === 'A',
-		windows			: mq.isWindows,
-		ios					: mq.isIos,
-		android			: mq.isAndroid
+		desktop			: dm.isDesktop,
+		mobile			: dm.isMobile,
+		phone				: dm.isPhone,
+		tablet			: dm.isTablet,
+		mobilegradea: dm.mobileGrade === 'A',
+		windows			: dm.isWindows,
+		ios					: dm.isIos,
+		android			: dm.isAndroid
 
 	});
 	

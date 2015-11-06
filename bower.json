@@ -1,21 +1,21 @@
 {
-  "name": "media-queries",
-  "version": "1.1.0",
-  "homepage": "https://github.com/FCOO/media-queries",
+  "name": "device-modernizr",
+  "version": "1.1.1",
+  "homepage": "https://github.com/FCOO/device-modernizr",
   "authors": [
     "Niels Holt niels@steenbuchholt.dk"
   ],
   "description": "",
   "main": [
-    "dist/media-queries.min.js",
-    "dist/media-queries.min.css"
+    "dist/device-modernizr.min.js",
+    "dist/device-modernizr.min.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/FCOO/media-queries.git"
+    "url": "git://github.com/FCOO/device-modernizr.git"
   },
   "dependencies": {
-    "jquery": "latest",
+    "jquery": "~2.1.4",
     "device.js": "devicejs#~0.2.7",
     "mobile-detect": "~1.3.0"
   },

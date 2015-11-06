@@ -4,14 +4,14 @@
 
 <head>
 	<meta charset="iso-8859-1" />
-	<title>fcoo.dk - Media Queries</title>
+	<title>fcoo.dk - Device Modernizr</title>
 
   <!-- <meta charset="utf-8" /> -->
 	<meta http-equiv='x-dns-prefetch-control' content='on'>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
-  <link rel="stylesheet" type="text/css" href="../src/media-queries.css" />
+  <link rel="stylesheet" type="text/css" href="../src/device-modernizr.css" />
 	<style>
 		.landscape .green-on-landscape { color: green; }
 		.portrait .red-on-portrait { color: red; }
@@ -21,8 +21,8 @@
 </head>
 
 <body>
-	<h1>FCOO Media Queries TEST</h1>
-	<p>This is a test of the media queries to be used in FCOOs applications</p>
+	<h1>FCOO Device Modernizr TEST</h1>
+	<p>This is a test of the DeviceModernizr to be used in FCOOs applications</p>
 
 	<div class="show-for-landscape">This device is in LANDSCAPE mode. <code>class="show-for-landscape"</code></div>
 	<div class="show-for-portrait">This device is in PORTRAIT mode. <code>class="show-for-portrait"</code></div>
@@ -79,7 +79,7 @@
 	<script src="bower_components.js"></script>
 	<!-- <script src="../src/_modernizr-custom.js"></script> -->
 	<script src="modernizr-custom.js"></script>
-	<script src="../src/media-queries.js"></script>
+	<script src="../src/device-modernizr.js"></script>
 
 	<script>
 		(function ($, window, document, undefined) {
@@ -97,7 +97,7 @@
 				$( window ).orientationchange();
 			*/
 
-			var mq = new window.fcoo.MediaQueries();
+			var mq = new window.fcoo.DeviceModernizr();
 
 			var info = '<table border=0>';
 

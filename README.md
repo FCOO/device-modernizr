@@ -1,4 +1,4 @@
-# media-queries
+# device-modernizr
 
 [Modernizr]: https://modernizr.com/
 [mobile-detect.js]: http://hgoebl.github.io/mobile-detect.js/
@@ -6,30 +6,34 @@
 
 ## Description
 
-This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print.
+This package contains of a javascript object `DeviceModernizr`, and a css-file `device-modernizr.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print.
+
+Using [Modernizr.addTest()](https://modernizr.com/docs#modernizr-addtest) to add different classes. 
+
+[Modernizr] must be included.
 
 Using [mobile-detect.js] to detect the name of the device etc.
  
 Using [device.js] to detect operating system, orientation and type, but with the exception that the term *'mobile'* is used for *all* mobile devices (phones and tablets). Instead the term *phone* is used for mobile phones.
 
-[Modernizr] must be included.
+
 
 
 ## Installation
 ### bower
-    bower install https://github.com/FCOO/media-queries.git --save
+    bower install https://github.com/FCOO/device-modernizr.git --save
 
 ## Demo
-http://FCOO.github.io/media-queries/demo/ 
+http://FCOO.github.io/device-modernizr/demo/ 
 
 ## Usage
 
-### MediaQueries-object (media-queries.js)
+### DeviceModernizr-object (device-modernizr.js)
 Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
 
 (Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
-```var myMediaQueries = new MediaQueries( options );```
+```var myDeviceModernizr = new DeviceModernizr( options );```
 
 #### Default options
 	{
@@ -58,7 +62,7 @@ Collects a number of difference values regarding the device and screen using [Mo
   <td><code>dpi</code></td><td>dots pro inc</td></tr>
   <td><code>dpr</code></td><td>device pixel ratio</td></tr>
 -->
-<td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myMediaQueries.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
+<td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myDeviceModernizr.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
 
 <td><code>isDesktop</code></td><td><code>true</code> if it is a desktop</td></tr>
 
@@ -89,9 +93,9 @@ Collects a number of difference values regarding the device and screen using [Mo
 #### Methods
 All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` object,eq.: 
 
-	var version = myMediaQueries.mobileDetect.version('Chrome');
+	var version = myDeviceModernizr.mobileDetect.version('Chrome');
 
-### media-queries.css
+### device-modernizr.css
 
 The css-classes is based on the visibility classes by [ZURB Foundation](http://foundation.zurb.com/docs/components/visibility.html) and the syntax used by [Modernizr].
 
@@ -103,7 +107,7 @@ The device is a tablet : `<html class="tablet ...">`
 
 The device is not a tablet : `<html class="no-tablet ...">`
 
-All the `MQNAME` and `no-MQNAME` classes are added to or removed from `<html>`by [Modernizr] or `media-queries.js`
+All the `MQNAME` and `no-MQNAME` classes are added to or removed from `<html>`by [Modernizr] or `device-modernizr.js`
 
 #### Hide/Show classes
 To control if a element is displayed (show) or hidden (hide) when a given 'state' is on or off there are the following classes defined for each 'state'
@@ -127,7 +131,7 @@ To avoid problems with breakpoints when the device changes orientation the "size
 
 There are five breakpoints for screen size named `screen-small`, `screen-medium`, `screen-large`, `screen-xlarge`, and `screen-xxlarge`
 
-The breakpoints for this five groups are given in the `src/_media-queries.js`:
+The breakpoints for this five groups are given in the `src/device-modernizr.js`:
 <table>
 <tr><td>class</td><td>Screen size (min-<b>max</b>)</td></tr>
 <tr><td>screen-small</td><td>0-<b>624px<b></td></tr>
@@ -181,7 +185,7 @@ Two classes are provided
 
 #### Additional css and scss
 
-The classes in `media-queries.css` only controls the display of elements under certent conditions.
+The classes in `device-modernizr.css` only controls the display of elements under certent conditions.
 But other properties can be controled by using the `MQNAME` and `noMQNAME` classes
 
 Example: To define a class `green-when-in-portrait` that displayes a element in green when orientation is portrait:
@@ -230,7 +234,7 @@ Example: To define a class `green-when-in-portrait` that displayes a element in 
 
 
 ## Copyright and License
-This plugin is licensed under the [MIT license](https://github.com/FCOO/media-queries/LICENSE).
+This plugin is licensed under the [MIT license](https://github.com/FCOO/device-modernizr/LICENSE).
 
 Copyright (c) 2015 [FCOO](https://github.com/FCOO)
 
