@@ -30,8 +30,7 @@ $modernizr-tests:
 	screen-large	,	screen-large-down,
 	screen-xlarge	,	screen-xlarge-down,
 	screen-xxlarge,	screen-xxlarge-down,
-	portrait,
-	landscape,
+	desktop,
 	mobile,
 	phone,
 	tablet,
@@ -103,6 +102,95 @@ $modernizr-tests:
 } //end of @each $modernizr-test in $modernizr-tests {
 
 
+
+/* Orientation targeting */
+.show-for-landscape,
+.hide-for-portrait { display: inherit !important; }
+.hide-for-landscape,
+.show-for-portrait { display: none !important; }
+
+/* Specific visibility for tables */
+table {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table !important; }
+}
+thead {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-header-group !important; }
+}
+tbody {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-row-group !important; }
+}
+tr {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-row !important; }
+}
+td,
+th {
+	&.hide-for-landscape,
+	&.show-for-portrait { display: table-cell !important; }
+}
+
+html.landscape {
+	.show-for-landscape,
+	.hide-for-portrait { display: inherit !important; }
+	.hide-for-landscape,
+	.show-for-portrait { display: none !important; }
+
+	/* Specific visibility for tables */
+	table {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table !important; }
+	}
+	thead {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-header-group !important; }
+	}
+	tbody {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-row-group !important; }
+	}
+	tr {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-row !important; }
+	}
+	td,
+	th {
+		&.show-for-landscape,
+		&.hide-for-portrait { display: table-cell !important; }
+	}
+}
+
+html.portrait {
+	.show-for-portrait,
+	.hide-for-landscape { display: inherit !important; }
+	.hide-for-portrait,
+	.show-for-landscape { display: none !important; }
+
+	/* Specific visibility for tables */
+	table {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table !important; }
+	}
+	thead {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-header-group !important; }
+	}
+	tbody {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-row-group !important; }
+	}
+	tr {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-row !important; }
+	}
+	td,
+	th {
+		&.show-for-portrait,
+		&.hide-for-landscape { display: table-cell !important; }
+	}
+}
 
 // Print visibility
 .show-for-print { display: none !important; }

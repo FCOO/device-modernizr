@@ -14,7 +14,7 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 
 ;(function ($, window, document, undefined) {
 	"use strict";
-	
+
 	var screenBreakPoints = [
 		{name:'screen-small',		value:  624 },
 		{name:'screen-medium',	value: 1024 },
@@ -35,6 +35,9 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 
 	function MediaQueries( options) {
 		this.plugin_count = plugin_count++;
+
+		//Extend with device (https://github.com/matthewhudson/device.js.git)
+		$.extend( this, window.device );
 
 		this.options = $.extend({
 			//Default options = Standard desttop screen
@@ -63,15 +66,6 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 				break;
 			}
 
-/*
-		this.dppx = 1;
-		for (var dppx=1; dppx<4; dppx=dppx+0.1 )
-			if ( Modernizr.mq('(resolution: '+dppx+'dppx)') ){
-				this.dppx = dppx;
-				break;
-			}
-*/
-		
 		this.dpr = window.devicePixelRatio;		
 		if (!this.dpr){
 			this.dpr = 1;
@@ -88,7 +82,6 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 	
 		this.dpr = Math.round(100*this.dpr)/100;
 
-
 		this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
 		this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
 
@@ -102,15 +95,26 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 			this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
 
 
-		//Dreate own instance of MobileDetect
+		//Create own instance of MobileDetect
 		this.mobileDetect = new window.MobileDetect( this.wnua );
-		
-		this.mobile				= this.mobileDetect.mobile();
-		this.phone				= this.mobileDetect.phone();
-		this.tablet				= this.mobileDetect.tablet();
+
+		//Set properties using device.js and mobile-detect.js
+		this.isDesktop		= this.desktop();
+		this.isMobile			= this.mobile() || this.tablet();
+		this.mobileName		= this.mobileDetect.mobile();
+		this.isPhone			= this.mobile();
+		this.phoneName		= this.mobileDetect.phone();
+		this.isTablet			= this.tablet();
+		this.tabletName		= this.mobileDetect.tablet();
 		this.mobileGrade	= this.mobileDetect.mobileGrade();
 		this.userAgent		= this.mobileDetect.userAgent();
 		this.os						= this.mobileDetect.os();
+		this.mobileGrade	= this.mobileDetect.grade;
+
+//		this.mobile				= this.mobileDetect.mobile();
+//		this.phone				= this.mobileDetect.phone();
+//		this.tablet				= this.mobileDetect.tablet();
+
 	}
   
   // expose access to the constructor
@@ -138,15 +142,16 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 	var screenDim	= Math.min(screen.width, screen.height),
 			bpIndex,
 			bpName,
-			md					= new window.MobileDetect(window.navigator.userAgent),
-			grade				= md.mobileGrade();
+			mq					= new ns.MediaQueries();
+//			grade				= md.mobileGrade()*/;
 			
 	
 	Modernizr.addTest({
-		mobile			: !!md.mobile(),
-		phone				: !!md.phone(),
-		tablet			: !!md.tablet(),
-		mobilegradea: grade === 'A'
+		desktop			: mq.isDesktop,
+		mobile			: mq.isMobile,
+		phone				: mq.isPhone,
+		tablet			: mq.isTablet,
+		mobilegradea: mq.mobileGrade === 'A'
 	});
 	
 	//Find the first index in screenBreakPoints where screenDim < value
@@ -172,6 +177,8 @@ document.body.insertBefore(e,d),n.cssText="position:absolute;top:0;left:0;width:
 	*******************************************/
 	$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
 
+console.log(window.device);//.windows());
+/*
 	// Bind an event to window.orientationchange that update the classes of <html>
 	$( window ).on( "orientationchange", function( event ) {
 		var landscape = (event.orientation == 'landscape');
@@ -181,7 +188,7 @@ console.log(event.orientation);
 	});
  
 	$( window ).orientationchange();
-
+*/
 		/*! modernizr 3.1.0 (Custom Build) | MIT *
 		 * http://modernizr.com/download/?-adownload-ambientlight-animation-apng-appearance-applicationcache-audio-audioloop-audiopreload-backdropfilter-backgroundblendmode-backgroundcliptext-backgroundsize-batteryapi-beacon-bgpositionshorthand-bgpositionxy-bgrepeatspace_bgrepeatround-bgsizecover-blobconstructor-bloburls-blobworkers-borderimage-borderradius-boxshadow-boxsizing-canvas-canvasblending-canvastext-canvaswinding-capture-checked-classlist-contains-contenteditable-contextmenu-cookies-cors-createelementattrs_createelement_attrs-cssall-cssanimations-csscalc-csschunit-csscolumns-cssescape-cssexunit-cssfilters-cssgradients-csshyphens_softhyphens_softhyphensfind-cssinvalid-cssmask-csspointerevents-csspositionsticky-csspseudoanimations-csspseudotransitions-cssreflections-cssremunit-cssresize-cssscrollbar-csstransforms-csstransforms3d-csstransitions-cssvalid-cssvhunit-cssvmaxunit-cssvminunit-cssvwunit-cubicbezierrange-customevent-customprotocolhandler-dart-datachannel-datalistelem-dataset-datauri-dataview-dataworkers-details-devicemotion_deviceorientation-directory-display_runin-displaytable-documentfragment-ellipsis-emoji-es5-es5array-es5date-es5function-es5object-es5string-es5syntax-es5undefined-es6array-es6math-es6number-es6object-es6string-eventlistener-eventsource-exiforientation-fetch-fileinput-filereader-filesystem-flash-flexbox-flexboxlegacy-flexboxtweener-flexwrap-fontface-formattribute-formvalidation-framed-fullscreen-gamepads-generatedcontent-generators-geolocation-getrandomvalues-getusermedia-hashchange-hidden-hiddenscroll-history-hsla-htmlimports-ie8compat-indexeddb-indexeddbblob-inlinesvg-input-inputformaction-inputformenctype-inputformmethod-inputformtarget-inputtypes-intl-jpeg2000-jpegxr-json-lastchild-localizednumber-localstorage-lowbandwidth-lowbattery-matchmedia-mathml-mediaqueries-microdata-multiplebgs-mutationobserver-notification-nthchild-objectfit-olreversed-oninput-opacity-outputelem-overflowscrolling-pagevisibility-peerconnection-performance-picture-placeholder-pointerevents-pointerlock-postmessage-preserve3d-progressbar_meter-promises-proximity-queryselector-quotamanagement-regions-requestanimationframe-requestautocomplete-rgba-ruby-sandbox-scriptasync-scriptdefer-seamless-search-serviceworker-sessionstorage-shapes-sharedworkers-siblinggeneral-sizes-smil-speechrecognition-speechsynthesis-srcdoc-srcset-strictmode-stylescoped-subpixelfont-supports-svg-svgasimg-svgclippaths-svgfilters-svgforeignobject-target-template-templatestrings-textalignlast-textareamaxlength-textshadow-texttrackapi_track-time-todataurljpeg_todataurlpng_todataurlwebp-touchevents-transferables-typedarrays-unicode-unicoderange-unknownelements-urlparser-userdata-userselect-vibrate-video-videoautoplay-videoloop-videopreload-vml-webaudio-webgl-webglextensions-webintents-webp-webpalpha-webpanimation-webplossless_webp_lossless-websockets-websocketsbinary-websqldatabase-webworkers-willchange-wrapflow-xhr2-xhrresponsetype-xhrresponsetypearraybuffer-xhrresponsetypeblob-xhrresponsetypedocument-xhrresponsetypejson-xhrresponsetypetext-addtest-atrule-domprefixes-hasevent-mq-prefixed-prefixedcss-prefixedcssvalue-prefixes-shiv-testallprops-testprop-teststyles !*/
 	

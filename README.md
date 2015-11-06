@@ -2,10 +2,15 @@
 
 [Modernizr]: https://modernizr.com/
 [mobile-detect.js]: http://hgoebl.github.io/mobile-detect.js/
+[device.js]: https://github.com/matthewhudson/device.js
 
 ## Description
 
-This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print
+This package contains of a javascript class `MediaQueries`, and a css-file `media-queries.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print.
+
+Using [mobile-detect.js] to detect the name of the device etc.
+ 
+Using [device.js] to detect operating system, orientation and type, but with the exception that the term *'mobile'* is used for *all* mobile devices (phones and tablets). Instead the term *phone* is used for mobile phones.
 
 [Modernizr] must be included.
 
@@ -53,13 +58,25 @@ Collects a number of difference values regarding the device and screen using [Mo
   <td><code>dpi</code></td><td>dots pro inc</td></tr>
   <td><code>dpr</code></td><td>device pixel ratio</td></tr>
 -->
-  <td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myMediaQueries.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
- <td><code>mobile</code></td><td>Name of mobile device - <code>null</code> if not a mobile device</td></tr>
- <td><code>phone</code></td><td>If a mobile device: Name of phone - <code>null</code> if not a phone</td></tr>
- <td><code>tablet</code></td><td>If a mobile device: Name of table - <code>null</code> if not a table</td></tr>
- <td><code>mobileGrade</code></td><td><a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a></td></tr>
- <td><code>userAgent</code></td><td>Browser (only for mobile devices)</td></tr>
- <td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
+<td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myMediaQueries.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
+
+<td><code>isDesktop</code></td><td><code>true</code> if it is a desktop</td></tr>
+
+<td><code>isMobile</code></td><td><code>true</code> if it is a mobile device</td></tr>
+<td><code>mobileName</code></td><td>Name of mobile device</td></tr>
+
+<td><code>isPhone</code></td><td><code>true</code> if it is a mobile phone</td></tr>
+<td><code>phoneName</code></td><td>Name of mobile phone</td></tr>
+
+<td><code>isTablet</code></td><td><code>true</code> if it is a table</td></tr>
+<td><code>tabletName</code></td><td>Name of tablet</td></tr>
+
+
+<td><code>mobileGrade</code></td><td><a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a></td></tr>
+
+<td><code>userAgent</code></td><td>Browser (only for mobile devices)</td></tr>
+
+<td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
 </table>
 
 
@@ -128,7 +145,10 @@ Example
 	<p class="show-for-no-screen-small">The screen width and height is > 624px</p> 
 
 ##### Device
-Test if the device is a `mobile` device and subsequently if it is a `phone` or a `tablet`
+Test if the device is a `desktop` or `mobile` device and subsequently if it is a `phone` or a `tablet`
+
+	show-for-desktop / hide-for-desktop
+	show-for-no-desktop / hide-for-no-desktop
 
 	show-for-mobile / hide-for-mobile
 	show-for-no-mobile / hide-for-no-mobile 
