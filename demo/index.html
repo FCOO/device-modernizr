@@ -109,7 +109,7 @@
 			info += '<tr><td>Scale</td><td>'+mq.scale+'</td></tr>';
 			info += '<tr><td>device pixel ratio</td><td>'+mq.dpr +'</td></tr>';
 
-			var property, propertyList = ['isDesktop', 'isMobile', 'mobileName', 'isPhone', 'phoneName', 'isTablet', 'tabletName', 'mobileGrade', 'userAgent', 'os', 'mobileGrade'];
+			var property, propertyList = ['isDesktop', 'isMobile', 'mobileName', 'isPhone', 'phoneName', 'isTablet', 'tabletName',  'mobileGrade', 'userAgent', 'isWindows', 'isIos', 'isAndroid', 'os','browser_version'];
 			for (var i=0; i<propertyList.length; i++ ){
 				property = propertyList[i];
 				info += '<tr><td>'+property+'</td><td>'+mq[property]+'</td></tr>';			

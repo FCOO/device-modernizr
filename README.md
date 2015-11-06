@@ -76,7 +76,13 @@ Collects a number of difference values regarding the device and screen using [Mo
 
 <td><code>userAgent</code></td><td>Browser (only for mobile devices)</td></tr>
 
+<td><code>isWindows</code></td><td><code>true</code> if it is Windows OS</td></tr>
+<td><code>isIos</code></td><td><code>true</code> if it is iOS</td></tr>
+<td><code>isAndroid</code></td><td><code>true</code> if it is Android OS</td></tr>
+
 <td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
+<td><code>browser_version</code></td><td>Browser and version as string. Eq.<code>Firefox 41</code></td></tr>
+ 'mobileGrade', 
 </table>
 
 
@@ -111,7 +117,7 @@ The `[-down]` is only for **screen sizes** and `[-no]` is not used for **print**
 There are four 'groups' of 'states' in 
 
 - **Screen size** - show or hide for different screen sizes
-- **Device** - mobile device and type (phone/tablet)
+- **Device** - desktop or mobile device, type (phone/tablet), and OS
 - **Orientation** - landscape or portrate
 - **Print** - show or hide on print
 
@@ -145,7 +151,7 @@ Example
 	<p class="show-for-no-screen-small">The screen width and height is > 624px</p> 
 
 ##### Device
-Test if the device is a `desktop` or `mobile` device and subsequently if it is a `phone` or a `tablet`
+Test if the device is a `desktop` or `mobile` device and subsequently if it is a `phone` or a `tablet` and the OS (`windows`, `ios`, or `android`)
 
 	show-for-desktop / hide-for-desktop
 	show-for-no-desktop / hide-for-no-desktop
@@ -156,6 +162,9 @@ Test if the device is a `desktop` or `mobile` device and subsequently if it is a
 	show-for-phone / hide-for-phone
 	show-for-tablet / hide-for-tablet
 
+	show-for-windows / hide-for-windows
+	show-for-ios / hide-for-ios
+	show-for-android / hide-for-android
 
 ##### Orientation
 Four classes are provided

@@ -34,6 +34,9 @@ $modernizr-tests:
 	mobile,
 	phone,
 	tablet,
+	windows,
+	ios,
+	android,
 	mobilegradea;
 
 @each $modernizr-test in $modernizr-tests {
