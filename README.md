@@ -86,7 +86,6 @@ Collects a number of difference values regarding the device and screen using [Mo
 
 <td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
 <td><code>browser_version</code></td><td>Browser and version as string. Eq.<code>Firefox 41</code></td></tr>
- 'mobileGrade', 
 </table>
 
 
