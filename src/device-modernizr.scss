@@ -6,19 +6,9 @@
 	https://github.com/FCOO/device-modernizr
 	https://github.com/FCOO
 
-	Using the scss-files created by ZURB Foundation
-	See http://foundation.zurb.com/docs/media-queries.html
-
 ************************************************/
-//BOURBON - http://bourbon.io/
-// @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-
-//MODERNIZR-MIXIN - https://github.com/danielguillan/modernizr-mixin
-// @import "../bower_components/modernizr-mixin/stylesheets/modernizr";
-
-//MATHSASS - https://github.com/terkel/mathsass
-// @import "../bower_components/mathsass/dist/math";
-
+//MODERNIZR-SASS - http://github.com/FCOO/modernizr-scss
+@import "../bower_components/modernizr-scss/dist/modernizr-scss";
 
 //Create show/hide-for-TEST and show/hide-for-no-TEST, TEST = the Modernizr tests installed
 
@@ -39,73 +29,12 @@ $modernizr-tests:
 	mobilegradea;
 
 @each $modernizr-test in $modernizr-tests {
-	// Hide/show when test passed
-	html.#{$modernizr-test}{
-		.show-for-#{$modernizr-test},
-		.hide-for-no-#{$modernizr-test}		{ display: inherit !important; }
-		.hide-for-#{$modernizr-test},
-		.show-for-no-#{$modernizr-test}		{ display: none !important; }
-
-		// Specific visibility for tables 
-		table {
-			&.show-for-#{$modernizr-test},
-			&.hide-for-no-#{$modernizr-test} { display: table !important; }
-		}
-		thead {
-			&.show-for-#{$modernizr-test},
-			&.hide-for-no-#{$modernizr-test} { display: table-header-group !important; }
-		}
-		tbody {
-			&.show-for-#{$modernizr-test},
-			&.hide-for-no-#{$modernizr-test} { display: table-row-group !important; }
-		}
-		tr {
-			&.show-for-#{$modernizr-test},
-			&.hide-for-no-#{$modernizr-test} { display: table-row !important; }
-		}
-		td,
-		th {
-			&.show-for-#{$modernizr-test},
-			&.hide-for-no-#{$modernizr-test} { display: table-cell !important; }
-		}
-  }
-
-	// Hide/show when test failed
-	html.no-#{$modernizr-test}{
-		.show-for-no-#{$modernizr-test},
-		.hide-for-#{$modernizr-test}		{ display: inherit !important; }
-		.hide-for-no-#{$modernizr-test},
-		.show-for-#{$modernizr-test}		{ display: none !important; }
-
-		// Specific visibility for tables 
-		table {
-			&.show-for-no-#{$modernizr-test},
-			&.hide-for-#{$modernizr-test} { display: table !important; }
-		}
-		thead {
-			&.show-for-no-#{$modernizr-test},
-			&.hide-for-#{$modernizr-test} { display: table-header-group !important; }
-		}
-		tbody {
-			&.show-for-no-#{$modernizr-test},
-			&.hide-for-#{$modernizr-test} { display: table-row-group !important; }
-		}
-		tr {
-			&.show-for-no-#{$modernizr-test},
-			&.hide-for-#{$modernizr-test} { display: table-row !important; }
-		}
-		td,
-		th {
-			&.show-for-no-#{$modernizr-test},
-			&.hide-for-#{$modernizr-test} { display: table-cell !important; }
-		}
-	}
-
-} //end of @each $modernizr-test in $modernizr-tests {
+	@include show-and-hide-for-modernizr-test( $modernizr-test, html );
+}
 
 
 
-/* Orientation targeting */
+// Orientation targeting - special version with 'landscape' contra 'portrait' instead of 'landscape' vs 'no-landscape'
 .show-for-landscape,
 .hide-for-portrait { display: inherit !important; }
 .hide-for-landscape,
