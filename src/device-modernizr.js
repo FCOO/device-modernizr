@@ -197,6 +197,12 @@
 	}
 	
 	
+	//test
+	$(window).on('resize.TEST', function(e){
+
+alert('davs');
+	});
+
 	
 	/******************************************
 	Initialize/ready 
