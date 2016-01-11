@@ -63,7 +63,8 @@ th {
 	&.show-for-portrait { display: table-cell !important; }
 }
 
-html.landscape {
+//html.landscape {
+@media screen and (orientation: landscape) {
 	.show-for-landscape,
 	.hide-for-portrait { display: inherit !important; }
 	.hide-for-landscape,
@@ -93,7 +94,8 @@ html.landscape {
 	}
 }
 
-html.portrait {
+//html.portrait {
+@media screen and (orientation: portrait) {
 	.show-for-portrait,
 	.hide-for-landscape { display: inherit !important; }
 	.hide-for-portrait,

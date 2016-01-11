@@ -13,9 +13,11 @@
 
   <link rel="stylesheet" type="text/css" href="../src/device-modernizr.css" />
 	<style>
+		pre : {
+			border: 1px solid black;
+		}
 		.landscape .green-on-landscape { color: green; }
 		.portrait .red-on-portrait { color: red; }
-	
 	</style>
 
 </head>
@@ -27,9 +29,15 @@
 	<div class="show-for-landscape">This device is in LANDSCAPE mode. <code>class="show-for-landscape"</code></div>
 	<div class="show-for-portrait">This device is in PORTRAIT mode. <code>class="show-for-portrait"</code></div>
 
-	<div class="green-on-landscape">This is GREEN in LANDSCAPE mode. <code>class="green-on-landscape"</code></div>
-	<div class="red-on-portrait">This is RED in PORTRAIT mode. <code>class="red-on-portrait"</code></div>
-
+<hr>
+<pre>
+CSS:
+.landscape .green-on-landscape { color: green; }
+.portrait .red-on-portrait { color: red; }
+</pre>
+<div class="green-on-landscape">This is GREEN in LANDSCAPE mode. <code>class="green-on-landscape"</code></div>
+<div class="red-on-portrait">This is RED in PORTRAIT mode. <code>class="red-on-portrait"</code></div>
+<hr>
 	
 	<div class="show-for-mobile">This device IS a MOBILE device.. <code>class="show-for-mobile"</code></div>
 	<div class="show-for-phone">..and it is a PHONE. <code>class="show-for-phone"</code></div>
