@@ -8,7 +8,7 @@
 
 ****************************************************************************/
 
-;(function ($, window, document, undefined) {
+;(function ($, window, document, Modernizr, undefined) {
 	"use strict";
 
 	var screenBreakPoints = [
@@ -29,7 +29,7 @@
 
 	var plugin_count = 1000;
 
-	function DeviceModernizr( options) {
+	function DeviceModernizr( options ) {
 		this.plugin_count = plugin_count++;
 
 		//Extend with device (https://github.com/matthewhudson/device.js.git)
@@ -139,6 +139,49 @@
 //		this.phone				= this.mobileDetect.phone();
 //		this.tablet				= this.mobileDetect.tablet();
 
+
+		//Add tests to Modernizr
+		var screenDim	= Math.min(screen.width, screen.height),
+				bpIndex,
+				bpName;
+			
+		Modernizr.addTest({
+			desktop			: this.isDesktop,
+			mobile			: this.isMobile,
+			phone				: this.isPhone,
+			tablet			: this.isTablet,
+			mobilegradea: this.mobileGrade === 'A',
+			windows			: this.isWindows,
+			ios					: this.isIos,
+			android			: this.isAndroid
+		});
+	
+		//Find the first index in screenBreakPoints where screenDim < value
+		for (bpIndex=0; bpIndex<screenBreakPoints.length; bpIndex++ )
+			if (screenBreakPoints[bpIndex].value >= screenDim)
+				break;
+		
+		for (var i=0; i<screenBreakPoints.length; i++ ){
+			bpName = screenBreakPoints[i].name;
+
+			//Test for exact size
+			Modernizr.addTest( bpName, i == bpIndex );
+	
+			//Test for max size
+			Modernizr.addTest( bpName+'-down', i >= bpIndex );
+	
+		}
+	
+	
+		//test
+		$(window).on('resize.TEST', $.proxy( this._onOriantation, this ));
+
+	
+	
+	
+	
+	
+	
 	}
   
   // expose access to the constructor
@@ -152,7 +195,9 @@
 		//myMethod
 //		myMethod: function( /*arg1, arg2*/ ){
 //		},
-		
+		_onOriantation: function( event ){
+			alert('onOri');	
+		}
 
 
 	};
@@ -160,48 +205,6 @@
 	//If DeviceModernizr is a extention of class "ParentClass" include the next line 
 	//ns.DeviceModernizr.prototype = $.extend( {}, window.ParentClass.prototype, ns.DeviceModernizr.prototype );
 
-
-	//*****************************************************************
-	//Add tests to Modernizr
-	var screenDim	= Math.min(screen.width, screen.height),
-			dm				= new ns.DeviceModernizr(),
-			bpIndex,
-			bpName;
-			
-	Modernizr.addTest({
-		desktop			: dm.isDesktop,
-		mobile			: dm.isMobile,
-		phone				: dm.isPhone,
-		tablet			: dm.isTablet,
-		mobilegradea: dm.mobileGrade === 'A',
-		windows			: dm.isWindows,
-		ios					: dm.isIos,
-		android			: dm.isAndroid
-
-	});
-	
-	//Find the first index in screenBreakPoints where screenDim < value
-	for (bpIndex=0; bpIndex<screenBreakPoints.length; bpIndex++ )
-		if (screenBreakPoints[bpIndex].value >= screenDim)
-			break;
-		
-	for (var i=0; i<screenBreakPoints.length; i++ ){
-		bpName = screenBreakPoints[i].name;
-
-		//Test for exact size
-		Modernizr.addTest( bpName, i == bpIndex );
-	
-		//Test for max size
-		Modernizr.addTest( bpName+'-down', i >= bpIndex );
-	
-	}
-	
-	
-	//test
-	$(window).on('resize.TEST', function(e){
-
-alert('davs');
-	});
 
 	
 	/******************************************
@@ -215,5 +218,5 @@ alert('davs');
 
 
 
-}(jQuery, this, document));
+}(jQuery, this, document, Modernizr));
 
