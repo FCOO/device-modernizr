@@ -51,12 +51,11 @@
  		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
-		this.orientation = '';
 
 		this.isPortrait = false;
 		this.isLandscape = false;
 		this._testOrientation();
-		
+this._onOrientation();
 		this.client_width		= docEl.clientWidth;
 		this.client_width		= docEl.clientHeight;
 		
@@ -216,13 +215,13 @@
 		},
 
 		_onOrientation: function( event ){
-			var old_screen_width	= this.screen.width,
-					old_screen_height	=	this.screen.height;
+			var old_screen_width	= this.screen_width,
+					old_screen_height	=	this.screen_height;
 
 			this.screen_width		= screen.width;
 			this.screen_height	=	screen.height;
-alert(old_screen_width+'->'+this.screen.width+' '+old_screen_height+'->'+this.screen.height);
-			if ((old_screen_width != this.screen.width) || (old_screen_height	!=	this.screen.height)){
+alert(old_screen_width+'->'+this.screen_width+' '+old_screen_height+'->'+this.screen_height);
+			if ((old_screen_width != this.screen_width) || (old_screen_height	!=	this.screen_height)){
 				this._testOrientation();
 	
 				alert('onOri isPortrait='+this.isPortrait);	
