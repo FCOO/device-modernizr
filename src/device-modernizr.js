@@ -32,6 +32,8 @@
 	function DeviceModernizr( options ) {
 		this.plugin_count = plugin_count++;
 
+		this.modernizr = Modernizr;
+
 		//Extend with device (https://github.com/matthewhudson/device.js.git)
 		$.extend( this, window.device );
 
@@ -49,6 +51,12 @@
  		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
+		this.orientation = '';
+
+		this.isPortrait = false;
+		this.isLandscape = false;
+		this._testOrientation();
+		
 		this.client_width		= docEl.clientWidth;
 		this.client_width		= docEl.clientHeight;
 		
@@ -89,7 +97,6 @@
 		this.scale = 100;
 		if ((this.dpr != 1) || (this.dpi != 96))
 			this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
-
 
 		//Get a string with browser and version
 		this.browser_version = function() {
@@ -134,6 +141,7 @@
 		
 		this.os						= this.mobileDetect.os();
 
+		
 
 //		this.mobile				= this.mobileDetect.mobile();
 //		this.phone				= this.mobileDetect.phone();
@@ -174,7 +182,7 @@
 	
 	
 		//test
-		$(window).on('resize.TEST', $.proxy( this._onOriantation, this ));
+		$(window).on('resize.TEST', $.proxy( this._onOrientation, this ));
 
 	
 	
@@ -195,8 +203,25 @@
 		//myMethod
 //		myMethod: function( /*arg1, arg2*/ ){
 //		},
-		_onOriantation: function( event ){
-			alert('onOri');	
+		_testOrientation: function(){
+			this.isPortrait = !!this.modernizr.mq('screen and (orientation: portrait)');
+			this.isLandscape = !!this.modernizr.mq('screen and (orientation: landscape)');
+
+			$('html')
+				.toggleClass( 'portrait'		,  this.isPortrait	)
+				.toggleClass( 'no-portrait',	!this.isPortrait	)
+				.toggleClass( 'landscape'		,  this.isLandscape	)
+				.toggleClass( 'no-landscape', !this.isLandscape )
+
+		},
+
+		_onOrientation: function( event ){
+			this.screen_width		= screen.width;
+			this.screen_height	=	screen.height;
+			this._testOrientation();
+
+	
+			alert('onOri isPortrait='+this.isPortrait);	
 		}
 
 
