@@ -107,6 +107,8 @@ CSS:
 
 			var mq = new window.fcoo.DeviceModernizr();
 
+			mq.onOrientation( function( m ){ alert(m.isPortrait ) } );
+
 			var info = '<table border=0>';
 
 			info += '<tr><td>screen width</td><td>'+mq.screen_width +'</td></tr>';

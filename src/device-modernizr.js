@@ -31,8 +31,10 @@
 
 	function DeviceModernizr( options ) {
 		this.plugin_count = plugin_count++;
+		this.VERSION = "{VERSION}";
 
-		this.modernizr = Modernizr;
+		this.modernizr		= Modernizr;
+		this.globalEvents = new GlobalEvents();
 
 		//Extend with device (https://github.com/matthewhudson/device.js.git)
 		$.extend( this, window.device );
@@ -180,15 +182,9 @@ this._onOrientation();
 		}
 	
 	
-		//test
-		$(window).on('resize.TEST', $.proxy( this._onOrientation, this ));
+		//Set the 'change orientation event'
+		$(window).on('resize.mmqd', $.proxy( this._onOrientation, this ));
 
-	
-	
-	
-	
-	
-	
 	}
   
   // expose access to the constructor
@@ -199,9 +195,11 @@ this._onOrientation();
 	//Extend the prototype
 	ns.DeviceModernizr.prototype = {
 
-		//myMethod
-//		myMethod: function( /*arg1, arg2*/ ){
-//		},
+		onOrientation		: function( callback, context ){ this.globalEvents.on		('orientation', callback, context );	},
+		offOrientation	: function( callback, context ){ this.globalEvents.off	('orientation', callback, context );	},
+		onceOrientation	: function( callback, context ){ this.globalEvents.once	('orientation', callback, context );	},
+		oneOrientation	: function( callback, context ){ this.globalEvents.one	('orientation', callback, context );	},
+
 		_testOrientation: function(){
 			this.isPortrait = !!this.modernizr.mq('screen and (orientation: portrait)');
 			this.isLandscape = !!this.modernizr.mq('screen and (orientation: landscape)');
@@ -220,20 +218,15 @@ this._onOrientation();
 
 			this.screen_width		= screen.width;
 			this.screen_height	=	screen.height;
-alert(old_screen_width+'->'+this.screen_width+' '+old_screen_height+'->'+this.screen_height);
 			if ((old_screen_width != this.screen_width) || (old_screen_height	!=	this.screen_height)){
 				this._testOrientation();
 	
-				alert('onOri isPortrait='+this.isPortrait);	
+				this.globalEvents.fire('orientation', this, event);
 			}
 		}
 
 
 	};
-
-	//If DeviceModernizr is a extention of class "ParentClass" include the next line 
-	//ns.DeviceModernizr.prototype = $.extend( {}, window.ParentClass.prototype, ns.DeviceModernizr.prototype );
-
 
 	
 	/******************************************
