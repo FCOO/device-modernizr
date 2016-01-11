@@ -216,12 +216,17 @@
 		},
 
 		_onOrientation: function( event ){
+			var old_screen_width		= this.screen.width,
+					old_screen_height	=	this.screen.height;
+
 			this.screen_width		= screen.width;
 			this.screen_height	=	screen.height;
-			this._testOrientation();
 
+			if ((old_screen_width != this.screen.width) || (old_screen_height	!=	this.screen.height)){
+				this._testOrientation();
 	
-			alert('onOri isPortrait='+this.isPortrait);	
+				alert('onOri isPortrait='+this.isPortrait);	
+			}
 		}
 
 
