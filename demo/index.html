@@ -83,7 +83,6 @@ CSS:
 		<button>This is a 'default' button</button>
 	</div>
 
-	<!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
 	<script src="bower_components.js"></script>
 	<!-- <script src="../src/_modernizr-custom.js"></script> -->
 	<script src="modernizr-custom.js"></script>
@@ -107,7 +106,9 @@ CSS:
 
 			var mq = new window.fcoo.DeviceModernizr();
 
-			mq.onOrientation( function( m ){ alert(m.isPortrait ) } );
+			mq.onOrientation( function( m ){ 
+				console.log('.isPortrait=', m.isPortrait) ;
+			});
 
 			var info = '<table border=0>';
 

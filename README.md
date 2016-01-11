@@ -73,12 +73,12 @@ Collects a number of difference values regarding the device and screen using [Mo
 When the orientation of the screen is changed (to/from landscape from/to portrait) an event is fired.
 To add a function to the event use
 
-	on( callback, context ) //callback = function( deviceModernizr )
-	once( callback, context ) //Only called once. callback = function( deviceModernizr )
+	.onOrientation( callback, context ) //callback = function( deviceModernizr )
+	.onceOrientation( callback, context ) //Only called once. callback = function( deviceModernizr )
 
 To remove a event use
 
-	off( callback, context )
+	.offOrientation( callback, context )
 
 
 ##### mobile-detect.js
