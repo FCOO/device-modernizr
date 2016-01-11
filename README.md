@@ -41,55 +41,47 @@ Collects a number of difference values regarding the device and screen using [Mo
 	    width		: 1366,
 		height		: 768,
 		diagonal_inc: 20
-		}
+	  }
 	}
 
 
 #### Properties
-<table>
-<tr>
-  <th>Id</th>
-  <th>Description</th>
-</tr>
-<tr>
-<!--  
-  <td><code>screen_width</code></td><td><td></td></tr>
-  <td><code>screen_height</code></td><td></td></tr>
-  <td><code>client_width</code></td><td></td></tr>
-  <td><code>client_width</code></td><td></td></tr>
-  <td><code>screen_width_em</code></td><td></td></tr>
-  <td><code>screen_height_em</code></td><td></td></tr>
-  <td><code>dpi</code></td><td>dots pro inc</td></tr>
-  <td><code>dpr</code></td><td>device pixel ratio</td></tr>
--->
-<td><code>scale</code></td><td>The scale is best guest for a scale (eq. <code>html.style.font-size = myDeviceModernizr.scale</code>) of the screen to have elements the same size as on the reference screen</td></tr>
-
-<td><code>isDesktop</code></td><td><code>true</code> if it is a desktop</td></tr>
-
-<td><code>isMobile</code></td><td><code>true</code> if it is a mobile device</td></tr>
-<td><code>mobileName</code></td><td>Name of mobile device</td></tr>
-
-<td><code>isPhone</code></td><td><code>true</code> if it is a mobile phone</td></tr>
-<td><code>phoneName</code></td><td>Name of mobile phone</td></tr>
-
-<td><code>isTablet</code></td><td><code>true</code> if it is a table</td></tr>
-<td><code>tabletName</code></td><td>Name of tablet</td></tr>
-
-
-<td><code>mobileGrade</code></td><td><a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a></td></tr>
-
-<td><code>userAgent</code></td><td>Browser (only for mobile devices)</td></tr>
-
-<td><code>isWindows</code></td><td><code>true</code> if it is Windows OS</td></tr>
-<td><code>isIos</code></td><td><code>true</code> if it is iOS</td></tr>
-<td><code>isAndroid</code></td><td><code>true</code> if it is Android OS</td></tr>
-
-<td><code>os</code></td><td>Operating System (only for mobile devices)</td></tr>
-<td><code>browser_version</code></td><td>Browser and version as string. Eq.<code>Firefox 41</code></td></tr>
-</table>
+| Id | Description |
+| :-- | --- |
+| <code>isPortrait</code>| True if the pages in displayed **on screen** and in potrait-mode |
+| <code>isLandscape</code>| True if the pages in displayed **on screen** and in landscape-mode |
+| <code>scale</code> | The scale is best guest for a scale (eq. <code>html.style.font-size = myDeviceModernizr.scale</code>) of the screen to have elements the same size as on the reference screen |
+| <code>isDesktop</code> | <code>true</code> if it is a desktop |
+| <code>isMobile</code> | <code>true</code> if it is a mobile device |
+| <code>mobileName</code> | Name of mobile device |
+| <code>isPhone</code> | <code>true</code> if it is a mobile phone |
+| <code>phoneName</code> | Name of mobile phone |
+| <code>isTablet</code> | <code>true</code> if it is a table |
+| <code>tabletName</code> | Name of tablet |
+| <code>mobileGrade</code> | <a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a> |
+| <code>userAgent</code> | Browser (only for mobile devices) |
+| <code>isWindows</code> | <code>true</code> if it is Windows OS |
+| <code>isIos</code> | <code>true</code> if it is iOS |
+| <code>isAndroid</code> | <code>true</code> if it is Android OS |
+| <code>os</code> | Operating System (only for mobile devices) |
+| <code>browser_version</code> | Browser and version as string. Eq.<code>Firefox 41</code> |
 
 
 #### Methods
+
+##### orientation-events
+When the orientation of the screen is changed (to/from landscape from/to portrait) an event is fired.
+To add a function to the event use
+
+	on( callback, context ) //callback = function( deviceModernizr )
+	once( callback, context ) //Only called once. callback = function( deviceModernizr )
+
+To remove a event use
+
+	off( callback, context )
+
+
+##### mobile-detect.js
 All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` object,eq.: 
 
 	var version = myDeviceModernizr.mobileDetect.version('Chrome');
