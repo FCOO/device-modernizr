@@ -1,9 +1,9 @@
 /***************************************************************************
-	device-modernizr.js, 
+	modernizr-mq-device.js, 
 
 	(c) 2015, FCOO
 
-	https://github.com/FCOO/device-modernizr
+	https://github.com/FCOO/modernizr-mq-device
 	https://github.com/FCOO
 
 ****************************************************************************/
