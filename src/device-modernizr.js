@@ -216,12 +216,12 @@
 		},
 
 		_onOrientation: function( event ){
-			var old_screen_width		= this.screen.width,
+			var old_screen_width	= this.screen.width,
 					old_screen_height	=	this.screen.height;
 
 			this.screen_width		= screen.width;
 			this.screen_height	=	screen.height;
-
+alert(old_screen_width+'->'+this.screen.width+' '+old_screen_height+'->'+this.screen.height);
 			if ((old_screen_width != this.screen.width) || (old_screen_height	!=	this.screen.height)){
 				this._testOrientation();
 	
