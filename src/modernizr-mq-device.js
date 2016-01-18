@@ -236,7 +236,7 @@
 			for (i=0; i<this.mediaQuery.length; i++ ){
 				mediaQuery = this.mediaQuery[i];
 				isOn = !!this.modernizr.mq(mediaQuery.mq);
-console.log(mediaQuery.id,isOn);
+alert(mediaQuery.id+' '+isOn);
 				$('html')
 					.toggleClass(				mediaQuery.id,  isOn	)
 					.toggleClass( 'no-'+mediaQuery.id, !isOn	);
@@ -245,7 +245,6 @@ console.log(mediaQuery.id,isOn);
 					//Fire event
 					this.globalEvents.fire(mediaQuery.id, mediaQuery.id, this);
 				}
-
 				mediaQuery.on = isOn;
 			}
 		}
