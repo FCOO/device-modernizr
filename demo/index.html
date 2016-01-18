@@ -106,8 +106,8 @@ CSS:
 
 			var mq = new window.fcoo.ModernizrMQDevice();
 
-			mq.on( 'landscape', function( m ){ 
-				console.log('Is now in landscape-mode') ;
+			mq.on( 'landscape portrait', function( m ){ 
+				alert('Is now in '+m+'-mode') ;
 			});
 
 			var info = '<table border=0>';
