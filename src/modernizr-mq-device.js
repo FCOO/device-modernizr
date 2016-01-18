@@ -242,6 +242,7 @@
 
 				if (isOn && !mediaQuery.on){
 					//Fire event
+					console.log(this.globalEvents, mediaQuery.id);
 					this.globalEvents.fire(mediaQuery.id, mediaQuery.id, this);
 				}
 				mediaQuery.on = isOn;
