@@ -51,12 +51,7 @@
 	//***********************************************
 	
 	
-	//Create fcoo-namespace
-	window.fcoo = window.fcoo || {};
-
-	//If fcoo.namespace() is defined create a name-space
-	var ns = window.fcoo.namespace ? window.fcoo.namespace(''/*Enter the fcoo-namespace here*/) : window.fcoo; 
-	//or var ns = window;
+	var ns = window;
 
 	var plugin_count = 1000;
 
