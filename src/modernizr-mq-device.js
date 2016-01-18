@@ -236,7 +236,7 @@
 			for (i=0; i<this.mediaQuery.length; i++ ){
 				mediaQuery = this.mediaQuery[i];
 				isOn = !!this.modernizr.mq(mediaQuery.mq);
-alert(mediaQuery.id+' '+isOn);
+alert(mediaQuery.id+' '+isOn+' FIRE='+(isOn && !mediaQuery.on));
 				$('html')
 					.toggleClass(				mediaQuery.id,  isOn	)
 					.toggleClass( 'no-'+mediaQuery.id, !isOn	);
