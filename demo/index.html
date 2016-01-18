@@ -109,7 +109,7 @@ CSS:
 			mq.on( 'landscape portrait', function( m ){ 
 				alert('Is now in '+m+'-mode') ;
 			});
-
+			mq._onMediaQuery();
 			var info = '<table border=0>';
 
 			info += '<tr><td>screen width</td><td>'+mq.screen_width +'</td></tr>';

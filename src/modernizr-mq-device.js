@@ -221,10 +221,10 @@
 	ns.ModernizrMQDevice.prototype = {
 		
 		//Methods to add media-query-events
-		on	: function( callback, context ){ this.globalEvents.on		('orientation', callback, context );	},
-		off	: function( callback, context ){ this.globalEvents.off	('orientation', callback, context );	},
-		once: function( callback, context ){ this.globalEvents.once	('orientation', callback, context );	},
-		one	: function( callback, context ){ this.globalEvents.one	('orientation', callback, context );	},
+		on	: function( mediaQueries, callback, context ){ this.globalEvents.on		(mediaQueries, callback, context );	},
+		off	: function( mediaQueries, callback, context ){ this.globalEvents.off	(mediaQueries, callback, context );	},
+		once: function( mediaQueries, callback, context ){ this.globalEvents.once	(mediaQueries, callback, context );	},
+		one	: function( mediaQueries, callback, context ){ this.globalEvents.one	(mediaQueries, callback, context );	},
 
 		_onMediaQuery: function( event ){
 			var old_screen_width	= this.screen_width,
@@ -236,7 +236,6 @@
 			for (i=0; i<this.mediaQuery.length; i++ ){
 				mediaQuery = this.mediaQuery[i];
 				isOn = !!this.modernizr.mq(mediaQuery.mq);
-alert(mediaQuery.id+' '+isOn+' FIRE='+(isOn && !mediaQuery.on));
 				$('html')
 					.toggleClass(				mediaQuery.id,  isOn	)
 					.toggleClass( 'no-'+mediaQuery.id, !isOn	);
