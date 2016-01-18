@@ -6,7 +6,7 @@
 
 ## Description
 
-This package contains of a javascript object `DeviceModernizr`, and a css-file `modernizr-mq-device.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print.
+This package contains of a javascript object `ModernizrMQDevice`, and a css-file `modernizr-mq-device.css` with classes to hide or show elements for different screen dimensions, orientations (portrait/landscape), devices, and print.
 
 Using [Modernizr.addTest()](https://modernizr.com/docs#modernizr-addtest) to add different classes. 
 
@@ -28,12 +28,12 @@ http://FCOO.github.io/modernizr-mq-device/demo/
 
 ## Usage
 
-### DeviceModernizr-object (modernizr-mq-device.js)
+### ModernizrMQDevice-object (modernizr-mq-device.js)
 Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
 
 (Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
-```var myDeviceModernizr = new DeviceModernizr( options );```
+```var myModernizrMQDevice = new ModernizrMQDevice( options );```
 
 #### Default options
 	{
@@ -47,10 +47,10 @@ Collects a number of difference values regarding the device and screen using [Mo
 
 #### Properties
 | Id | Description |
-| :-- | --- |
+| :--: | --- |
 | <code>isPortrait</code>| True if the pages in displayed **on screen** and in potrait-mode |
 | <code>isLandscape</code>| True if the pages in displayed **on screen** and in landscape-mode |
-| <code>scale</code> | The scale is best guest for a scale (eq. <code>html.style.font-size = myDeviceModernizr.scale</code>) of the screen to have elements the same size as on the reference screen |
+| <code>scale</code> | The scale is best guest for a scale (eq. <code>html.style.font-size = myModernizrMQDevice.scale</code>) of the screen to have elements the same size as on the reference screen |
 | <code>isDesktop</code> | <code>true</code> if it is a desktop |
 | <code>isMobile</code> | <code>true</code> if it is a mobile device |
 | <code>mobileName</code> | Name of mobile device |
@@ -69,22 +69,24 @@ Collects a number of difference values regarding the device and screen using [Mo
 
 #### Methods
 
-##### orientation-events
-When the orientation of the screen is changed (to/from landscape from/to portrait) an event is fired.
+##### mediq-query-events
+When the orientation or size of the screen is changed an "media-query-event" is fired.
 To add a function to the event use
 
-	.onOrientation( callback, context ) //callback = function( deviceModernizr )
-	.onceOrientation( callback, context ) //Only called once. callback = function( deviceModernizr )
+	.on( eventName, callback, context ) //callback = function( eventName, modernizrMQDevice )
+	.once( eventName, callback, context ) //Only called once. callback = function( eventName, modernizrMQDevice )
 
+Where `eventName` is `small, small-down, small-up,...., portrait, landscape`
+`
 To remove a event use
 
-	.offOrientation( callback, context )
+	.off( eventName, callback, context )
 
 
 ##### mobile-detect.js
 All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` object,eq.: 
 
-	var version = myDeviceModernizr.mobileDetect.version('Chrome');
+	var version = myModernizrMQDevice.mobileDetect.version('Chrome');
 
 ### modernizr-mq-device.css
 
@@ -103,9 +105,9 @@ All the `MQNAME` and `no-MQNAME` classes are added to or removed from `<html>`by
 #### Hide/Show classes
 To control if a element is displayed (show) or hidden (hide) when a given 'state' is on or off there are the following classes defined for each 'state'
 
-	(hide|show)-for[-no]-MQNAME[-down]
+	(hide|show)-for[-no]-MQNAME[-down | -up]
 
-The `[-down]` is only for **screen sizes** and `[-no]` is not used for **print** 
+The `[-down | -up]` is only for **screen sizes** and `[-no]` is not used for **print** 
 
 #### States
 
@@ -118,32 +120,32 @@ There are four 'groups' of 'states' in
 
 ##### Screen size
 
-To avoid problems with breakpoints when the device changes orientation the "size" of the screen is the minimum of the `screen.height` and `screen.width`
+The breakpoints for screen size are given in the `src/modernizr-mq-device.scss` and can be changed by overwriting `$breakpoints`
 
-There are five breakpoints for screen size named `screen-small`, `screen-medium`, `screen-large`, `screen-xlarge`, and `screen-xxlarge`
+The default breakpoints are named `small`, `medium`, `large`, `xlarge`, and `xxlarge`
 
-The breakpoints for this five groups are given in the `src/modernizr-mq-device.js`:
-<table>
-<tr><td>class</td><td>Screen size (min-<b>max</b>)</td></tr>
-<tr><td>screen-small</td><td>0-<b>624px<b></td></tr>
-<tr><td>screen-medium</td><td>625-<b>1024px</b></td></tr>
-<tr><td>screen-large</td><td>1025-<b>1440px</b></td></tr>
-<tr><td>screen-xlarge</td><td>1441-<b>1920px</b></td></tr>
-<tr><td>screen-xxlarge</td><td><b>>1920px</b></td></tr>
-</table>
+| Class | Screen size (min-<b>max</b>) |
+| :--: | ---- |
+| small | 0-<b>624px<b> |
+| medium | 625-<b>1024px</b> |
+| large | 1025-<b>1440px</b> |
+| xlarge | 1441-<b>1920px</b> |
+| xxlarge | <b>>1920px</b> |
 
 For each size-class `SCREENSIZE` there are the following classes
 
 	show-for-SCREENSIZE      //Displayed for screen size in range
 	hide-for-SCREENSIZE      //Hidden for screen size in range
-	show-for-SCREENSIZE-down //Displayed for all screen size in less than max
-	hide-for-SCREENSIZE-down //Hidden for all screen size in less than max
+	show-for-SCREENSIZE-up   //Displayed for all screen size bigger than min
+	hide-for-SCREENSIZE-up 	 //Hidden for all screen size bigger than min
+	show-for-SCREENSIZE-down //Displayed for all screen size less than max
+	hide-for-SCREENSIZE-down //Hidden for all screen size less than max
 	show-for-no-SCREENSIZE   //Displayed for screen size outside range
 	hide-for-no-SCREENSIZE   //Hidden for screen size outside range
 
 Example
 
-	<p class="show-for-no-screen-small">The screen width and height is > 624px</p> 
+	<p class="show-for-no-small">The screen width is > 624px</p> 
 
 ##### Device
 Test if the device is a `desktop` or `mobile` device and subsequently if it is a `phone` or a `tablet` and the OS (`windows`, `ios`, or `android`)

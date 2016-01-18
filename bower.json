@@ -15,15 +15,16 @@
     "url": "git://github.com/FCOO/modernizr-mq-device.git"
   },
   "dependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "latest",
     "device.js": "devicejs#~0.2.7",
     "mobile-detect": "latest",
-    "global-events": "FCOO/global-events#~1.1.0"
+    "global-events": "FCOO/global-events#latest"
   },
   "devDependencies": {
     "bourbon": "latest",
     "modernizr-mixin": "latest",
-    "modernizr-scss": "https://github.com/FCOO/modernizr-scss.git"
+    "foundation-sites": "~6.1.1",
+    "modernizr-scss": "https://github.com/FCOO/modernizr-scss.git#latest"
   },
   "license": "MIT",
   "ignore": [

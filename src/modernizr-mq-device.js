@@ -11,15 +11,46 @@
 ;(function ($, window, document, Modernizr, undefined) {
 	"use strict";
 
-	var screenBreakPoints = [
-		{name:'screen-small',		value:  624 },
-		{name:'screen-medium',	value: 1024 },
-		{name:'screen-large',		value: 1440 },
-		{name:'screen-xlarge',	value: 1920 },
-		{name:'screen-xxlarge',	value:99999 }
-	];
+	//***********************************************
+	// Thank you: https://github.com/sindresorhus/query-string
+	function parseStyleToObject(str) {
+		var styleObject = {};
 
+	  if (typeof str !== 'string') {
+		  return styleObject;
+	  }
 
+	  str = str.trim().slice(1, -1); // browsers re-quote string style values
+
+	  if (!str) {
+		  return styleObject;
+	  }
+
+	  styleObject = str.split('&').reduce(function(ret, param) {
+		  var parts = param.replace(/\+/g, ' ').split('=');
+			var key = parts[0];
+	    var val = parts[1];
+		  key = decodeURIComponent(key);
+
+	    // missing `=` should be `null`:
+		  // http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
+			val = val === undefined ? null : decodeURIComponent(val);
+
+	    if (!ret.hasOwnProperty(key)) {
+		    ret[key] = val;
+			} else if (Array.isArray(ret[key])) {
+				ret[key].push(val);
+	    } else {
+		    ret[key] = [ret[key], val];
+			}
+	    return ret;
+		}, {});
+
+	  return styleObject;
+	}
+	//***********************************************
+	
+	
 	//Create fcoo-namespace
 	window.fcoo = window.fcoo || {};
 
@@ -29,7 +60,7 @@
 
 	var plugin_count = 1000;
 
-	function DeviceModernizr( options ) {
+	function ModernizrMQDevice( options ) {
 		this.plugin_count = plugin_count++;
 		this.VERSION = "{VERSION}";
 
@@ -54,10 +85,30 @@
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 
-		this.isPortrait = false;
-		this.isLandscape = false;
-		this._testOrientation();
-this._onOrientation();
+		//'Reads the different media queries from the css-file using the 'dummy' class "modernizr-mq-device"
+		this.meta = $('<meta class="modernizr-mq-device">').appendTo(document.head);
+		var mediaJSON = parseStyleToObject(this.meta.css('font-family'));
+
+		this.mediaQuery = [];
+		for (var id in mediaJSON)
+			this.mediaQuery.push({
+				id: id,
+				mq: mediaJSON[id],
+				on: false
+			});
+		
+		//Set the 'change media-query event'
+		$(window).on('resize.mmqd', $.proxy( this._onMediaQuery, this ));
+
+		var THIS = this;
+		
+		$(function() { 
+			THIS._onMediaQuery();
+		}); 
+
+	
+
+
 		this.client_width		= docEl.clientWidth;
 		this.client_width		= docEl.clientHeight;
 		
@@ -142,18 +193,12 @@ this._onOrientation();
 		
 		this.os						= this.mobileDetect.os();
 
-		
-
 //		this.mobile				= this.mobileDetect.mobile();
 //		this.phone				= this.mobileDetect.phone();
 //		this.tablet				= this.mobileDetect.tablet();
 
 
-		//Add tests to Modernizr
-		var screenDim	= Math.min(screen.width, screen.height),
-				bpIndex,
-				bpName;
-			
+		//Add device-tests to Modernizr
 		Modernizr.addTest({
 			desktop			: this.isDesktop,
 			mobile			: this.isMobile,
@@ -165,63 +210,43 @@ this._onOrientation();
 			android			: this.isAndroid
 		});
 	
-		//Find the first index in screenBreakPoints where screenDim < value
-		for (bpIndex=0; bpIndex<screenBreakPoints.length; bpIndex++ )
-			if (screenBreakPoints[bpIndex].value >= screenDim)
-				break;
-		
-		for (var i=0; i<screenBreakPoints.length; i++ ){
-			bpName = screenBreakPoints[i].name;
-
-			//Test for exact size
-			Modernizr.addTest( bpName, i == bpIndex );
-	
-			//Test for max size
-			Modernizr.addTest( bpName+'-down', i >= bpIndex );
-	
-		}
-	
-	
-		//Set the 'change orientation event'
-		$(window).on('resize.mmqd', $.proxy( this._onOrientation, this ));
-
 	}
   
   // expose access to the constructor
-  ns.DeviceModernizr = DeviceModernizr;
+  ns.ModernizrMQDevice = ModernizrMQDevice;
 
 
 
 	//Extend the prototype
-	ns.DeviceModernizr.prototype = {
+	ns.ModernizrMQDevice.prototype = {
+		
+		//Methods to add media-query-events
+		on	: function( callback, context ){ this.globalEvents.on		('orientation', callback, context );	},
+		off	: function( callback, context ){ this.globalEvents.off	('orientation', callback, context );	},
+		once: function( callback, context ){ this.globalEvents.once	('orientation', callback, context );	},
+		one	: function( callback, context ){ this.globalEvents.one	('orientation', callback, context );	},
 
-		onOrientation		: function( callback, context ){ this.globalEvents.on		('orientation', callback, context );	},
-		offOrientation	: function( callback, context ){ this.globalEvents.off	('orientation', callback, context );	},
-		onceOrientation	: function( callback, context ){ this.globalEvents.once	('orientation', callback, context );	},
-		oneOrientation	: function( callback, context ){ this.globalEvents.one	('orientation', callback, context );	},
-
-		_testOrientation: function(){
-			this.isPortrait = !!this.modernizr.mq('screen and (orientation: portrait)');
-			this.isLandscape = !!this.modernizr.mq('screen and (orientation: landscape)');
-
-			$('html')
-				.toggleClass( 'portrait'		,  this.isPortrait	)
-				.toggleClass( 'no-portrait',	!this.isPortrait	)
-				.toggleClass( 'landscape'		,  this.isLandscape	)
-				.toggleClass( 'no-landscape', !this.isLandscape )
-
-		},
-
-		_onOrientation: function( event ){
+		_onMediaQuery: function( event ){
 			var old_screen_width	= this.screen_width,
-					old_screen_height	=	this.screen_height;
-
+					old_screen_height	=	this.screen_height,
+					i, mediaQuery, isOn;
 			this.screen_width		= screen.width;
 			this.screen_height	=	screen.height;
-			if ((old_screen_width != this.screen_width) || (old_screen_height	!=	this.screen_height)){
-				this._testOrientation();
-	
-				this.globalEvents.fire('orientation', this, event);
+
+			for (i=0; i<this.mediaQuery.length; i++ ){
+				mediaQuery = this.mediaQuery[i];
+				isOn = !!this.modernizr.mq(mediaQuery.mq);
+console.log(mediaQuery.id,isOn);
+				$('html')
+					.toggleClass(				mediaQuery.id,  isOn	)
+					.toggleClass( 'no-'+mediaQuery.id, !isOn	);
+
+				if (isOn && !mediaQuery.on){
+					//Fire event
+					this.globalEvents.fire(mediaQuery.id, mediaQuery.id, this);
+				}
+
+				mediaQuery.on = isOn;
 			}
 		}
 
