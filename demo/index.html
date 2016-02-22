@@ -6,10 +6,8 @@
 	<meta charset="utf-8" />
 	<title>fcoo.dk - modernizr-device - demo</title>
 
-
 	<meta http-equiv='x-dns-prefetch-control' content='on'>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
 
   <link rel="stylesheet" type="text/css" href="../src/modernizr-device.css" />
 	<style>
@@ -21,7 +19,6 @@
 </head>
 
 <body>
-	<h1>FCOO modernizr-device TEST</h1>
 	<p>This is a test of the ModernizrDevice to be used in FCOOs applications</p>
 
 <hr>
@@ -65,7 +62,7 @@
 			Initialize/ready 
 			*******************************************/
 			$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
-/*
+
 			var md = new window.ModernizrDevice();
 
 			var info = '<table border=0>';
@@ -83,17 +80,17 @@
 				property = propertyList[i];
 				info += '<tr><td>'+property+'</td><td>'+md[property]+'</td></tr>';			
 			}
-*/			
+			
 			/*
 			http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 			Google: > 30% has 1366*768
 			*/
 
-	//		info += '</table>';
-	//		$('#info').html(info);		
+			info += '</table>';
+			$('#info').html(info);		
 
 
-	//		$('#scaled').css('font-size', md.scale+'%');
+			$('#scaled').css('font-size', md.scale+'%');
 
 		}); //End of initialize/ready
 	}(jQuery, this, document));	
