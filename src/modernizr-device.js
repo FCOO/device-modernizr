@@ -1,9 +1,9 @@
 /***************************************************************************
-	modernizr-mq-device.js, 
+	modernizr-device.js,
 
 	(c) 2015, FCOO
 
-	https://github.com/FCOO/modernizr-mq-device
+	https://github.com/FCOO/modernizr-device
 	https://github.com/FCOO
 
 ****************************************************************************/
@@ -11,63 +11,22 @@
 ;(function ($, window, document, Modernizr, undefined) {
 	"use strict";
 
-	//***********************************************
-	// Thank you: https://github.com/sindresorhus/query-string
-	function parseStyleToObject(str) {
-		var styleObject = {};
-
-	  if (typeof str !== 'string') {
-		  return styleObject;
-	  }
-
-	  str = str.trim().slice(1, -1); // browsers re-quote string style values
-
-	  if (!str) {
-		  return styleObject;
-	  }
-
-	  styleObject = str.split('&').reduce(function(ret, param) {
-		  var parts = param.replace(/\+/g, ' ').split('=');
-			var key = parts[0];
-	    var val = parts[1];
-		  key = decodeURIComponent(key);
-
-	    // missing `=` should be `null`:
-		  // http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
-			val = val === undefined ? null : decodeURIComponent(val);
-
-	    if (!ret.hasOwnProperty(key)) {
-		    ret[key] = val;
-			} else if (Array.isArray(ret[key])) {
-				ret[key].push(val);
-	    } else {
-		    ret[key] = [ret[key], val];
-			}
-	    return ret;
-		}, {});
-
-	  return styleObject;
-	}
-	//***********************************************
-	
-	
 	var ns = window;
 
 	var plugin_count = 1000;
 
-	function ModernizrMQDevice( options ) {
+	function ModernizrDevice( options ) {
 		this.plugin_count = plugin_count++;
 		this.VERSION = "{VERSION}";
 
 		this.modernizr		= Modernizr;
-		this.globalEvents = new GlobalEvents();
 
 		//Extend with device (https://github.com/matthewhudson/device.js.git)
 		$.extend( this, window.device );
 
 		this.options = $.extend({
 			//Default options = Standard desttop screen
-			referenceScreen: { 
+			referenceScreen: {
 				width				: 1366,
 				height			: 768,
 				diagonal_inc: 20
@@ -80,33 +39,10 @@
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 
-		//'Reads the different media queries from the css-file using the 'dummy' class "modernizr-mq-device"
-		this.meta = $('<meta class="modernizr-mq-device">').appendTo(document.head);
-		var mediaJSON = parseStyleToObject(this.meta.css('font-family'));
-
-		this.mediaQuery = [];
-		for (var id in mediaJSON)
-			this.mediaQuery.push({
-				id: id,
-				mq: mediaJSON[id],
-				on: false
-			});
-		
-		//Set the 'change media-query event'
-		$(window).on('resize.mmqd', $.proxy( this._onMediaQuery, this ));
-
-		var THIS = this;
-		
-		$(function() { 
-			THIS._onMediaQuery();
-		}); 
-
-	
-
 
 		this.client_width		= docEl.clientWidth;
 		this.client_width		= docEl.clientHeight;
-		
+
 		this.screen_width_em	= this.screen_width/16;
 		this.screen_height_em	=	this.screen_height/16;
 
@@ -117,11 +53,11 @@
 				break;
 			}
 
-		this.dpr = window.devicePixelRatio;		
+		this.dpr = window.devicePixelRatio;
 		if (!this.dpr){
 			this.dpr = 1;
 			for (var dpr=1; dpr<4; dpr=dpr+0.1 )
-				if ( 
+				if (
 					Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ||
 					Modernizr.mq('(min--moz-device-pixel-ratio: '+dpr+')') ||
 					Modernizr.mq('(-o-min-device-pixel-ratio: '+dpr+'/1)')
@@ -130,7 +66,7 @@
 					break;
 				}
 		}
-	
+
 		this.dpr = Math.round(100*this.dpr)/100;
 
 		this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
@@ -139,7 +75,7 @@
 		//Calculate the diagonal and dpi for the reference screen
 		var ref_screen_diagonal = Math.sqrt( Math.pow(this.options.referenceScreen.width, 2) + Math.pow(this.options.referenceScreen.height, 2) );
 		this.ref_dpi = ref_screen_diagonal/this.options.referenceScreen.diagonal_inc;
-		
+
 		//The scale is best guest for a scale (eq. html.style.font-size=this.scale) of the screen to have elements the same size as on the reference screen
 		this.scale = 100;
 		if ((this.dpr != 1) || (this.dpi != 96))
@@ -161,7 +97,7 @@
 				if(tem!== null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
 			}
 			M = M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
-			if((tem= ua.match(/version\/(\d+)/i))!= null) 
+			if((tem= ua.match(/version\/(\d+)/i))!= null)
 				M.splice(1, 1, tem[1]);
 			return M.join(' ');
 		}();
@@ -185,7 +121,7 @@
 		this.isWindows		= this.windows();
 		this.isIos				= this.ios();
 		this.isAndroid		= this.android();
-		
+
 		this.os						= this.mobileDetect.os();
 
 //		this.mobile				= this.mobileDetect.mobile();
@@ -204,56 +140,27 @@
 			ios					: this.isIos,
 			android			: this.isAndroid
 		});
-	
+
 	}
-  
+
   // expose access to the constructor
-  ns.ModernizrMQDevice = ModernizrMQDevice;
+  ns.ModernizrDevice = ModernizrDevice;
 
 
 
 	//Extend the prototype
-	ns.ModernizrMQDevice.prototype = {
-		
-		//Methods to add media-query-events
-		on	: function( mediaQueries, callback, context ){ this.globalEvents.on		(mediaQueries, callback, context );	},
-		off	: function( mediaQueries, callback, context ){ this.globalEvents.off	(mediaQueries, callback, context );	},
-		once: function( mediaQueries, callback, context ){ this.globalEvents.once	(mediaQueries, callback, context );	},
-		one	: function( mediaQueries, callback, context ){ this.globalEvents.one	(mediaQueries, callback, context );	},
-
-		_onMediaQuery: function( event ){
-			var old_screen_width	= this.screen_width,
-					old_screen_height	=	this.screen_height,
-					i, mediaQuery, isOn;
-			this.screen_width		= screen.width;
-			this.screen_height	=	screen.height;
-
-			for (i=0; i<this.mediaQuery.length; i++ ){
-				mediaQuery = this.mediaQuery[i];
-				isOn = !!this.modernizr.mq(mediaQuery.mq);
-				$('html')
-					.toggleClass(				mediaQuery.id,  isOn	)
-					.toggleClass( 'no-'+mediaQuery.id, !isOn	);
-
-				if (isOn && !mediaQuery.on){
-					//Fire event
-					console.log(this.globalEvents, mediaQuery.id);
-					this.globalEvents.fire(mediaQuery.id, mediaQuery.id, this);
-				}
-				mediaQuery.on = isOn;
-			}
-		}
+//	ns.ModernizrDevice.prototype = {
 
 
-	};
+//	};
 
-	
+
 	/******************************************
-	Initialize/ready 
+	Initialize/ready
 	*******************************************/
-	$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
+	$(function() {
+		new ns.ModernizrDevice();
 
-	
 	}); //End of initialize/ready
 	//******************************************
 

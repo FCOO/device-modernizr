@@ -1,0 +1,23 @@
+/***********************************************
+	modernizr-device.scss, 
+
+	(c) 2015, FCOO
+
+	https://github.com/FCOO/modernizr-device
+	https://github.com/FCOO
+
+************************************************/
+//MODERNIZR-SASS - http://github.com/FCOO/modernizr-scss
+@import "../bower_components/modernizr-scss/dist/modernizr-scss";
+
+
+//******************************************************************************************
+//Create show/hide-for-TEST and show/hide-for-no-TEST, TEST = the Modernizr tests installed
+//$modernizr-tests = the list of tests added to Modernizr by modernizr-device.js
+$modernizr-tests: desktop, mobile, phone, tablet, windows, ios, android, mobilegradea; 
+@each $modernizr-test in $modernizr-tests {
+	@include show-and-hide-for-modernizr-test( $modernizr-test, html );
+}
+
+//******************************************************************************************
+

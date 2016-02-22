@@ -1,29 +1,25 @@
 {
-  "name": "modernizr-mq-device",
-  "version": "1.5.0",
-  "homepage": "https://github.com/FCOO/modernizr-mq-device",
+  "name": "modernizr-device",
+  "version": "0.1.0",
+  "homepage": "https://github.com/FCOO/modernizr-device",
   "authors": [
-    "Niels Holt niels@steenbuchholt.dk"
+    "Niels Holt niels@fcoo.dk"
   ],
   "description": "",
   "main": [
-    "dist/modernizr-mq-device.min.js",
-    "dist/modernizr-mq-device.min.css"
+    "dist/modernizr-device.min.js",
+    "dist/modernizr-device.min.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/FCOO/modernizr-mq-device.git"
+    "url": "git://github.com/FCOO/modernizr-device.git"
   },
   "dependencies": {
     "jquery": "latest",
     "device.js": "devicejs#~0.2.7",
-    "mobile-detect": "latest",
-    "global-events": "FCOO/global-events#latest"
+    "mobile-detect": "latest"
   },
   "devDependencies": {
-    "bourbon": "latest",
-    "modernizr-mixin": "latest",
-    "foundation-sites": "~6.1.1",
     "modernizr-scss": "https://github.com/FCOO/modernizr-scss.git#latest"
   },
   "license": "MIT",
