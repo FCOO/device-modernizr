@@ -17,7 +17,7 @@
 
 	function ModernizrDevice( options ) {
 		this.plugin_count = plugin_count++;
-		this.VERSION = "2.0.0";
+		this.VERSION = "2.0.1";
 
 		this.modernizr		= Modernizr;
 
@@ -35,7 +35,7 @@
 
 		var docEl = window.document.documentElement;
 		this.wnua	= window.navigator.userAgent;
- 		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
+ 		//this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 

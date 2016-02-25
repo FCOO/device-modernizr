@@ -35,7 +35,7 @@
 
 		var docEl = window.document.documentElement;
 		this.wnua	= window.navigator.userAgent;
- 		this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
+ 		//this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
 		this.screen_width		= screen.width;
 		this.screen_height	=	screen.height;
 
