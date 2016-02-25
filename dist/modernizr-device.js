@@ -17,7 +17,7 @@
 
 	function ModernizrDevice( options ) {
 		this.plugin_count = plugin_count++;
-		this.VERSION = "{VERSION}";
+		this.VERSION = "1.0.0";
 
 		this.modernizr		= Modernizr;
 

@@ -1,6 +1,6 @@
 {
   "name": "modernizr-device",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/FCOO/modernizr-device",
   "authors": [
     "Niels Holt niels@fcoo.dk"
@@ -15,7 +15,7 @@
     "url": "git://github.com/FCOO/modernizr-device.git"
   },
   "dependencies": {
-    "jquery": "latest",
+    "jquery": "^2.2.1",
     "device.js": "devicejs#~0.2.7",
     "mobile-detect": "latest"
   },
