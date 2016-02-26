@@ -1,7 +1,7 @@
 {   
-  "isApplication"								: false,		//true for stand-alone applications. false for packages/plugins
+  "isApplication"								: false,	//true for stand-alone applications. false for packages/plugins
   "haveJavaScript"							: true,		//true if the packages have js-files
-  "haveStyleSheet"							: true,		//true if the packages have css and/or scss-files
+  "haveStyleSheet"							: false,	//true if the packages have css and/or scss-files
 	"beforeProdCmd"								: "",			//Cmd to be run at the start of prod-task. Multi cmd can be seperated by "&"
   "beforeDevCmd"								: "",			//Cmd to be run at the start of dev-task
   "afterProdCmd"								: "",			//Cmd to be run at the end of prod-task

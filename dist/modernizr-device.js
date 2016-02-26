@@ -17,7 +17,7 @@
 
 	function ModernizrDevice( options ) {
 		this.plugin_count = plugin_count++;
-		this.VERSION = "2.0.1";
+		this.VERSION = "2.1.0";
 
 		this.modernizr		= Modernizr;
 
@@ -128,7 +128,6 @@
 //		this.phone				= this.mobileDetect.phone();
 //		this.tablet				= this.mobileDetect.tablet();
 
-
 		//Add device-tests to Modernizr
 		Modernizr.addTest({
 			desktop			: this.isDesktop,
@@ -141,6 +140,11 @@
 			android			: this.isAndroid
 		});
 
+		//Adding test for Internet Explore versions
+		for (var version=7; version<=11; version++ )
+			Modernizr.addTest('ie'+version, this.browser_version == 'IE '+version );		
+
+	
 	}
 
   // expose access to the constructor
