@@ -1,3 +1,8 @@
+/*
+
+DEMO.scss for github/fcoo/modernizr-device/demo/index.html
+
+*/
 /***********************************************
 	modernizr-device.scss, 
 
@@ -997,96 +1002,6 @@ html.no-ie10 th.show-for-no-ie10 {
   display: table-cell					!important;
 }
 
-html.ie11 .show-for-ie11 {
-  display: inherit !important;
-}
-html.ie11 .hide-for-ie11 {
-  display: none								!important;
-}
-html.ie11 .hide-for-no-ie11 {
-  display: inherit !important;
-}
-html.ie11 .show-for-no-ie11 {
-  display: none								!important;
-}
-html.ie11 table.show-for-ie11 {
-  display: table							!important;
-}
-html.ie11 thead.show-for-ie11 {
-  display: table-header-group !important;
-}
-html.ie11 tbody.show-for-ie11 {
-  display: table-row-group		!important;
-}
-html.ie11 tr.show-for-ie11 {
-  display: table-row					!important;
-}
-html.ie11 td.show-for-ie11,
-html.ie11 th.show-for-ie11 {
-  display: table-cell					!important;
-}
-html.ie11 table.hide-for-no-ie11 {
-  display: table							!important;
-}
-html.ie11 thead.hide-for-no-ie11 {
-  display: table-header-group !important;
-}
-html.ie11 tbody.hide-for-no-ie11 {
-  display: table-row-group		!important;
-}
-html.ie11 tr.hide-for-no-ie11 {
-  display: table-row					!important;
-}
-html.ie11 td.hide-for-no-ie11,
-html.ie11 th.hide-for-no-ie11 {
-  display: table-cell					!important;
-}
-
-html.no-ie11 .hide-for-ie11 {
-  display: inherit !important;
-}
-html.no-ie11 .show-for-ie11 {
-  display: none								!important;
-}
-html.no-ie11 .show-for-no-ie11 {
-  display: inherit !important;
-}
-html.no-ie11 .hide-for-no-ie11 {
-  display: none								!important;
-}
-html.no-ie11 table.hide-for-ie11 {
-  display: table							!important;
-}
-html.no-ie11 thead.hide-for-ie11 {
-  display: table-header-group !important;
-}
-html.no-ie11 tbody.hide-for-ie11 {
-  display: table-row-group		!important;
-}
-html.no-ie11 tr.hide-for-ie11 {
-  display: table-row					!important;
-}
-html.no-ie11 td.hide-for-ie11,
-html.no-ie11 th.hide-for-ie11 {
-  display: table-cell					!important;
-}
-html.no-ie11 table.show-for-no-ie11 {
-  display: table							!important;
-}
-html.no-ie11 thead.show-for-no-ie11 {
-  display: table-header-group !important;
-}
-html.no-ie11 tbody.show-for-no-ie11 {
-  display: table-row-group		!important;
-}
-html.no-ie11 tr.show-for-no-ie11 {
-  display: table-row					!important;
-}
-html.no-ie11 td.show-for-no-ie11,
-html.no-ie11 th.show-for-no-ie11 {
-  display: table-cell					!important;
-}
-
 html.mobilegradea .show-for-mobilegradea {
   display: inherit !important;
 }
@@ -1177,4 +1092,4 @@ html.no-mobilegradea th.show-for-no-mobilegradea {
   display: table-cell					!important;
 }
 
-/*# sourceMappingURL=_modernizr-device.css.map */
+/*# sourceMappingURL=demo.css.map */
