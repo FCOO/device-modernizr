@@ -141,8 +141,8 @@
 		});
 
 		//Adding test for Internet Explore versions
-		for (var version=7; version<=11; version++ )
-			Modernizr.addTest('ie'+version, this.browser_version == 'IE '+version );		
+		for (var version=7; version<=10; version++ )
+			Modernizr.addTest('ie'+version, this.browser_version == 'MSIE '+version );		
 
 	
 	}

@@ -6,7 +6,7 @@
 
 ## Description
 
-This package contains of a javascript object `ModernizrDevice`, and a css-file `modernizr-device.css` with classes to hide or show elements for devices, and print.
+This package contains of a javascript object `ModernizrDevice`, and a scss-file `_modernizr-device.scss` to include in a project with classes to hide or show elements for devices, and print.
 
 Using [Modernizr.addTest()](https://modernizr.com/docs#modernizr-addtest) to add different classes. 
 
@@ -72,11 +72,23 @@ All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` o
 
 	var version = myModernizrDevice.mobileDetect.version('Chrome');
 
-### modernizr-device.css
+### _modernizr-device.scss
+
+Include the scc-file in your project by adding the following to your scss-file
+
+	@import "../bower_components/modernizr-device/src/modernizr-device";
+
+
 
 The css-classes is based on the visibility classes by [ZURB Foundation](http://foundation.zurb.com/docs/components/visibility.html) and the syntax used by [Modernizr].
 
 A number of different device 'settings' - named `MDNAME` in the syntax - is set in the css as in [Modernizr] by adding or removing the classes `MDNAME` and `no-MDNAME` to/from the `<html>` element
+
+Thee default list of device settings is given in `_modernizr-device.scss`:
+
+	$modernizr-device-list: desktop, mobile, phone, tablet, windows, ios, android, ie7, ie8, ie9, ie10, mobilegradea !default; 
+
+All the classes will be set in `<html>` as `MDNAME` or `no-MDNAME` but you can adjust witch test to create `show-for-MDNAME` and `hide-for-MDNAME` for by overwriting `$modernizr-device-list` 
 
 Example: 
 
@@ -107,12 +119,20 @@ Test if the device is a `desktop` or `mobile` device and subsequently if it is a
 	show-for-ios / hide-for-ios
 	show-for-android / hide-for-android
 
+Test the version 7-10 of Internet Explore
+
+	show-for-ie7 / hide-for-ie7
+	show-for-ie8 / hide-for-ie8
+	show-for-ie9 / hide-for-ie9
+	show-for-ie10 / hide-for-ie10
+
+
 #### Additional css and scss
 
-The classes in `modernizr-device.css` only controls the display of elements under certent conditions.
-But other properties can be controled by using the `MQNAME` and `noMQNAME` classes
+The classes in `_modernizr-device.scss` only controls the display of elements under certain conditions.
+But other properties can be controlled by using the `MQNAME` and `noMQNAME` classes
 
-Example: To define a class `green-when-on-desktop` that displayes a element in green when shown on a desktop computer:
+Example: To define a class `green-when-on-desktop` that displays a element in green when shown on a desktop computer:
 
 	css:
 	.desktop .green-when-on-desktop { color: green; }
