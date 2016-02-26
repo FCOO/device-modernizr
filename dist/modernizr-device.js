@@ -8,7 +8,7 @@
 
 ****************************************************************************/
 
-;(function ($, window, document, Modernizr, undefined) {
+;(function ($, window, document, /*Modernizr,*/ undefined) {
 	"use strict";
 
 	var ns = window;
@@ -17,7 +17,7 @@
 
 	function ModernizrDevice( options ) {
 		this.plugin_count = plugin_count++;
-		this.VERSION = "2.1.4";
+		this.VERSION = "2.1.5";
 
 		this.modernizr		= Modernizr;
 
@@ -170,5 +170,5 @@
 
 
 
-}(jQuery, this, document, Modernizr));
+}(jQuery, this, document/*, Modernizr*/));
 

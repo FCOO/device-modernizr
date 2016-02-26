@@ -8,7 +8,7 @@
 
 ****************************************************************************/
 
-;(function ($, window, document, Modernizr, undefined) {
+;(function ($, window, document, /*Modernizr,*/ undefined) {
 	"use strict";
 
 	var ns = window;
@@ -170,5 +170,5 @@
 
 
 
-}(jQuery, this, document, Modernizr));
+}(jQuery, this, document/*, Modernizr*/));
 
