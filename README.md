@@ -76,6 +76,13 @@ All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` o
 
 Include the scc-file in your project by adding the following to your scss-file
 
+	//MODERNIZR-SASS - http://github.com/FCOO/modernizr-scss
+	@import "../bower_components/modernizr-scss/dist/modernizr-scss";
+
+	//Adjust default list of tests (optional)
+	$modernizr-device-list: desktop, mobile, phone, tablet; 
+	
+	//MODERNIZR-DEVICE - http://github.com/FCOO/modernizr-devic
 	@import "../bower_components/modernizr-device/src/modernizr-device";
 
 
