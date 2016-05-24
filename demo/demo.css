@@ -12,1084 +12,940 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 	https://github.com/FCOO
 
 ************************************************/
-html.desktop .show-for-desktop {
-  display: inherit !important;
+.desktop .hide-for-desktop {
+  display: none !important;
 }
-html.desktop .hide-for-desktop {
-  display: none								!important;
+.desktop .show-for-no-desktop {
+  display: none !important;
 }
-html.desktop .hide-for-no-desktop {
-  display: inherit !important;
+.desktop table.show-for-desktop {
+  display: table;
 }
-html.desktop .show-for-no-desktop {
-  display: none								!important;
+.desktop thead.show-for-desktop {
+  display: table-header-group;
 }
-html.desktop table.show-for-desktop {
-  display: table							!important;
+.desktop tbody.show-for-desktop {
+  display: table-row-group;
 }
-html.desktop thead.show-for-desktop {
-  display: table-header-group !important;
+.desktop tr.show-for-desktop {
+  display: table-row;
 }
-html.desktop tbody.show-for-desktop {
-  display: table-row-group		!important;
+.desktop td.show-for-desktop,
+.desktop th.show-for-desktop {
+  display: table-cell;
 }
-html.desktop tr.show-for-desktop {
-  display: table-row					!important;
+.desktop table.hide-for-no-desktop {
+  display: table;
 }
-html.desktop td.show-for-desktop,
-html.desktop th.show-for-desktop {
-  display: table-cell					!important;
+.desktop thead.hide-for-no-desktop {
+  display: table-header-group;
 }
-html.desktop table.hide-for-no-desktop {
-  display: table							!important;
+.desktop tbody.hide-for-no-desktop {
+  display: table-row-group;
 }
-html.desktop thead.hide-for-no-desktop {
-  display: table-header-group !important;
+.desktop tr.hide-for-no-desktop {
+  display: table-row;
 }
-html.desktop tbody.hide-for-no-desktop {
-  display: table-row-group		!important;
-}
-html.desktop tr.hide-for-no-desktop {
-  display: table-row					!important;
-}
-html.desktop td.hide-for-no-desktop,
-html.desktop th.hide-for-no-desktop {
-  display: table-cell					!important;
+.desktop td.hide-for-no-desktop,
+.desktop th.hide-for-no-desktop {
+  display: table-cell;
 }
 
-html.no-desktop .hide-for-desktop {
-  display: inherit !important;
+.no-desktop .show-for-desktop {
+  display: none !important;
 }
-html.no-desktop .show-for-desktop {
-  display: none								!important;
+.no-desktop .hide-for-no-desktop {
+  display: none !important;
 }
-html.no-desktop .show-for-no-desktop {
-  display: inherit !important;
+.no-desktop table.hide-for-desktop {
+  display: table;
 }
-html.no-desktop .hide-for-no-desktop {
-  display: none								!important;
+.no-desktop thead.hide-for-desktop {
+  display: table-header-group;
 }
-html.no-desktop table.hide-for-desktop {
-  display: table							!important;
+.no-desktop tbody.hide-for-desktop {
+  display: table-row-group;
 }
-html.no-desktop thead.hide-for-desktop {
-  display: table-header-group !important;
+.no-desktop tr.hide-for-desktop {
+  display: table-row;
 }
-html.no-desktop tbody.hide-for-desktop {
-  display: table-row-group		!important;
+.no-desktop td.hide-for-desktop,
+.no-desktop th.hide-for-desktop {
+  display: table-cell;
 }
-html.no-desktop tr.hide-for-desktop {
-  display: table-row					!important;
+.no-desktop table.show-for-no-desktop {
+  display: table;
 }
-html.no-desktop td.hide-for-desktop,
-html.no-desktop th.hide-for-desktop {
-  display: table-cell					!important;
+.no-desktop thead.show-for-no-desktop {
+  display: table-header-group;
 }
-html.no-desktop table.show-for-no-desktop {
-  display: table							!important;
+.no-desktop tbody.show-for-no-desktop {
+  display: table-row-group;
 }
-html.no-desktop thead.show-for-no-desktop {
-  display: table-header-group !important;
+.no-desktop tr.show-for-no-desktop {
+  display: table-row;
 }
-html.no-desktop tbody.show-for-no-desktop {
-  display: table-row-group		!important;
-}
-html.no-desktop tr.show-for-no-desktop {
-  display: table-row					!important;
-}
-html.no-desktop td.show-for-no-desktop,
-html.no-desktop th.show-for-no-desktop {
-  display: table-cell					!important;
+.no-desktop td.show-for-no-desktop,
+.no-desktop th.show-for-no-desktop {
+  display: table-cell;
 }
 
-html.mobile .show-for-mobile {
-  display: inherit !important;
+.mobile .hide-for-mobile {
+  display: none !important;
 }
-html.mobile .hide-for-mobile {
-  display: none								!important;
+.mobile .show-for-no-mobile {
+  display: none !important;
 }
-html.mobile .hide-for-no-mobile {
-  display: inherit !important;
+.mobile table.show-for-mobile {
+  display: table;
 }
-html.mobile .show-for-no-mobile {
-  display: none								!important;
+.mobile thead.show-for-mobile {
+  display: table-header-group;
 }
-html.mobile table.show-for-mobile {
-  display: table							!important;
+.mobile tbody.show-for-mobile {
+  display: table-row-group;
 }
-html.mobile thead.show-for-mobile {
-  display: table-header-group !important;
+.mobile tr.show-for-mobile {
+  display: table-row;
 }
-html.mobile tbody.show-for-mobile {
-  display: table-row-group		!important;
+.mobile td.show-for-mobile,
+.mobile th.show-for-mobile {
+  display: table-cell;
 }
-html.mobile tr.show-for-mobile {
-  display: table-row					!important;
+.mobile table.hide-for-no-mobile {
+  display: table;
 }
-html.mobile td.show-for-mobile,
-html.mobile th.show-for-mobile {
-  display: table-cell					!important;
+.mobile thead.hide-for-no-mobile {
+  display: table-header-group;
 }
-html.mobile table.hide-for-no-mobile {
-  display: table							!important;
+.mobile tbody.hide-for-no-mobile {
+  display: table-row-group;
 }
-html.mobile thead.hide-for-no-mobile {
-  display: table-header-group !important;
+.mobile tr.hide-for-no-mobile {
+  display: table-row;
 }
-html.mobile tbody.hide-for-no-mobile {
-  display: table-row-group		!important;
-}
-html.mobile tr.hide-for-no-mobile {
-  display: table-row					!important;
-}
-html.mobile td.hide-for-no-mobile,
-html.mobile th.hide-for-no-mobile {
-  display: table-cell					!important;
+.mobile td.hide-for-no-mobile,
+.mobile th.hide-for-no-mobile {
+  display: table-cell;
 }
 
-html.no-mobile .hide-for-mobile {
-  display: inherit !important;
+.no-mobile .show-for-mobile {
+  display: none !important;
 }
-html.no-mobile .show-for-mobile {
-  display: none								!important;
+.no-mobile .hide-for-no-mobile {
+  display: none !important;
 }
-html.no-mobile .show-for-no-mobile {
-  display: inherit !important;
+.no-mobile table.hide-for-mobile {
+  display: table;
 }
-html.no-mobile .hide-for-no-mobile {
-  display: none								!important;
+.no-mobile thead.hide-for-mobile {
+  display: table-header-group;
 }
-html.no-mobile table.hide-for-mobile {
-  display: table							!important;
+.no-mobile tbody.hide-for-mobile {
+  display: table-row-group;
 }
-html.no-mobile thead.hide-for-mobile {
-  display: table-header-group !important;
+.no-mobile tr.hide-for-mobile {
+  display: table-row;
 }
-html.no-mobile tbody.hide-for-mobile {
-  display: table-row-group		!important;
+.no-mobile td.hide-for-mobile,
+.no-mobile th.hide-for-mobile {
+  display: table-cell;
 }
-html.no-mobile tr.hide-for-mobile {
-  display: table-row					!important;
+.no-mobile table.show-for-no-mobile {
+  display: table;
 }
-html.no-mobile td.hide-for-mobile,
-html.no-mobile th.hide-for-mobile {
-  display: table-cell					!important;
+.no-mobile thead.show-for-no-mobile {
+  display: table-header-group;
 }
-html.no-mobile table.show-for-no-mobile {
-  display: table							!important;
+.no-mobile tbody.show-for-no-mobile {
+  display: table-row-group;
 }
-html.no-mobile thead.show-for-no-mobile {
-  display: table-header-group !important;
+.no-mobile tr.show-for-no-mobile {
+  display: table-row;
 }
-html.no-mobile tbody.show-for-no-mobile {
-  display: table-row-group		!important;
-}
-html.no-mobile tr.show-for-no-mobile {
-  display: table-row					!important;
-}
-html.no-mobile td.show-for-no-mobile,
-html.no-mobile th.show-for-no-mobile {
-  display: table-cell					!important;
+.no-mobile td.show-for-no-mobile,
+.no-mobile th.show-for-no-mobile {
+  display: table-cell;
 }
 
-html.phone .show-for-phone {
-  display: inherit !important;
+.phone .hide-for-phone {
+  display: none !important;
 }
-html.phone .hide-for-phone {
-  display: none								!important;
+.phone .show-for-no-phone {
+  display: none !important;
 }
-html.phone .hide-for-no-phone {
-  display: inherit !important;
+.phone table.show-for-phone {
+  display: table;
 }
-html.phone .show-for-no-phone {
-  display: none								!important;
+.phone thead.show-for-phone {
+  display: table-header-group;
 }
-html.phone table.show-for-phone {
-  display: table							!important;
+.phone tbody.show-for-phone {
+  display: table-row-group;
 }
-html.phone thead.show-for-phone {
-  display: table-header-group !important;
+.phone tr.show-for-phone {
+  display: table-row;
 }
-html.phone tbody.show-for-phone {
-  display: table-row-group		!important;
+.phone td.show-for-phone,
+.phone th.show-for-phone {
+  display: table-cell;
 }
-html.phone tr.show-for-phone {
-  display: table-row					!important;
+.phone table.hide-for-no-phone {
+  display: table;
 }
-html.phone td.show-for-phone,
-html.phone th.show-for-phone {
-  display: table-cell					!important;
+.phone thead.hide-for-no-phone {
+  display: table-header-group;
 }
-html.phone table.hide-for-no-phone {
-  display: table							!important;
+.phone tbody.hide-for-no-phone {
+  display: table-row-group;
 }
-html.phone thead.hide-for-no-phone {
-  display: table-header-group !important;
+.phone tr.hide-for-no-phone {
+  display: table-row;
 }
-html.phone tbody.hide-for-no-phone {
-  display: table-row-group		!important;
-}
-html.phone tr.hide-for-no-phone {
-  display: table-row					!important;
-}
-html.phone td.hide-for-no-phone,
-html.phone th.hide-for-no-phone {
-  display: table-cell					!important;
+.phone td.hide-for-no-phone,
+.phone th.hide-for-no-phone {
+  display: table-cell;
 }
 
-html.no-phone .hide-for-phone {
-  display: inherit !important;
+.no-phone .show-for-phone {
+  display: none !important;
 }
-html.no-phone .show-for-phone {
-  display: none								!important;
+.no-phone .hide-for-no-phone {
+  display: none !important;
 }
-html.no-phone .show-for-no-phone {
-  display: inherit !important;
+.no-phone table.hide-for-phone {
+  display: table;
 }
-html.no-phone .hide-for-no-phone {
-  display: none								!important;
+.no-phone thead.hide-for-phone {
+  display: table-header-group;
 }
-html.no-phone table.hide-for-phone {
-  display: table							!important;
+.no-phone tbody.hide-for-phone {
+  display: table-row-group;
 }
-html.no-phone thead.hide-for-phone {
-  display: table-header-group !important;
+.no-phone tr.hide-for-phone {
+  display: table-row;
 }
-html.no-phone tbody.hide-for-phone {
-  display: table-row-group		!important;
+.no-phone td.hide-for-phone,
+.no-phone th.hide-for-phone {
+  display: table-cell;
 }
-html.no-phone tr.hide-for-phone {
-  display: table-row					!important;
+.no-phone table.show-for-no-phone {
+  display: table;
 }
-html.no-phone td.hide-for-phone,
-html.no-phone th.hide-for-phone {
-  display: table-cell					!important;
+.no-phone thead.show-for-no-phone {
+  display: table-header-group;
 }
-html.no-phone table.show-for-no-phone {
-  display: table							!important;
+.no-phone tbody.show-for-no-phone {
+  display: table-row-group;
 }
-html.no-phone thead.show-for-no-phone {
-  display: table-header-group !important;
+.no-phone tr.show-for-no-phone {
+  display: table-row;
 }
-html.no-phone tbody.show-for-no-phone {
-  display: table-row-group		!important;
-}
-html.no-phone tr.show-for-no-phone {
-  display: table-row					!important;
-}
-html.no-phone td.show-for-no-phone,
-html.no-phone th.show-for-no-phone {
-  display: table-cell					!important;
+.no-phone td.show-for-no-phone,
+.no-phone th.show-for-no-phone {
+  display: table-cell;
 }
 
-html.tablet .show-for-tablet {
-  display: inherit !important;
+.tablet .hide-for-tablet {
+  display: none !important;
 }
-html.tablet .hide-for-tablet {
-  display: none								!important;
+.tablet .show-for-no-tablet {
+  display: none !important;
 }
-html.tablet .hide-for-no-tablet {
-  display: inherit !important;
+.tablet table.show-for-tablet {
+  display: table;
 }
-html.tablet .show-for-no-tablet {
-  display: none								!important;
+.tablet thead.show-for-tablet {
+  display: table-header-group;
 }
-html.tablet table.show-for-tablet {
-  display: table							!important;
+.tablet tbody.show-for-tablet {
+  display: table-row-group;
 }
-html.tablet thead.show-for-tablet {
-  display: table-header-group !important;
+.tablet tr.show-for-tablet {
+  display: table-row;
 }
-html.tablet tbody.show-for-tablet {
-  display: table-row-group		!important;
+.tablet td.show-for-tablet,
+.tablet th.show-for-tablet {
+  display: table-cell;
 }
-html.tablet tr.show-for-tablet {
-  display: table-row					!important;
+.tablet table.hide-for-no-tablet {
+  display: table;
 }
-html.tablet td.show-for-tablet,
-html.tablet th.show-for-tablet {
-  display: table-cell					!important;
+.tablet thead.hide-for-no-tablet {
+  display: table-header-group;
 }
-html.tablet table.hide-for-no-tablet {
-  display: table							!important;
+.tablet tbody.hide-for-no-tablet {
+  display: table-row-group;
 }
-html.tablet thead.hide-for-no-tablet {
-  display: table-header-group !important;
+.tablet tr.hide-for-no-tablet {
+  display: table-row;
 }
-html.tablet tbody.hide-for-no-tablet {
-  display: table-row-group		!important;
-}
-html.tablet tr.hide-for-no-tablet {
-  display: table-row					!important;
-}
-html.tablet td.hide-for-no-tablet,
-html.tablet th.hide-for-no-tablet {
-  display: table-cell					!important;
+.tablet td.hide-for-no-tablet,
+.tablet th.hide-for-no-tablet {
+  display: table-cell;
 }
 
-html.no-tablet .hide-for-tablet {
-  display: inherit !important;
+.no-tablet .show-for-tablet {
+  display: none !important;
 }
-html.no-tablet .show-for-tablet {
-  display: none								!important;
+.no-tablet .hide-for-no-tablet {
+  display: none !important;
 }
-html.no-tablet .show-for-no-tablet {
-  display: inherit !important;
+.no-tablet table.hide-for-tablet {
+  display: table;
 }
-html.no-tablet .hide-for-no-tablet {
-  display: none								!important;
+.no-tablet thead.hide-for-tablet {
+  display: table-header-group;
 }
-html.no-tablet table.hide-for-tablet {
-  display: table							!important;
+.no-tablet tbody.hide-for-tablet {
+  display: table-row-group;
 }
-html.no-tablet thead.hide-for-tablet {
-  display: table-header-group !important;
+.no-tablet tr.hide-for-tablet {
+  display: table-row;
 }
-html.no-tablet tbody.hide-for-tablet {
-  display: table-row-group		!important;
+.no-tablet td.hide-for-tablet,
+.no-tablet th.hide-for-tablet {
+  display: table-cell;
 }
-html.no-tablet tr.hide-for-tablet {
-  display: table-row					!important;
+.no-tablet table.show-for-no-tablet {
+  display: table;
 }
-html.no-tablet td.hide-for-tablet,
-html.no-tablet th.hide-for-tablet {
-  display: table-cell					!important;
+.no-tablet thead.show-for-no-tablet {
+  display: table-header-group;
 }
-html.no-tablet table.show-for-no-tablet {
-  display: table							!important;
+.no-tablet tbody.show-for-no-tablet {
+  display: table-row-group;
 }
-html.no-tablet thead.show-for-no-tablet {
-  display: table-header-group !important;
+.no-tablet tr.show-for-no-tablet {
+  display: table-row;
 }
-html.no-tablet tbody.show-for-no-tablet {
-  display: table-row-group		!important;
-}
-html.no-tablet tr.show-for-no-tablet {
-  display: table-row					!important;
-}
-html.no-tablet td.show-for-no-tablet,
-html.no-tablet th.show-for-no-tablet {
-  display: table-cell					!important;
+.no-tablet td.show-for-no-tablet,
+.no-tablet th.show-for-no-tablet {
+  display: table-cell;
 }
 
-html.windows .show-for-windows {
-  display: inherit !important;
+.windows .hide-for-windows {
+  display: none !important;
 }
-html.windows .hide-for-windows {
-  display: none								!important;
+.windows .show-for-no-windows {
+  display: none !important;
 }
-html.windows .hide-for-no-windows {
-  display: inherit !important;
+.windows table.show-for-windows {
+  display: table;
 }
-html.windows .show-for-no-windows {
-  display: none								!important;
+.windows thead.show-for-windows {
+  display: table-header-group;
 }
-html.windows table.show-for-windows {
-  display: table							!important;
+.windows tbody.show-for-windows {
+  display: table-row-group;
 }
-html.windows thead.show-for-windows {
-  display: table-header-group !important;
+.windows tr.show-for-windows {
+  display: table-row;
 }
-html.windows tbody.show-for-windows {
-  display: table-row-group		!important;
+.windows td.show-for-windows,
+.windows th.show-for-windows {
+  display: table-cell;
 }
-html.windows tr.show-for-windows {
-  display: table-row					!important;
+.windows table.hide-for-no-windows {
+  display: table;
 }
-html.windows td.show-for-windows,
-html.windows th.show-for-windows {
-  display: table-cell					!important;
+.windows thead.hide-for-no-windows {
+  display: table-header-group;
 }
-html.windows table.hide-for-no-windows {
-  display: table							!important;
+.windows tbody.hide-for-no-windows {
+  display: table-row-group;
 }
-html.windows thead.hide-for-no-windows {
-  display: table-header-group !important;
+.windows tr.hide-for-no-windows {
+  display: table-row;
 }
-html.windows tbody.hide-for-no-windows {
-  display: table-row-group		!important;
-}
-html.windows tr.hide-for-no-windows {
-  display: table-row					!important;
-}
-html.windows td.hide-for-no-windows,
-html.windows th.hide-for-no-windows {
-  display: table-cell					!important;
+.windows td.hide-for-no-windows,
+.windows th.hide-for-no-windows {
+  display: table-cell;
 }
 
-html.no-windows .hide-for-windows {
-  display: inherit !important;
+.no-windows .show-for-windows {
+  display: none !important;
 }
-html.no-windows .show-for-windows {
-  display: none								!important;
+.no-windows .hide-for-no-windows {
+  display: none !important;
 }
-html.no-windows .show-for-no-windows {
-  display: inherit !important;
+.no-windows table.hide-for-windows {
+  display: table;
 }
-html.no-windows .hide-for-no-windows {
-  display: none								!important;
+.no-windows thead.hide-for-windows {
+  display: table-header-group;
 }
-html.no-windows table.hide-for-windows {
-  display: table							!important;
+.no-windows tbody.hide-for-windows {
+  display: table-row-group;
 }
-html.no-windows thead.hide-for-windows {
-  display: table-header-group !important;
+.no-windows tr.hide-for-windows {
+  display: table-row;
 }
-html.no-windows tbody.hide-for-windows {
-  display: table-row-group		!important;
+.no-windows td.hide-for-windows,
+.no-windows th.hide-for-windows {
+  display: table-cell;
 }
-html.no-windows tr.hide-for-windows {
-  display: table-row					!important;
+.no-windows table.show-for-no-windows {
+  display: table;
 }
-html.no-windows td.hide-for-windows,
-html.no-windows th.hide-for-windows {
-  display: table-cell					!important;
+.no-windows thead.show-for-no-windows {
+  display: table-header-group;
 }
-html.no-windows table.show-for-no-windows {
-  display: table							!important;
+.no-windows tbody.show-for-no-windows {
+  display: table-row-group;
 }
-html.no-windows thead.show-for-no-windows {
-  display: table-header-group !important;
+.no-windows tr.show-for-no-windows {
+  display: table-row;
 }
-html.no-windows tbody.show-for-no-windows {
-  display: table-row-group		!important;
-}
-html.no-windows tr.show-for-no-windows {
-  display: table-row					!important;
-}
-html.no-windows td.show-for-no-windows,
-html.no-windows th.show-for-no-windows {
-  display: table-cell					!important;
+.no-windows td.show-for-no-windows,
+.no-windows th.show-for-no-windows {
+  display: table-cell;
 }
 
-html.ios .show-for-ios {
-  display: inherit !important;
+.ios .hide-for-ios {
+  display: none !important;
 }
-html.ios .hide-for-ios {
-  display: none								!important;
+.ios .show-for-no-ios {
+  display: none !important;
 }
-html.ios .hide-for-no-ios {
-  display: inherit !important;
+.ios table.show-for-ios {
+  display: table;
 }
-html.ios .show-for-no-ios {
-  display: none								!important;
+.ios thead.show-for-ios {
+  display: table-header-group;
 }
-html.ios table.show-for-ios {
-  display: table							!important;
+.ios tbody.show-for-ios {
+  display: table-row-group;
 }
-html.ios thead.show-for-ios {
-  display: table-header-group !important;
+.ios tr.show-for-ios {
+  display: table-row;
 }
-html.ios tbody.show-for-ios {
-  display: table-row-group		!important;
+.ios td.show-for-ios,
+.ios th.show-for-ios {
+  display: table-cell;
 }
-html.ios tr.show-for-ios {
-  display: table-row					!important;
+.ios table.hide-for-no-ios {
+  display: table;
 }
-html.ios td.show-for-ios,
-html.ios th.show-for-ios {
-  display: table-cell					!important;
+.ios thead.hide-for-no-ios {
+  display: table-header-group;
 }
-html.ios table.hide-for-no-ios {
-  display: table							!important;
+.ios tbody.hide-for-no-ios {
+  display: table-row-group;
 }
-html.ios thead.hide-for-no-ios {
-  display: table-header-group !important;
+.ios tr.hide-for-no-ios {
+  display: table-row;
 }
-html.ios tbody.hide-for-no-ios {
-  display: table-row-group		!important;
-}
-html.ios tr.hide-for-no-ios {
-  display: table-row					!important;
-}
-html.ios td.hide-for-no-ios,
-html.ios th.hide-for-no-ios {
-  display: table-cell					!important;
+.ios td.hide-for-no-ios,
+.ios th.hide-for-no-ios {
+  display: table-cell;
 }
 
-html.no-ios .hide-for-ios {
-  display: inherit !important;
+.no-ios .show-for-ios {
+  display: none !important;
 }
-html.no-ios .show-for-ios {
-  display: none								!important;
+.no-ios .hide-for-no-ios {
+  display: none !important;
 }
-html.no-ios .show-for-no-ios {
-  display: inherit !important;
+.no-ios table.hide-for-ios {
+  display: table;
 }
-html.no-ios .hide-for-no-ios {
-  display: none								!important;
+.no-ios thead.hide-for-ios {
+  display: table-header-group;
 }
-html.no-ios table.hide-for-ios {
-  display: table							!important;
+.no-ios tbody.hide-for-ios {
+  display: table-row-group;
 }
-html.no-ios thead.hide-for-ios {
-  display: table-header-group !important;
+.no-ios tr.hide-for-ios {
+  display: table-row;
 }
-html.no-ios tbody.hide-for-ios {
-  display: table-row-group		!important;
+.no-ios td.hide-for-ios,
+.no-ios th.hide-for-ios {
+  display: table-cell;
 }
-html.no-ios tr.hide-for-ios {
-  display: table-row					!important;
+.no-ios table.show-for-no-ios {
+  display: table;
 }
-html.no-ios td.hide-for-ios,
-html.no-ios th.hide-for-ios {
-  display: table-cell					!important;
+.no-ios thead.show-for-no-ios {
+  display: table-header-group;
 }
-html.no-ios table.show-for-no-ios {
-  display: table							!important;
+.no-ios tbody.show-for-no-ios {
+  display: table-row-group;
 }
-html.no-ios thead.show-for-no-ios {
-  display: table-header-group !important;
+.no-ios tr.show-for-no-ios {
+  display: table-row;
 }
-html.no-ios tbody.show-for-no-ios {
-  display: table-row-group		!important;
-}
-html.no-ios tr.show-for-no-ios {
-  display: table-row					!important;
-}
-html.no-ios td.show-for-no-ios,
-html.no-ios th.show-for-no-ios {
-  display: table-cell					!important;
+.no-ios td.show-for-no-ios,
+.no-ios th.show-for-no-ios {
+  display: table-cell;
 }
 
-html.android .show-for-android {
-  display: inherit !important;
+.android .hide-for-android {
+  display: none !important;
 }
-html.android .hide-for-android {
-  display: none								!important;
+.android .show-for-no-android {
+  display: none !important;
 }
-html.android .hide-for-no-android {
-  display: inherit !important;
+.android table.show-for-android {
+  display: table;
 }
-html.android .show-for-no-android {
-  display: none								!important;
+.android thead.show-for-android {
+  display: table-header-group;
 }
-html.android table.show-for-android {
-  display: table							!important;
+.android tbody.show-for-android {
+  display: table-row-group;
 }
-html.android thead.show-for-android {
-  display: table-header-group !important;
+.android tr.show-for-android {
+  display: table-row;
 }
-html.android tbody.show-for-android {
-  display: table-row-group		!important;
+.android td.show-for-android,
+.android th.show-for-android {
+  display: table-cell;
 }
-html.android tr.show-for-android {
-  display: table-row					!important;
+.android table.hide-for-no-android {
+  display: table;
 }
-html.android td.show-for-android,
-html.android th.show-for-android {
-  display: table-cell					!important;
+.android thead.hide-for-no-android {
+  display: table-header-group;
 }
-html.android table.hide-for-no-android {
-  display: table							!important;
+.android tbody.hide-for-no-android {
+  display: table-row-group;
 }
-html.android thead.hide-for-no-android {
-  display: table-header-group !important;
+.android tr.hide-for-no-android {
+  display: table-row;
 }
-html.android tbody.hide-for-no-android {
-  display: table-row-group		!important;
-}
-html.android tr.hide-for-no-android {
-  display: table-row					!important;
-}
-html.android td.hide-for-no-android,
-html.android th.hide-for-no-android {
-  display: table-cell					!important;
+.android td.hide-for-no-android,
+.android th.hide-for-no-android {
+  display: table-cell;
 }
 
-html.no-android .hide-for-android {
-  display: inherit !important;
+.no-android .show-for-android {
+  display: none !important;
 }
-html.no-android .show-for-android {
-  display: none								!important;
+.no-android .hide-for-no-android {
+  display: none !important;
 }
-html.no-android .show-for-no-android {
-  display: inherit !important;
+.no-android table.hide-for-android {
+  display: table;
 }
-html.no-android .hide-for-no-android {
-  display: none								!important;
+.no-android thead.hide-for-android {
+  display: table-header-group;
 }
-html.no-android table.hide-for-android {
-  display: table							!important;
+.no-android tbody.hide-for-android {
+  display: table-row-group;
 }
-html.no-android thead.hide-for-android {
-  display: table-header-group !important;
+.no-android tr.hide-for-android {
+  display: table-row;
 }
-html.no-android tbody.hide-for-android {
-  display: table-row-group		!important;
+.no-android td.hide-for-android,
+.no-android th.hide-for-android {
+  display: table-cell;
 }
-html.no-android tr.hide-for-android {
-  display: table-row					!important;
+.no-android table.show-for-no-android {
+  display: table;
 }
-html.no-android td.hide-for-android,
-html.no-android th.hide-for-android {
-  display: table-cell					!important;
+.no-android thead.show-for-no-android {
+  display: table-header-group;
 }
-html.no-android table.show-for-no-android {
-  display: table							!important;
+.no-android tbody.show-for-no-android {
+  display: table-row-group;
 }
-html.no-android thead.show-for-no-android {
-  display: table-header-group !important;
+.no-android tr.show-for-no-android {
+  display: table-row;
 }
-html.no-android tbody.show-for-no-android {
-  display: table-row-group		!important;
-}
-html.no-android tr.show-for-no-android {
-  display: table-row					!important;
-}
-html.no-android td.show-for-no-android,
-html.no-android th.show-for-no-android {
-  display: table-cell					!important;
+.no-android td.show-for-no-android,
+.no-android th.show-for-no-android {
+  display: table-cell;
 }
 
-html.ie7 .show-for-ie7 {
-  display: inherit !important;
+.ie7 .hide-for-ie7 {
+  display: none !important;
 }
-html.ie7 .hide-for-ie7 {
-  display: none								!important;
+.ie7 .show-for-no-ie7 {
+  display: none !important;
 }
-html.ie7 .hide-for-no-ie7 {
-  display: inherit !important;
+.ie7 table.show-for-ie7 {
+  display: table;
 }
-html.ie7 .show-for-no-ie7 {
-  display: none								!important;
+.ie7 thead.show-for-ie7 {
+  display: table-header-group;
 }
-html.ie7 table.show-for-ie7 {
-  display: table							!important;
+.ie7 tbody.show-for-ie7 {
+  display: table-row-group;
 }
-html.ie7 thead.show-for-ie7 {
-  display: table-header-group !important;
+.ie7 tr.show-for-ie7 {
+  display: table-row;
 }
-html.ie7 tbody.show-for-ie7 {
-  display: table-row-group		!important;
+.ie7 td.show-for-ie7,
+.ie7 th.show-for-ie7 {
+  display: table-cell;
 }
-html.ie7 tr.show-for-ie7 {
-  display: table-row					!important;
+.ie7 table.hide-for-no-ie7 {
+  display: table;
 }
-html.ie7 td.show-for-ie7,
-html.ie7 th.show-for-ie7 {
-  display: table-cell					!important;
+.ie7 thead.hide-for-no-ie7 {
+  display: table-header-group;
 }
-html.ie7 table.hide-for-no-ie7 {
-  display: table							!important;
+.ie7 tbody.hide-for-no-ie7 {
+  display: table-row-group;
 }
-html.ie7 thead.hide-for-no-ie7 {
-  display: table-header-group !important;
+.ie7 tr.hide-for-no-ie7 {
+  display: table-row;
 }
-html.ie7 tbody.hide-for-no-ie7 {
-  display: table-row-group		!important;
-}
-html.ie7 tr.hide-for-no-ie7 {
-  display: table-row					!important;
-}
-html.ie7 td.hide-for-no-ie7,
-html.ie7 th.hide-for-no-ie7 {
-  display: table-cell					!important;
+.ie7 td.hide-for-no-ie7,
+.ie7 th.hide-for-no-ie7 {
+  display: table-cell;
 }
 
-html.no-ie7 .hide-for-ie7 {
-  display: inherit !important;
+.no-ie7 .show-for-ie7 {
+  display: none !important;
 }
-html.no-ie7 .show-for-ie7 {
-  display: none								!important;
+.no-ie7 .hide-for-no-ie7 {
+  display: none !important;
 }
-html.no-ie7 .show-for-no-ie7 {
-  display: inherit !important;
+.no-ie7 table.hide-for-ie7 {
+  display: table;
 }
-html.no-ie7 .hide-for-no-ie7 {
-  display: none								!important;
+.no-ie7 thead.hide-for-ie7 {
+  display: table-header-group;
 }
-html.no-ie7 table.hide-for-ie7 {
-  display: table							!important;
+.no-ie7 tbody.hide-for-ie7 {
+  display: table-row-group;
 }
-html.no-ie7 thead.hide-for-ie7 {
-  display: table-header-group !important;
+.no-ie7 tr.hide-for-ie7 {
+  display: table-row;
 }
-html.no-ie7 tbody.hide-for-ie7 {
-  display: table-row-group		!important;
+.no-ie7 td.hide-for-ie7,
+.no-ie7 th.hide-for-ie7 {
+  display: table-cell;
 }
-html.no-ie7 tr.hide-for-ie7 {
-  display: table-row					!important;
+.no-ie7 table.show-for-no-ie7 {
+  display: table;
 }
-html.no-ie7 td.hide-for-ie7,
-html.no-ie7 th.hide-for-ie7 {
-  display: table-cell					!important;
+.no-ie7 thead.show-for-no-ie7 {
+  display: table-header-group;
 }
-html.no-ie7 table.show-for-no-ie7 {
-  display: table							!important;
+.no-ie7 tbody.show-for-no-ie7 {
+  display: table-row-group;
 }
-html.no-ie7 thead.show-for-no-ie7 {
-  display: table-header-group !important;
+.no-ie7 tr.show-for-no-ie7 {
+  display: table-row;
 }
-html.no-ie7 tbody.show-for-no-ie7 {
-  display: table-row-group		!important;
-}
-html.no-ie7 tr.show-for-no-ie7 {
-  display: table-row					!important;
-}
-html.no-ie7 td.show-for-no-ie7,
-html.no-ie7 th.show-for-no-ie7 {
-  display: table-cell					!important;
+.no-ie7 td.show-for-no-ie7,
+.no-ie7 th.show-for-no-ie7 {
+  display: table-cell;
 }
 
-html.ie8 .show-for-ie8 {
-  display: inherit !important;
+.ie8 .hide-for-ie8 {
+  display: none !important;
 }
-html.ie8 .hide-for-ie8 {
-  display: none								!important;
+.ie8 .show-for-no-ie8 {
+  display: none !important;
 }
-html.ie8 .hide-for-no-ie8 {
-  display: inherit !important;
+.ie8 table.show-for-ie8 {
+  display: table;
 }
-html.ie8 .show-for-no-ie8 {
-  display: none								!important;
+.ie8 thead.show-for-ie8 {
+  display: table-header-group;
 }
-html.ie8 table.show-for-ie8 {
-  display: table							!important;
+.ie8 tbody.show-for-ie8 {
+  display: table-row-group;
 }
-html.ie8 thead.show-for-ie8 {
-  display: table-header-group !important;
+.ie8 tr.show-for-ie8 {
+  display: table-row;
 }
-html.ie8 tbody.show-for-ie8 {
-  display: table-row-group		!important;
+.ie8 td.show-for-ie8,
+.ie8 th.show-for-ie8 {
+  display: table-cell;
 }
-html.ie8 tr.show-for-ie8 {
-  display: table-row					!important;
+.ie8 table.hide-for-no-ie8 {
+  display: table;
 }
-html.ie8 td.show-for-ie8,
-html.ie8 th.show-for-ie8 {
-  display: table-cell					!important;
+.ie8 thead.hide-for-no-ie8 {
+  display: table-header-group;
 }
-html.ie8 table.hide-for-no-ie8 {
-  display: table							!important;
+.ie8 tbody.hide-for-no-ie8 {
+  display: table-row-group;
 }
-html.ie8 thead.hide-for-no-ie8 {
-  display: table-header-group !important;
+.ie8 tr.hide-for-no-ie8 {
+  display: table-row;
 }
-html.ie8 tbody.hide-for-no-ie8 {
-  display: table-row-group		!important;
-}
-html.ie8 tr.hide-for-no-ie8 {
-  display: table-row					!important;
-}
-html.ie8 td.hide-for-no-ie8,
-html.ie8 th.hide-for-no-ie8 {
-  display: table-cell					!important;
+.ie8 td.hide-for-no-ie8,
+.ie8 th.hide-for-no-ie8 {
+  display: table-cell;
 }
 
-html.no-ie8 .hide-for-ie8 {
-  display: inherit !important;
+.no-ie8 .show-for-ie8 {
+  display: none !important;
 }
-html.no-ie8 .show-for-ie8 {
-  display: none								!important;
+.no-ie8 .hide-for-no-ie8 {
+  display: none !important;
 }
-html.no-ie8 .show-for-no-ie8 {
-  display: inherit !important;
+.no-ie8 table.hide-for-ie8 {
+  display: table;
 }
-html.no-ie8 .hide-for-no-ie8 {
-  display: none								!important;
+.no-ie8 thead.hide-for-ie8 {
+  display: table-header-group;
 }
-html.no-ie8 table.hide-for-ie8 {
-  display: table							!important;
+.no-ie8 tbody.hide-for-ie8 {
+  display: table-row-group;
 }
-html.no-ie8 thead.hide-for-ie8 {
-  display: table-header-group !important;
+.no-ie8 tr.hide-for-ie8 {
+  display: table-row;
 }
-html.no-ie8 tbody.hide-for-ie8 {
-  display: table-row-group		!important;
+.no-ie8 td.hide-for-ie8,
+.no-ie8 th.hide-for-ie8 {
+  display: table-cell;
 }
-html.no-ie8 tr.hide-for-ie8 {
-  display: table-row					!important;
+.no-ie8 table.show-for-no-ie8 {
+  display: table;
 }
-html.no-ie8 td.hide-for-ie8,
-html.no-ie8 th.hide-for-ie8 {
-  display: table-cell					!important;
+.no-ie8 thead.show-for-no-ie8 {
+  display: table-header-group;
 }
-html.no-ie8 table.show-for-no-ie8 {
-  display: table							!important;
+.no-ie8 tbody.show-for-no-ie8 {
+  display: table-row-group;
 }
-html.no-ie8 thead.show-for-no-ie8 {
-  display: table-header-group !important;
+.no-ie8 tr.show-for-no-ie8 {
+  display: table-row;
 }
-html.no-ie8 tbody.show-for-no-ie8 {
-  display: table-row-group		!important;
-}
-html.no-ie8 tr.show-for-no-ie8 {
-  display: table-row					!important;
-}
-html.no-ie8 td.show-for-no-ie8,
-html.no-ie8 th.show-for-no-ie8 {
-  display: table-cell					!important;
+.no-ie8 td.show-for-no-ie8,
+.no-ie8 th.show-for-no-ie8 {
+  display: table-cell;
 }
 
-html.ie9 .show-for-ie9 {
-  display: inherit !important;
+.ie9 .hide-for-ie9 {
+  display: none !important;
 }
-html.ie9 .hide-for-ie9 {
-  display: none								!important;
+.ie9 .show-for-no-ie9 {
+  display: none !important;
 }
-html.ie9 .hide-for-no-ie9 {
-  display: inherit !important;
+.ie9 table.show-for-ie9 {
+  display: table;
 }
-html.ie9 .show-for-no-ie9 {
-  display: none								!important;
+.ie9 thead.show-for-ie9 {
+  display: table-header-group;
 }
-html.ie9 table.show-for-ie9 {
-  display: table							!important;
+.ie9 tbody.show-for-ie9 {
+  display: table-row-group;
 }
-html.ie9 thead.show-for-ie9 {
-  display: table-header-group !important;
+.ie9 tr.show-for-ie9 {
+  display: table-row;
 }
-html.ie9 tbody.show-for-ie9 {
-  display: table-row-group		!important;
+.ie9 td.show-for-ie9,
+.ie9 th.show-for-ie9 {
+  display: table-cell;
 }
-html.ie9 tr.show-for-ie9 {
-  display: table-row					!important;
+.ie9 table.hide-for-no-ie9 {
+  display: table;
 }
-html.ie9 td.show-for-ie9,
-html.ie9 th.show-for-ie9 {
-  display: table-cell					!important;
+.ie9 thead.hide-for-no-ie9 {
+  display: table-header-group;
 }
-html.ie9 table.hide-for-no-ie9 {
-  display: table							!important;
+.ie9 tbody.hide-for-no-ie9 {
+  display: table-row-group;
 }
-html.ie9 thead.hide-for-no-ie9 {
-  display: table-header-group !important;
+.ie9 tr.hide-for-no-ie9 {
+  display: table-row;
 }
-html.ie9 tbody.hide-for-no-ie9 {
-  display: table-row-group		!important;
-}
-html.ie9 tr.hide-for-no-ie9 {
-  display: table-row					!important;
-}
-html.ie9 td.hide-for-no-ie9,
-html.ie9 th.hide-for-no-ie9 {
-  display: table-cell					!important;
+.ie9 td.hide-for-no-ie9,
+.ie9 th.hide-for-no-ie9 {
+  display: table-cell;
 }
 
-html.no-ie9 .hide-for-ie9 {
-  display: inherit !important;
+.no-ie9 .show-for-ie9 {
+  display: none !important;
 }
-html.no-ie9 .show-for-ie9 {
-  display: none								!important;
+.no-ie9 .hide-for-no-ie9 {
+  display: none !important;
 }
-html.no-ie9 .show-for-no-ie9 {
-  display: inherit !important;
+.no-ie9 table.hide-for-ie9 {
+  display: table;
 }
-html.no-ie9 .hide-for-no-ie9 {
-  display: none								!important;
+.no-ie9 thead.hide-for-ie9 {
+  display: table-header-group;
 }
-html.no-ie9 table.hide-for-ie9 {
-  display: table							!important;
+.no-ie9 tbody.hide-for-ie9 {
+  display: table-row-group;
 }
-html.no-ie9 thead.hide-for-ie9 {
-  display: table-header-group !important;
+.no-ie9 tr.hide-for-ie9 {
+  display: table-row;
 }
-html.no-ie9 tbody.hide-for-ie9 {
-  display: table-row-group		!important;
+.no-ie9 td.hide-for-ie9,
+.no-ie9 th.hide-for-ie9 {
+  display: table-cell;
 }
-html.no-ie9 tr.hide-for-ie9 {
-  display: table-row					!important;
+.no-ie9 table.show-for-no-ie9 {
+  display: table;
 }
-html.no-ie9 td.hide-for-ie9,
-html.no-ie9 th.hide-for-ie9 {
-  display: table-cell					!important;
+.no-ie9 thead.show-for-no-ie9 {
+  display: table-header-group;
 }
-html.no-ie9 table.show-for-no-ie9 {
-  display: table							!important;
+.no-ie9 tbody.show-for-no-ie9 {
+  display: table-row-group;
 }
-html.no-ie9 thead.show-for-no-ie9 {
-  display: table-header-group !important;
+.no-ie9 tr.show-for-no-ie9 {
+  display: table-row;
 }
-html.no-ie9 tbody.show-for-no-ie9 {
-  display: table-row-group		!important;
-}
-html.no-ie9 tr.show-for-no-ie9 {
-  display: table-row					!important;
-}
-html.no-ie9 td.show-for-no-ie9,
-html.no-ie9 th.show-for-no-ie9 {
-  display: table-cell					!important;
+.no-ie9 td.show-for-no-ie9,
+.no-ie9 th.show-for-no-ie9 {
+  display: table-cell;
 }
 
-html.ie10 .show-for-ie10 {
-  display: inherit !important;
+.ie10 .hide-for-ie10 {
+  display: none !important;
 }
-html.ie10 .hide-for-ie10 {
-  display: none								!important;
+.ie10 .show-for-no-ie10 {
+  display: none !important;
 }
-html.ie10 .hide-for-no-ie10 {
-  display: inherit !important;
+.ie10 table.show-for-ie10 {
+  display: table;
 }
-html.ie10 .show-for-no-ie10 {
-  display: none								!important;
+.ie10 thead.show-for-ie10 {
+  display: table-header-group;
 }
-html.ie10 table.show-for-ie10 {
-  display: table							!important;
+.ie10 tbody.show-for-ie10 {
+  display: table-row-group;
 }
-html.ie10 thead.show-for-ie10 {
-  display: table-header-group !important;
+.ie10 tr.show-for-ie10 {
+  display: table-row;
 }
-html.ie10 tbody.show-for-ie10 {
-  display: table-row-group		!important;
+.ie10 td.show-for-ie10,
+.ie10 th.show-for-ie10 {
+  display: table-cell;
 }
-html.ie10 tr.show-for-ie10 {
-  display: table-row					!important;
+.ie10 table.hide-for-no-ie10 {
+  display: table;
 }
-html.ie10 td.show-for-ie10,
-html.ie10 th.show-for-ie10 {
-  display: table-cell					!important;
+.ie10 thead.hide-for-no-ie10 {
+  display: table-header-group;
 }
-html.ie10 table.hide-for-no-ie10 {
-  display: table							!important;
+.ie10 tbody.hide-for-no-ie10 {
+  display: table-row-group;
 }
-html.ie10 thead.hide-for-no-ie10 {
-  display: table-header-group !important;
+.ie10 tr.hide-for-no-ie10 {
+  display: table-row;
 }
-html.ie10 tbody.hide-for-no-ie10 {
-  display: table-row-group		!important;
-}
-html.ie10 tr.hide-for-no-ie10 {
-  display: table-row					!important;
-}
-html.ie10 td.hide-for-no-ie10,
-html.ie10 th.hide-for-no-ie10 {
-  display: table-cell					!important;
+.ie10 td.hide-for-no-ie10,
+.ie10 th.hide-for-no-ie10 {
+  display: table-cell;
 }
 
-html.no-ie10 .hide-for-ie10 {
-  display: inherit !important;
+.no-ie10 .show-for-ie10 {
+  display: none !important;
 }
-html.no-ie10 .show-for-ie10 {
-  display: none								!important;
+.no-ie10 .hide-for-no-ie10 {
+  display: none !important;
 }
-html.no-ie10 .show-for-no-ie10 {
-  display: inherit !important;
+.no-ie10 table.hide-for-ie10 {
+  display: table;
 }
-html.no-ie10 .hide-for-no-ie10 {
-  display: none								!important;
+.no-ie10 thead.hide-for-ie10 {
+  display: table-header-group;
 }
-html.no-ie10 table.hide-for-ie10 {
-  display: table							!important;
+.no-ie10 tbody.hide-for-ie10 {
+  display: table-row-group;
 }
-html.no-ie10 thead.hide-for-ie10 {
-  display: table-header-group !important;
+.no-ie10 tr.hide-for-ie10 {
+  display: table-row;
 }
-html.no-ie10 tbody.hide-for-ie10 {
-  display: table-row-group		!important;
+.no-ie10 td.hide-for-ie10,
+.no-ie10 th.hide-for-ie10 {
+  display: table-cell;
 }
-html.no-ie10 tr.hide-for-ie10 {
-  display: table-row					!important;
+.no-ie10 table.show-for-no-ie10 {
+  display: table;
 }
-html.no-ie10 td.hide-for-ie10,
-html.no-ie10 th.hide-for-ie10 {
-  display: table-cell					!important;
+.no-ie10 thead.show-for-no-ie10 {
+  display: table-header-group;
 }
-html.no-ie10 table.show-for-no-ie10 {
-  display: table							!important;
+.no-ie10 tbody.show-for-no-ie10 {
+  display: table-row-group;
 }
-html.no-ie10 thead.show-for-no-ie10 {
-  display: table-header-group !important;
+.no-ie10 tr.show-for-no-ie10 {
+  display: table-row;
 }
-html.no-ie10 tbody.show-for-no-ie10 {
-  display: table-row-group		!important;
-}
-html.no-ie10 tr.show-for-no-ie10 {
-  display: table-row					!important;
-}
-html.no-ie10 td.show-for-no-ie10,
-html.no-ie10 th.show-for-no-ie10 {
-  display: table-cell					!important;
+.no-ie10 td.show-for-no-ie10,
+.no-ie10 th.show-for-no-ie10 {
+  display: table-cell;
 }
 
-html.mobilegradea .show-for-mobilegradea {
-  display: inherit !important;
+.mobilegradea .hide-for-mobilegradea {
+  display: none !important;
 }
-html.mobilegradea .hide-for-mobilegradea {
-  display: none								!important;
+.mobilegradea .show-for-no-mobilegradea {
+  display: none !important;
 }
-html.mobilegradea .hide-for-no-mobilegradea {
-  display: inherit !important;
+.mobilegradea table.show-for-mobilegradea {
+  display: table;
 }
-html.mobilegradea .show-for-no-mobilegradea {
-  display: none								!important;
+.mobilegradea thead.show-for-mobilegradea {
+  display: table-header-group;
 }
-html.mobilegradea table.show-for-mobilegradea {
-  display: table							!important;
+.mobilegradea tbody.show-for-mobilegradea {
+  display: table-row-group;
 }
-html.mobilegradea thead.show-for-mobilegradea {
-  display: table-header-group !important;
+.mobilegradea tr.show-for-mobilegradea {
+  display: table-row;
 }
-html.mobilegradea tbody.show-for-mobilegradea {
-  display: table-row-group		!important;
+.mobilegradea td.show-for-mobilegradea,
+.mobilegradea th.show-for-mobilegradea {
+  display: table-cell;
 }
-html.mobilegradea tr.show-for-mobilegradea {
-  display: table-row					!important;
+.mobilegradea table.hide-for-no-mobilegradea {
+  display: table;
 }
-html.mobilegradea td.show-for-mobilegradea,
-html.mobilegradea th.show-for-mobilegradea {
-  display: table-cell					!important;
+.mobilegradea thead.hide-for-no-mobilegradea {
+  display: table-header-group;
 }
-html.mobilegradea table.hide-for-no-mobilegradea {
-  display: table							!important;
+.mobilegradea tbody.hide-for-no-mobilegradea {
+  display: table-row-group;
 }
-html.mobilegradea thead.hide-for-no-mobilegradea {
-  display: table-header-group !important;
+.mobilegradea tr.hide-for-no-mobilegradea {
+  display: table-row;
 }
-html.mobilegradea tbody.hide-for-no-mobilegradea {
-  display: table-row-group		!important;
-}
-html.mobilegradea tr.hide-for-no-mobilegradea {
-  display: table-row					!important;
-}
-html.mobilegradea td.hide-for-no-mobilegradea,
-html.mobilegradea th.hide-for-no-mobilegradea {
-  display: table-cell					!important;
+.mobilegradea td.hide-for-no-mobilegradea,
+.mobilegradea th.hide-for-no-mobilegradea {
+  display: table-cell;
 }
 
-html.no-mobilegradea .hide-for-mobilegradea {
-  display: inherit !important;
+.no-mobilegradea .show-for-mobilegradea {
+  display: none !important;
 }
-html.no-mobilegradea .show-for-mobilegradea {
-  display: none								!important;
+.no-mobilegradea .hide-for-no-mobilegradea {
+  display: none !important;
 }
-html.no-mobilegradea .show-for-no-mobilegradea {
-  display: inherit !important;
+.no-mobilegradea table.hide-for-mobilegradea {
+  display: table;
 }
-html.no-mobilegradea .hide-for-no-mobilegradea {
-  display: none								!important;
+.no-mobilegradea thead.hide-for-mobilegradea {
+  display: table-header-group;
 }
-html.no-mobilegradea table.hide-for-mobilegradea {
-  display: table							!important;
+.no-mobilegradea tbody.hide-for-mobilegradea {
+  display: table-row-group;
 }
-html.no-mobilegradea thead.hide-for-mobilegradea {
-  display: table-header-group !important;
+.no-mobilegradea tr.hide-for-mobilegradea {
+  display: table-row;
 }
-html.no-mobilegradea tbody.hide-for-mobilegradea {
-  display: table-row-group		!important;
+.no-mobilegradea td.hide-for-mobilegradea,
+.no-mobilegradea th.hide-for-mobilegradea {
+  display: table-cell;
 }
-html.no-mobilegradea tr.hide-for-mobilegradea {
-  display: table-row					!important;
+.no-mobilegradea table.show-for-no-mobilegradea {
+  display: table;
 }
-html.no-mobilegradea td.hide-for-mobilegradea,
-html.no-mobilegradea th.hide-for-mobilegradea {
-  display: table-cell					!important;
+.no-mobilegradea thead.show-for-no-mobilegradea {
+  display: table-header-group;
 }
-html.no-mobilegradea table.show-for-no-mobilegradea {
-  display: table							!important;
+.no-mobilegradea tbody.show-for-no-mobilegradea {
+  display: table-row-group;
 }
-html.no-mobilegradea thead.show-for-no-mobilegradea {
-  display: table-header-group !important;
+.no-mobilegradea tr.show-for-no-mobilegradea {
+  display: table-row;
 }
-html.no-mobilegradea tbody.show-for-no-mobilegradea {
-  display: table-row-group		!important;
-}
-html.no-mobilegradea tr.show-for-no-mobilegradea {
-  display: table-row					!important;
-}
-html.no-mobilegradea td.show-for-no-mobilegradea,
-html.no-mobilegradea th.show-for-no-mobilegradea {
-  display: table-cell					!important;
+.no-mobilegradea td.show-for-no-mobilegradea,
+.no-mobilegradea th.show-for-no-mobilegradea {
+  display: table-cell;
 }
 
 /*# sourceMappingURL=demo.css.map */
