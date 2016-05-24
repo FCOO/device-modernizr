@@ -8,9 +8,9 @@
 
 ************************************************/
 
-$display-value			: '' !default;		// Value for display:... when element is visible. Default = '' => no class created.
-$incl-no-selector		: true !default;	// if true classes for 'show-for-no-TEST are included
-$incl-table-display	: true !default;	// if true classes for table-elements (TABLE, TR,TD etc.) are included 
+$md-display-value			: '' !default;		// Value for display:... when element is visible. Default = '' => no class created.
+$md-incl-no-selector	: true !default;	// if true classes for 'show-for-no-TEST are included
+$md-incl-table-display: false !default;	// if true classes for table-elements (TABLE, TR,TD etc.) are included 
 
 
 //$modernizr-device-list = list of tests to create show-for-TEST, hide-for-TEST classes for
@@ -21,7 +21,7 @@ $modernizr-device-list: desktop, mobile, phone, tablet, windows, ios, android, i
 //Create show/hide-for-TEST and show/hide-for-no-TEST, TEST = the Modernizr tests installed
 //$modernizr-tests = the list of tests added to Modernizr by modernizr-device.js
 @each $modernizr-device in $modernizr-device-list {
-	@include show-and-hide-for-modernizr-test( $modernizr-device, '', $incl-no-selector, $display-value, $incl-table-display );
+	@include show-and-hide-for-modernizr-test( $modernizr-device, '', $md-incl-no-selector, $md-display-value, $md-incl-table-display );
 }
 
 //******************************************************************************************

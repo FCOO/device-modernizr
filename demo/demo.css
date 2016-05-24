@@ -18,76 +18,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .desktop .show-for-no-desktop {
   display: none !important;
 }
-.desktop table.show-for-desktop {
-  display: table;
-}
-.desktop thead.show-for-desktop {
-  display: table-header-group;
-}
-.desktop tbody.show-for-desktop {
-  display: table-row-group;
-}
-.desktop tr.show-for-desktop {
-  display: table-row;
-}
-.desktop td.show-for-desktop,
-.desktop th.show-for-desktop {
-  display: table-cell;
-}
-.desktop table.hide-for-no-desktop {
-  display: table;
-}
-.desktop thead.hide-for-no-desktop {
-  display: table-header-group;
-}
-.desktop tbody.hide-for-no-desktop {
-  display: table-row-group;
-}
-.desktop tr.hide-for-no-desktop {
-  display: table-row;
-}
-.desktop td.hide-for-no-desktop,
-.desktop th.hide-for-no-desktop {
-  display: table-cell;
-}
 
 .no-desktop .show-for-desktop {
   display: none !important;
 }
 .no-desktop .hide-for-no-desktop {
   display: none !important;
-}
-.no-desktop table.hide-for-desktop {
-  display: table;
-}
-.no-desktop thead.hide-for-desktop {
-  display: table-header-group;
-}
-.no-desktop tbody.hide-for-desktop {
-  display: table-row-group;
-}
-.no-desktop tr.hide-for-desktop {
-  display: table-row;
-}
-.no-desktop td.hide-for-desktop,
-.no-desktop th.hide-for-desktop {
-  display: table-cell;
-}
-.no-desktop table.show-for-no-desktop {
-  display: table;
-}
-.no-desktop thead.show-for-no-desktop {
-  display: table-header-group;
-}
-.no-desktop tbody.show-for-no-desktop {
-  display: table-row-group;
-}
-.no-desktop tr.show-for-no-desktop {
-  display: table-row;
-}
-.no-desktop td.show-for-no-desktop,
-.no-desktop th.show-for-no-desktop {
-  display: table-cell;
 }
 
 .mobile .hide-for-mobile {
@@ -96,76 +32,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .mobile .show-for-no-mobile {
   display: none !important;
 }
-.mobile table.show-for-mobile {
-  display: table;
-}
-.mobile thead.show-for-mobile {
-  display: table-header-group;
-}
-.mobile tbody.show-for-mobile {
-  display: table-row-group;
-}
-.mobile tr.show-for-mobile {
-  display: table-row;
-}
-.mobile td.show-for-mobile,
-.mobile th.show-for-mobile {
-  display: table-cell;
-}
-.mobile table.hide-for-no-mobile {
-  display: table;
-}
-.mobile thead.hide-for-no-mobile {
-  display: table-header-group;
-}
-.mobile tbody.hide-for-no-mobile {
-  display: table-row-group;
-}
-.mobile tr.hide-for-no-mobile {
-  display: table-row;
-}
-.mobile td.hide-for-no-mobile,
-.mobile th.hide-for-no-mobile {
-  display: table-cell;
-}
 
 .no-mobile .show-for-mobile {
   display: none !important;
 }
 .no-mobile .hide-for-no-mobile {
   display: none !important;
-}
-.no-mobile table.hide-for-mobile {
-  display: table;
-}
-.no-mobile thead.hide-for-mobile {
-  display: table-header-group;
-}
-.no-mobile tbody.hide-for-mobile {
-  display: table-row-group;
-}
-.no-mobile tr.hide-for-mobile {
-  display: table-row;
-}
-.no-mobile td.hide-for-mobile,
-.no-mobile th.hide-for-mobile {
-  display: table-cell;
-}
-.no-mobile table.show-for-no-mobile {
-  display: table;
-}
-.no-mobile thead.show-for-no-mobile {
-  display: table-header-group;
-}
-.no-mobile tbody.show-for-no-mobile {
-  display: table-row-group;
-}
-.no-mobile tr.show-for-no-mobile {
-  display: table-row;
-}
-.no-mobile td.show-for-no-mobile,
-.no-mobile th.show-for-no-mobile {
-  display: table-cell;
 }
 
 .phone .hide-for-phone {
@@ -174,76 +46,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .phone .show-for-no-phone {
   display: none !important;
 }
-.phone table.show-for-phone {
-  display: table;
-}
-.phone thead.show-for-phone {
-  display: table-header-group;
-}
-.phone tbody.show-for-phone {
-  display: table-row-group;
-}
-.phone tr.show-for-phone {
-  display: table-row;
-}
-.phone td.show-for-phone,
-.phone th.show-for-phone {
-  display: table-cell;
-}
-.phone table.hide-for-no-phone {
-  display: table;
-}
-.phone thead.hide-for-no-phone {
-  display: table-header-group;
-}
-.phone tbody.hide-for-no-phone {
-  display: table-row-group;
-}
-.phone tr.hide-for-no-phone {
-  display: table-row;
-}
-.phone td.hide-for-no-phone,
-.phone th.hide-for-no-phone {
-  display: table-cell;
-}
 
 .no-phone .show-for-phone {
   display: none !important;
 }
 .no-phone .hide-for-no-phone {
   display: none !important;
-}
-.no-phone table.hide-for-phone {
-  display: table;
-}
-.no-phone thead.hide-for-phone {
-  display: table-header-group;
-}
-.no-phone tbody.hide-for-phone {
-  display: table-row-group;
-}
-.no-phone tr.hide-for-phone {
-  display: table-row;
-}
-.no-phone td.hide-for-phone,
-.no-phone th.hide-for-phone {
-  display: table-cell;
-}
-.no-phone table.show-for-no-phone {
-  display: table;
-}
-.no-phone thead.show-for-no-phone {
-  display: table-header-group;
-}
-.no-phone tbody.show-for-no-phone {
-  display: table-row-group;
-}
-.no-phone tr.show-for-no-phone {
-  display: table-row;
-}
-.no-phone td.show-for-no-phone,
-.no-phone th.show-for-no-phone {
-  display: table-cell;
 }
 
 .tablet .hide-for-tablet {
@@ -252,76 +60,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .tablet .show-for-no-tablet {
   display: none !important;
 }
-.tablet table.show-for-tablet {
-  display: table;
-}
-.tablet thead.show-for-tablet {
-  display: table-header-group;
-}
-.tablet tbody.show-for-tablet {
-  display: table-row-group;
-}
-.tablet tr.show-for-tablet {
-  display: table-row;
-}
-.tablet td.show-for-tablet,
-.tablet th.show-for-tablet {
-  display: table-cell;
-}
-.tablet table.hide-for-no-tablet {
-  display: table;
-}
-.tablet thead.hide-for-no-tablet {
-  display: table-header-group;
-}
-.tablet tbody.hide-for-no-tablet {
-  display: table-row-group;
-}
-.tablet tr.hide-for-no-tablet {
-  display: table-row;
-}
-.tablet td.hide-for-no-tablet,
-.tablet th.hide-for-no-tablet {
-  display: table-cell;
-}
 
 .no-tablet .show-for-tablet {
   display: none !important;
 }
 .no-tablet .hide-for-no-tablet {
   display: none !important;
-}
-.no-tablet table.hide-for-tablet {
-  display: table;
-}
-.no-tablet thead.hide-for-tablet {
-  display: table-header-group;
-}
-.no-tablet tbody.hide-for-tablet {
-  display: table-row-group;
-}
-.no-tablet tr.hide-for-tablet {
-  display: table-row;
-}
-.no-tablet td.hide-for-tablet,
-.no-tablet th.hide-for-tablet {
-  display: table-cell;
-}
-.no-tablet table.show-for-no-tablet {
-  display: table;
-}
-.no-tablet thead.show-for-no-tablet {
-  display: table-header-group;
-}
-.no-tablet tbody.show-for-no-tablet {
-  display: table-row-group;
-}
-.no-tablet tr.show-for-no-tablet {
-  display: table-row;
-}
-.no-tablet td.show-for-no-tablet,
-.no-tablet th.show-for-no-tablet {
-  display: table-cell;
 }
 
 .windows .hide-for-windows {
@@ -330,76 +74,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .windows .show-for-no-windows {
   display: none !important;
 }
-.windows table.show-for-windows {
-  display: table;
-}
-.windows thead.show-for-windows {
-  display: table-header-group;
-}
-.windows tbody.show-for-windows {
-  display: table-row-group;
-}
-.windows tr.show-for-windows {
-  display: table-row;
-}
-.windows td.show-for-windows,
-.windows th.show-for-windows {
-  display: table-cell;
-}
-.windows table.hide-for-no-windows {
-  display: table;
-}
-.windows thead.hide-for-no-windows {
-  display: table-header-group;
-}
-.windows tbody.hide-for-no-windows {
-  display: table-row-group;
-}
-.windows tr.hide-for-no-windows {
-  display: table-row;
-}
-.windows td.hide-for-no-windows,
-.windows th.hide-for-no-windows {
-  display: table-cell;
-}
 
 .no-windows .show-for-windows {
   display: none !important;
 }
 .no-windows .hide-for-no-windows {
   display: none !important;
-}
-.no-windows table.hide-for-windows {
-  display: table;
-}
-.no-windows thead.hide-for-windows {
-  display: table-header-group;
-}
-.no-windows tbody.hide-for-windows {
-  display: table-row-group;
-}
-.no-windows tr.hide-for-windows {
-  display: table-row;
-}
-.no-windows td.hide-for-windows,
-.no-windows th.hide-for-windows {
-  display: table-cell;
-}
-.no-windows table.show-for-no-windows {
-  display: table;
-}
-.no-windows thead.show-for-no-windows {
-  display: table-header-group;
-}
-.no-windows tbody.show-for-no-windows {
-  display: table-row-group;
-}
-.no-windows tr.show-for-no-windows {
-  display: table-row;
-}
-.no-windows td.show-for-no-windows,
-.no-windows th.show-for-no-windows {
-  display: table-cell;
 }
 
 .ios .hide-for-ios {
@@ -408,76 +88,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .ios .show-for-no-ios {
   display: none !important;
 }
-.ios table.show-for-ios {
-  display: table;
-}
-.ios thead.show-for-ios {
-  display: table-header-group;
-}
-.ios tbody.show-for-ios {
-  display: table-row-group;
-}
-.ios tr.show-for-ios {
-  display: table-row;
-}
-.ios td.show-for-ios,
-.ios th.show-for-ios {
-  display: table-cell;
-}
-.ios table.hide-for-no-ios {
-  display: table;
-}
-.ios thead.hide-for-no-ios {
-  display: table-header-group;
-}
-.ios tbody.hide-for-no-ios {
-  display: table-row-group;
-}
-.ios tr.hide-for-no-ios {
-  display: table-row;
-}
-.ios td.hide-for-no-ios,
-.ios th.hide-for-no-ios {
-  display: table-cell;
-}
 
 .no-ios .show-for-ios {
   display: none !important;
 }
 .no-ios .hide-for-no-ios {
   display: none !important;
-}
-.no-ios table.hide-for-ios {
-  display: table;
-}
-.no-ios thead.hide-for-ios {
-  display: table-header-group;
-}
-.no-ios tbody.hide-for-ios {
-  display: table-row-group;
-}
-.no-ios tr.hide-for-ios {
-  display: table-row;
-}
-.no-ios td.hide-for-ios,
-.no-ios th.hide-for-ios {
-  display: table-cell;
-}
-.no-ios table.show-for-no-ios {
-  display: table;
-}
-.no-ios thead.show-for-no-ios {
-  display: table-header-group;
-}
-.no-ios tbody.show-for-no-ios {
-  display: table-row-group;
-}
-.no-ios tr.show-for-no-ios {
-  display: table-row;
-}
-.no-ios td.show-for-no-ios,
-.no-ios th.show-for-no-ios {
-  display: table-cell;
 }
 
 .android .hide-for-android {
@@ -486,76 +102,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .android .show-for-no-android {
   display: none !important;
 }
-.android table.show-for-android {
-  display: table;
-}
-.android thead.show-for-android {
-  display: table-header-group;
-}
-.android tbody.show-for-android {
-  display: table-row-group;
-}
-.android tr.show-for-android {
-  display: table-row;
-}
-.android td.show-for-android,
-.android th.show-for-android {
-  display: table-cell;
-}
-.android table.hide-for-no-android {
-  display: table;
-}
-.android thead.hide-for-no-android {
-  display: table-header-group;
-}
-.android tbody.hide-for-no-android {
-  display: table-row-group;
-}
-.android tr.hide-for-no-android {
-  display: table-row;
-}
-.android td.hide-for-no-android,
-.android th.hide-for-no-android {
-  display: table-cell;
-}
 
 .no-android .show-for-android {
   display: none !important;
 }
 .no-android .hide-for-no-android {
   display: none !important;
-}
-.no-android table.hide-for-android {
-  display: table;
-}
-.no-android thead.hide-for-android {
-  display: table-header-group;
-}
-.no-android tbody.hide-for-android {
-  display: table-row-group;
-}
-.no-android tr.hide-for-android {
-  display: table-row;
-}
-.no-android td.hide-for-android,
-.no-android th.hide-for-android {
-  display: table-cell;
-}
-.no-android table.show-for-no-android {
-  display: table;
-}
-.no-android thead.show-for-no-android {
-  display: table-header-group;
-}
-.no-android tbody.show-for-no-android {
-  display: table-row-group;
-}
-.no-android tr.show-for-no-android {
-  display: table-row;
-}
-.no-android td.show-for-no-android,
-.no-android th.show-for-no-android {
-  display: table-cell;
 }
 
 .ie7 .hide-for-ie7 {
@@ -564,76 +116,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .ie7 .show-for-no-ie7 {
   display: none !important;
 }
-.ie7 table.show-for-ie7 {
-  display: table;
-}
-.ie7 thead.show-for-ie7 {
-  display: table-header-group;
-}
-.ie7 tbody.show-for-ie7 {
-  display: table-row-group;
-}
-.ie7 tr.show-for-ie7 {
-  display: table-row;
-}
-.ie7 td.show-for-ie7,
-.ie7 th.show-for-ie7 {
-  display: table-cell;
-}
-.ie7 table.hide-for-no-ie7 {
-  display: table;
-}
-.ie7 thead.hide-for-no-ie7 {
-  display: table-header-group;
-}
-.ie7 tbody.hide-for-no-ie7 {
-  display: table-row-group;
-}
-.ie7 tr.hide-for-no-ie7 {
-  display: table-row;
-}
-.ie7 td.hide-for-no-ie7,
-.ie7 th.hide-for-no-ie7 {
-  display: table-cell;
-}
 
 .no-ie7 .show-for-ie7 {
   display: none !important;
 }
 .no-ie7 .hide-for-no-ie7 {
   display: none !important;
-}
-.no-ie7 table.hide-for-ie7 {
-  display: table;
-}
-.no-ie7 thead.hide-for-ie7 {
-  display: table-header-group;
-}
-.no-ie7 tbody.hide-for-ie7 {
-  display: table-row-group;
-}
-.no-ie7 tr.hide-for-ie7 {
-  display: table-row;
-}
-.no-ie7 td.hide-for-ie7,
-.no-ie7 th.hide-for-ie7 {
-  display: table-cell;
-}
-.no-ie7 table.show-for-no-ie7 {
-  display: table;
-}
-.no-ie7 thead.show-for-no-ie7 {
-  display: table-header-group;
-}
-.no-ie7 tbody.show-for-no-ie7 {
-  display: table-row-group;
-}
-.no-ie7 tr.show-for-no-ie7 {
-  display: table-row;
-}
-.no-ie7 td.show-for-no-ie7,
-.no-ie7 th.show-for-no-ie7 {
-  display: table-cell;
 }
 
 .ie8 .hide-for-ie8 {
@@ -642,76 +130,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .ie8 .show-for-no-ie8 {
   display: none !important;
 }
-.ie8 table.show-for-ie8 {
-  display: table;
-}
-.ie8 thead.show-for-ie8 {
-  display: table-header-group;
-}
-.ie8 tbody.show-for-ie8 {
-  display: table-row-group;
-}
-.ie8 tr.show-for-ie8 {
-  display: table-row;
-}
-.ie8 td.show-for-ie8,
-.ie8 th.show-for-ie8 {
-  display: table-cell;
-}
-.ie8 table.hide-for-no-ie8 {
-  display: table;
-}
-.ie8 thead.hide-for-no-ie8 {
-  display: table-header-group;
-}
-.ie8 tbody.hide-for-no-ie8 {
-  display: table-row-group;
-}
-.ie8 tr.hide-for-no-ie8 {
-  display: table-row;
-}
-.ie8 td.hide-for-no-ie8,
-.ie8 th.hide-for-no-ie8 {
-  display: table-cell;
-}
 
 .no-ie8 .show-for-ie8 {
   display: none !important;
 }
 .no-ie8 .hide-for-no-ie8 {
   display: none !important;
-}
-.no-ie8 table.hide-for-ie8 {
-  display: table;
-}
-.no-ie8 thead.hide-for-ie8 {
-  display: table-header-group;
-}
-.no-ie8 tbody.hide-for-ie8 {
-  display: table-row-group;
-}
-.no-ie8 tr.hide-for-ie8 {
-  display: table-row;
-}
-.no-ie8 td.hide-for-ie8,
-.no-ie8 th.hide-for-ie8 {
-  display: table-cell;
-}
-.no-ie8 table.show-for-no-ie8 {
-  display: table;
-}
-.no-ie8 thead.show-for-no-ie8 {
-  display: table-header-group;
-}
-.no-ie8 tbody.show-for-no-ie8 {
-  display: table-row-group;
-}
-.no-ie8 tr.show-for-no-ie8 {
-  display: table-row;
-}
-.no-ie8 td.show-for-no-ie8,
-.no-ie8 th.show-for-no-ie8 {
-  display: table-cell;
 }
 
 .ie9 .hide-for-ie9 {
@@ -720,76 +144,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .ie9 .show-for-no-ie9 {
   display: none !important;
 }
-.ie9 table.show-for-ie9 {
-  display: table;
-}
-.ie9 thead.show-for-ie9 {
-  display: table-header-group;
-}
-.ie9 tbody.show-for-ie9 {
-  display: table-row-group;
-}
-.ie9 tr.show-for-ie9 {
-  display: table-row;
-}
-.ie9 td.show-for-ie9,
-.ie9 th.show-for-ie9 {
-  display: table-cell;
-}
-.ie9 table.hide-for-no-ie9 {
-  display: table;
-}
-.ie9 thead.hide-for-no-ie9 {
-  display: table-header-group;
-}
-.ie9 tbody.hide-for-no-ie9 {
-  display: table-row-group;
-}
-.ie9 tr.hide-for-no-ie9 {
-  display: table-row;
-}
-.ie9 td.hide-for-no-ie9,
-.ie9 th.hide-for-no-ie9 {
-  display: table-cell;
-}
 
 .no-ie9 .show-for-ie9 {
   display: none !important;
 }
 .no-ie9 .hide-for-no-ie9 {
   display: none !important;
-}
-.no-ie9 table.hide-for-ie9 {
-  display: table;
-}
-.no-ie9 thead.hide-for-ie9 {
-  display: table-header-group;
-}
-.no-ie9 tbody.hide-for-ie9 {
-  display: table-row-group;
-}
-.no-ie9 tr.hide-for-ie9 {
-  display: table-row;
-}
-.no-ie9 td.hide-for-ie9,
-.no-ie9 th.hide-for-ie9 {
-  display: table-cell;
-}
-.no-ie9 table.show-for-no-ie9 {
-  display: table;
-}
-.no-ie9 thead.show-for-no-ie9 {
-  display: table-header-group;
-}
-.no-ie9 tbody.show-for-no-ie9 {
-  display: table-row-group;
-}
-.no-ie9 tr.show-for-no-ie9 {
-  display: table-row;
-}
-.no-ie9 td.show-for-no-ie9,
-.no-ie9 th.show-for-no-ie9 {
-  display: table-cell;
 }
 
 .ie10 .hide-for-ie10 {
@@ -798,76 +158,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .ie10 .show-for-no-ie10 {
   display: none !important;
 }
-.ie10 table.show-for-ie10 {
-  display: table;
-}
-.ie10 thead.show-for-ie10 {
-  display: table-header-group;
-}
-.ie10 tbody.show-for-ie10 {
-  display: table-row-group;
-}
-.ie10 tr.show-for-ie10 {
-  display: table-row;
-}
-.ie10 td.show-for-ie10,
-.ie10 th.show-for-ie10 {
-  display: table-cell;
-}
-.ie10 table.hide-for-no-ie10 {
-  display: table;
-}
-.ie10 thead.hide-for-no-ie10 {
-  display: table-header-group;
-}
-.ie10 tbody.hide-for-no-ie10 {
-  display: table-row-group;
-}
-.ie10 tr.hide-for-no-ie10 {
-  display: table-row;
-}
-.ie10 td.hide-for-no-ie10,
-.ie10 th.hide-for-no-ie10 {
-  display: table-cell;
-}
 
 .no-ie10 .show-for-ie10 {
   display: none !important;
 }
 .no-ie10 .hide-for-no-ie10 {
   display: none !important;
-}
-.no-ie10 table.hide-for-ie10 {
-  display: table;
-}
-.no-ie10 thead.hide-for-ie10 {
-  display: table-header-group;
-}
-.no-ie10 tbody.hide-for-ie10 {
-  display: table-row-group;
-}
-.no-ie10 tr.hide-for-ie10 {
-  display: table-row;
-}
-.no-ie10 td.hide-for-ie10,
-.no-ie10 th.hide-for-ie10 {
-  display: table-cell;
-}
-.no-ie10 table.show-for-no-ie10 {
-  display: table;
-}
-.no-ie10 thead.show-for-no-ie10 {
-  display: table-header-group;
-}
-.no-ie10 tbody.show-for-no-ie10 {
-  display: table-row-group;
-}
-.no-ie10 tr.show-for-no-ie10 {
-  display: table-row;
-}
-.no-ie10 td.show-for-no-ie10,
-.no-ie10 th.show-for-no-ie10 {
-  display: table-cell;
 }
 
 .mobilegradea .hide-for-mobilegradea {
@@ -876,76 +172,12 @@ DEMO.scss for github/fcoo/modernizr-device/demo/index.html
 .mobilegradea .show-for-no-mobilegradea {
   display: none !important;
 }
-.mobilegradea table.show-for-mobilegradea {
-  display: table;
-}
-.mobilegradea thead.show-for-mobilegradea {
-  display: table-header-group;
-}
-.mobilegradea tbody.show-for-mobilegradea {
-  display: table-row-group;
-}
-.mobilegradea tr.show-for-mobilegradea {
-  display: table-row;
-}
-.mobilegradea td.show-for-mobilegradea,
-.mobilegradea th.show-for-mobilegradea {
-  display: table-cell;
-}
-.mobilegradea table.hide-for-no-mobilegradea {
-  display: table;
-}
-.mobilegradea thead.hide-for-no-mobilegradea {
-  display: table-header-group;
-}
-.mobilegradea tbody.hide-for-no-mobilegradea {
-  display: table-row-group;
-}
-.mobilegradea tr.hide-for-no-mobilegradea {
-  display: table-row;
-}
-.mobilegradea td.hide-for-no-mobilegradea,
-.mobilegradea th.hide-for-no-mobilegradea {
-  display: table-cell;
-}
 
 .no-mobilegradea .show-for-mobilegradea {
   display: none !important;
 }
 .no-mobilegradea .hide-for-no-mobilegradea {
   display: none !important;
-}
-.no-mobilegradea table.hide-for-mobilegradea {
-  display: table;
-}
-.no-mobilegradea thead.hide-for-mobilegradea {
-  display: table-header-group;
-}
-.no-mobilegradea tbody.hide-for-mobilegradea {
-  display: table-row-group;
-}
-.no-mobilegradea tr.hide-for-mobilegradea {
-  display: table-row;
-}
-.no-mobilegradea td.hide-for-mobilegradea,
-.no-mobilegradea th.hide-for-mobilegradea {
-  display: table-cell;
-}
-.no-mobilegradea table.show-for-no-mobilegradea {
-  display: table;
-}
-.no-mobilegradea thead.show-for-no-mobilegradea {
-  display: table-header-group;
-}
-.no-mobilegradea tbody.show-for-no-mobilegradea {
-  display: table-row-group;
-}
-.no-mobilegradea tr.show-for-no-mobilegradea {
-  display: table-row;
-}
-.no-mobilegradea td.show-for-no-mobilegradea,
-.no-mobilegradea th.show-for-no-mobilegradea {
-  display: table-cell;
 }
 
 /*# sourceMappingURL=demo.css.map */
