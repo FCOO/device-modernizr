@@ -7,15 +7,15 @@
   ],
   "description": "",
   "main": [
-    "dist/modernizr-device.min.js"
+    "dist/modernizr-device.js"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/FCOO/modernizr-device.git"
   },
   "dependencies": {
-    "jquery": "^2.2.1",
-    "device.js": "devicejs#~0.2.7",
+    "jquery": "latest",
+    "device.js": "devicejs#^0.2.7",
     "mobile-detect": "latest"
   },
   "devDependencies": {
