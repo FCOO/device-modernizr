@@ -1,7 +1,7 @@
 /***********************************************
-gruntfile.js for {%= name %}
+gruntfile.js for modernizr-device
 
-https://github.com/FCOO/{%= name %}
+https://github.com/FCOO/modernizr-device
 
 ***********************************************/
 
