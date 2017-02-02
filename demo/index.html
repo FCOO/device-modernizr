@@ -9,7 +9,7 @@
 	<meta http-equiv='x-dns-prefetch-control' content='on'>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
 	<style>
 		pre : {
 			border: 1px solid black;
@@ -53,8 +53,8 @@
 	</div>
 
 	<script src="bower_components.js"></script>
-	<script src="../src/modernizr-device.js"></script>
 	<script src="modernizr-custom.js"></script>
+	<script src="../src/modernizr-device.js"></script>
 
 	<script>
 		(function ($, window, document, undefined) {
@@ -63,7 +63,7 @@
 			*******************************************/
 			$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
 
-			var md = new window.ModernizrDevice();
+			var md = new window.ModernizrDevice({modernizr:{device:true, os:true, ie:true}});
 
 			var info = '<table border=0>';
 
