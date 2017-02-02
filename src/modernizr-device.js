@@ -25,61 +25,70 @@
         $.extend( this, window.device );
 
         this.options = $.extend({
-            //Default options = Standard desttop screen
+            scale          : false, //When true: Calculate 'best' scaling of font-size
             referenceScreen: {
                 width       : 1366,
                 height      : 768,
                 diagonal_inc: 20
+            },
+            modernizr: {
+                device: false,  //When true: Add Modernizr-tests desktop mobile phone tablet
+                os    : true,   //When true: Add Modernizr-tests windows ios android
+                ie    : false   //When true: Add Modernizr-tests ie7 ie8 ie9 ie10
             }
         }, options || {} );
 
-        var docEl = document.documentElement;
+        
         this.wnua = window.navigator.userAgent;
-         //this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
-        this.screen_width  = screen.width;
-        this.screen_height = screen.height;
 
+        if (this.options.scale){
+            var docEl = document.documentElement;
+            //this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
+            this.screen_width  = screen.width;
+            this.screen_height = screen.height;
 
-        this.client_width = docEl.clientWidth;
-        this.client_width = docEl.clientHeight;
+            this.client_width = docEl.clientWidth;
+            this.client_width = docEl.clientHeight;
 
-        this.screen_width_em  = this.screen_width/16;
-        this.screen_height_em = this.screen_height/16;
+            this.screen_width_em  = this.screen_width/16;
+            this.screen_height_em = this.screen_height/16;
 
-        this.dpi = 96;
-        for (var dpi=1; dpi<400; dpi++ )
-            if ( window.Modernizr.mq('(resolution: '+dpi+'dpi)') ){
-                this.dpi = dpi;
-                break;
-            }
-
-        this.dpr = window.devicePixelRatio;
-        if (!this.dpr){
-            this.dpr = 1;
-            for (var dpr=1; dpr<4; dpr=dpr+0.1 )
-                if (
-                    Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ||
-                    Modernizr.mq('(min--moz-device-pixel-ratio: '+dpr+')') ||
-                    Modernizr.mq('(-o-min-device-pixel-ratio: '+dpr+'/1)')
-                ){
-                    this.dpr = dpr;
+            this.dpi = 96;
+            for (var dpi=1; dpi<400; dpi++ )
+                if ( window.Modernizr.mq('(resolution: '+dpi+'dpi)') ){
+                    this.dpi = dpi;
                     break;
                 }
-        }
 
-        this.dpr = Math.round(100*this.dpr)/100;
+            this.dpr = window.devicePixelRatio;
+            if (!this.dpr){
+                this.dpr = 1;
+                for (var dpr=1; dpr<4; dpr=dpr+0.1 )
+                    if (
+                        Modernizr.mq('(-webkit-device-pixel-ratio: '+dpr+')') ||
+                        Modernizr.mq('(min--moz-device-pixel-ratio: '+dpr+')') ||
+                        Modernizr.mq('(-o-min-device-pixel-ratio: '+dpr+'/1)')
+                    ){
+                        this.dpr = dpr;
+                        break;
+                    }
+            }
 
-        this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
-        this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
+            this.dpr = Math.round(100*this.dpr)/100;
 
-        //Calculate the diagonal and dpi for the reference screen
-        var ref_screen_diagonal = Math.sqrt( Math.pow(this.options.referenceScreen.width, 2) + Math.pow(this.options.referenceScreen.height, 2) );
-        this.ref_dpi = ref_screen_diagonal/this.options.referenceScreen.diagonal_inc;
+            this.screen_diagonal = Math.sqrt( Math.pow(this.screen_width, 2) + Math.pow(this.screen_height,2) );
+            this.screen_diagonal_inc = this.screen_diagonal/this.dpi; //Best guest !
 
-        //The scale is best guest for a scale (eq. html.style.font-size=this.scale) of the screen to have elements the same size as on the reference screen
-        this.scale = 100;
-        if ((this.dpr != 1) || (this.dpi != 96))
-            this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
+            //Calculate the diagonal and dpi for the reference screen
+            var ref_screen_diagonal = Math.sqrt( Math.pow(this.options.referenceScreen.width, 2) + Math.pow(this.options.referenceScreen.height, 2) );
+            this.ref_dpi = ref_screen_diagonal/this.options.referenceScreen.diagonal_inc;
+
+            //The scale is best guest for a scale (eq. html.style.font-size=this.scale) of the screen to have elements the same size as on the reference screen
+            this.scale = 100;
+            if ((this.dpr != 1) || (this.dpi != 96))
+                this.scale = Math.sqrt(this.dpi / this.ref_dpi)*100;
+
+        } //if (this.options.scale){...
 
         //Get a string with browser and version
         this.browser_version = function() {
@@ -128,21 +137,26 @@
 //        this.phone       = this.mobileDetect.phone();
 //        this.tablet      = this.mobileDetect.tablet();
 
-        //Add device-tests to Modernizr
-        Modernizr.addTest({
-            desktop     : this.isDesktop,
-            mobile      : this.isMobile,
-            phone       : this.isPhone,
-            tablet      : this.isTablet,
-            mobilegradea: this.mobileGrade === 'A',
-            windows     : this.isWindows,
-            ios         : this.isIos,
-            android     : this.isAndroid
-        });
+        //Add tests to Modernizr
+        if (this.options.modernizr.device)
+            Modernizr.addTest({
+                desktop: this.isDesktop,
+                mobile : this.isMobile,
+                phone  : this.isPhone,
+                tablet : this.isTablet
+            });
 
-        //Adding test for Internet Explore versions
-        for (var version=7; version<=10; version++ )
-            Modernizr.addTest('ie'+version, this.browser_version == 'MSIE '+version );        
+        if (this.options.modernizr.os)
+            Modernizr.addTest({
+                windows: this.isWindows,
+                ios    : this.isIos,
+                android: this.isAndroid
+            });
+
+        if (this.options.modernizr.ie)
+            //Adding test for Internet Explore versions
+            for (var version=7; version<=10; version++ )
+                Modernizr.addTest('ie'+version, this.browser_version == 'MSIE '+version );        
     }
 
   // expose access to the constructor
