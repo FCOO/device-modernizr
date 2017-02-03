@@ -61,41 +61,38 @@
 			/******************************************
 			Initialize/ready 
 			*******************************************/
-			$(function() { //"$( function() { ... });" is short for "$(document).ready( function(){...});"
+			$(function() { 
 
-			var md = new window.ModernizrDevice({scale:true, modernizr:{device:true, os:true, ie:true}});
+			    var md = new window.ModernizrDevice({scale:true, modernizr:{device:true, os:true, ie:true}});
 
-			var info = '<table border=0>';
+			    var info = '<table border=0>';
 
-			info += '<tr><td>screen width</td><td>'+md.screen_width +'</td></tr>';
-			info += '<tr><td>screen height</td><td>'+md.screen_height	 +'</td></tr>';
+			    info += '<tr><td>screen width</td><td>'+md.screen_width +'</td></tr>';
+			    info += '<tr><td>screen height</td><td>'+md.screen_height	 +'</td></tr>';
 
-			info += '<tr><td>dpi resolution</td><td>'+md.dpi+'dpi</td></tr>';
+			    info += '<tr><td>dpi resolution</td><td>'+md.dpi+'dpi</td></tr>';
 
-			info += '<tr><td>Scale</td><td>'+md.scale+'</td></tr>';
-			info += '<tr><td>device pixel ratio</td><td>'+md.dpr +'</td></tr>';
+			    info += '<tr><td>Scale</td><td>'+md.scale+'</td></tr>';
+			    info += '<tr><td>device pixel ratio</td><td>'+md.dpr +'</td></tr>';
 
-			var property, propertyList = ['isDesktop', 'isMobile', 'mobileName', 'isPhone', 'phoneName', 'isTablet', 'tabletName',  'mobileGrade', 'userAgent', 'isWindows', 'isIos', 'isAndroid', 'os','browser_version'];
-			for (var i=0; i<propertyList.length; i++ ){
-				property = propertyList[i];
-				info += '<tr><td>'+property+'</td><td>'+md[property]+'</td></tr>';			
-			}
+			    var property, propertyList = ['isDesktop', 'isMobile', 'isPhone', 'isTablet', 'isWindows', 'isIos', 'isAndroid', 'browser_version'];
+			    for (var i=0; i<propertyList.length; i++ ){
+				    property = propertyList[i];
+				    info += '<tr><td>'+property+'</td><td>'+md[property]+'</td></tr>';			
+			    }
 			
-			/*
-			http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
-			Google: > 30% has 1366*768
-			*/
+			    /*
+			    http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
+			    Google: > 30% has 1366*768
+			    */
 
-			info += '</table>';
-			$('#info').html(info);		
+			    info += '</table>';
+			    $('#info').html(info);		
 
+			    $('#scaled').css('font-size', md.scale+'%');
 
-			$('#scaled').css('font-size', md.scale+'%');
-
-		}); //End of initialize/ready
-	}(jQuery, this, document));	
-</script>
-
-
+		    }); //End of initialize/ready
+	    }(jQuery, this, document));	
+    </script>
 </body>
 </html>

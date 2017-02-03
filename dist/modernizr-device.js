@@ -13,16 +13,10 @@
 
     var ns = window;
 
-    var plugin_count = 1000;
-
     function ModernizrDevice( options ) {
-        this.plugin_count = plugin_count++;
-        this.VERSION = "3.0.1";
+        this.VERSION = "3.0.2";
 
         this.modernizr = Modernizr;
-
-        //Extend with device (https://github.com/matthewhudson/device.js.git)
-        $.extend( this, window.device );
 
         this.options = $.extend({
             scale          : false, //When true: Calculate 'best' scaling of font-size
@@ -38,9 +32,39 @@
             }
         }, options || {} );
 
-        
-        this.wnua = window.navigator.userAgent;
+        //Extend ModernizrDevice with some of the methods from Device.js (c) 2014 Matthew Hudson http://matthewhudson.me/projects/device.js/
 
+        // The client user agent string.
+        // Lowercase, so we can use the more efficient indexOf(), instead of Regex
+        this.userAgent = window.navigator.userAgent.toLowerCase();
+
+        this.find = function(needle) { return this.userAgent.indexOf(needle) !== -1; };
+
+        // Main functions
+        this.ios                = function () { return this.iphone() || this.ipod() || this.ipad(); };
+        this.iphone             = function () { return !this.windows() && this.find('iphone'); };
+        this.ipod               = function () { return this.find('ipod'); };
+        this.ipad               = function () { return this.find('ipad'); };
+        this.android            = function () { return !this.windows() && this.find('android'); };
+        this.androidPhone       = function () { return this.android() && this.find('mobile'); };
+        this.androidTablet      = function () { return this.android() && !this.find('mobile'); };
+        this.blackberry         = function () { return this.find('blackberry') || this.find('bb10') || this.find('rim'); };
+        this.blackberryPhone    = function () { return this.blackberry() && !this.find('tablet'); };
+        this.blackberryTablet   = function () { return this.blackberry() && this.find('tablet'); };
+        this.windows            = function () { return this.find('windows'); };
+        this.windowsPhone       = function () { return this.windows() && this.find('phone'); };
+        this.windowsTablet      = function () { return this.windows() && (this.find('touch') && !this.windowsPhone()); };
+        this.fxos               = function () { return (this.find('(mobile;') || this.find('(tablet;')) && this.find('; rv:'); };
+        this.fxosPhone          = function () { return this.fxos() && this.find('mobile'); };
+        this.fxosTablet         = function () { return this.fxos() && this.find('tablet'); };
+        this.meego              = function () { return this.find('meego'); };
+        this.cordova            = function () { return window.cordova && location.protocol === 'file:'; };
+        this.nodeWebkit         = function () { return typeof window.process === 'object';  };
+        this.mobile             = function () { return this.androidPhone() || this.iphone() || this.ipod() || this.windowsPhone() || this.blackberryPhone() || this.fxosPhone() || this.meego(); };
+        this.tablet             = function () { return this.ipad() || this.androidTablet() || this.blackberryTablet() || this.windowsTablet() || this.fxosTablet(); };
+        this.desktop            = function () { return !this.tablet() && !this.mobile(); };
+        
+        
         if (this.options.scale){
             var docEl = document.documentElement;
             //this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
@@ -111,31 +135,15 @@
             return M.join(' ');
         }();
 
-
-
-        //Create own instance of MobileDetect
-        this.mobileDetect = new window.MobileDetect( this.wnua );
-
-        //Set properties using device.js and mobile-detect.js
+        //Set properties
         this.isDesktop   = this.desktop();
         this.isMobile    = this.mobile() || this.tablet();
-        this.mobileName  = this.mobileDetect.mobile();
         this.isPhone     = this.mobile();
-        this.phoneName   = this.mobileDetect.phone();
         this.isTablet    = this.tablet();
-        this.tabletName  = this.mobileDetect.tablet();
-        this.mobileGrade = this.mobileDetect.mobileGrade();
 
-        this.userAgent   = this.mobileDetect.userAgent();
         this.isWindows   = this.windows();
         this.isIos       = this.ios();
         this.isAndroid   = this.android();
-
-        this.os          = this.mobileDetect.os();
-
-//        this.mobile      = this.mobileDetect.mobile();
-//        this.phone       = this.mobileDetect.phone();
-//        this.tablet      = this.mobileDetect.tablet();
 
         //Add tests to Modernizr
         if (this.options.modernizr.device)
@@ -159,17 +167,9 @@
                 Modernizr.addTest('ie'+version, this.browser_version == 'MSIE '+version );        
     }
 
-  // expose access to the constructor
-  ns.ModernizrDevice = ModernizrDevice;
+    // expose access to the constructor
+    ns.ModernizrDevice = ModernizrDevice;
 
-    /******************************************
-    Initialize/ready
-    *******************************************/
-    $(function() {
-        ns.ModernizrDevice();
-
-    }); //End of initialize/ready
-    //******************************************
 
 }(window.Modernizr, jQuery, this, document));
 

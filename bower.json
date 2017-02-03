@@ -1,6 +1,6 @@
 {
   "name": "modernizr-device",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "homepage": "https://github.com/FCOO/modernizr-device",
   "authors": [
     "Niels Holt niels@fcoo.dk"
@@ -14,9 +14,7 @@
     "url": "git://github.com/FCOO/modernizr-device.git"
   },
   "dependencies": {
-    "jquery": "latest",
-    "device.js": "devicejs#^0.2.7",
-    "mobile-detect": "latest"
+    "jquery": "latest"
   },
   "devDependencies": {},
   "license": "MIT",

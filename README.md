@@ -1,7 +1,6 @@
 # modernizr-device
 
 [Modernizr]: https://modernizr.com/
-[mobile-detect.js]: http://hgoebl.github.io/mobile-detect.js/
 [device.js]: https://github.com/matthewhudson/device.js
 
 ## Description
@@ -12,8 +11,6 @@ Using [Modernizr.addTest()](https://modernizr.com/docs#modernizr-addtest) to add
 
 [Modernizr] must be included.
 
-Using [mobile-detect.js] to detect the name of the device etc.
- 
 Using [device.js] to detect operating system, orientation and type, but with the exception that the term *'mobile'* is used for *all* mobile devices (phones and tablets). Instead the term *phone* is used for mobile phones.
 
 
@@ -29,7 +26,7 @@ http://FCOO.github.io/modernizr-device/demo/
 ## Usage
 
 ### ModernizrDevice-object (modernizr-device.js)
-Collects a number of difference values regarding the device and screen using [Modernizr] and [mobile-detect.js]
+Collects a number of difference values regarding the device and screen
 
 (Try to) calculate a `scale` (percent) that is the scaling needed for `<button>` and other html-elements to be displayed in the same physics size as on a 20'' desttop screen with a resolution of 1366x768 pixel. Can be changed by setting the `options.referenceScreen`  
 
@@ -57,25 +54,12 @@ Collects a number of difference values regarding the device and screen using [Mo
 | `scale` | The scale is best guest for a scale (e.g. `html.style.font-size = myModernizrDevice.scale`) of the screen to have elements the same size as on the reference screen = `options.referenceScreen`<br>**NOTE** Only if `options.scale: true` |
 | `isDesktop` | <code>true</code> if it is a desktop |
 | `isMobile` | <code>true</code> if it is a mobile device |
-| `mobileName` | Name of mobile device |
 | `isPhone` | <code>true</code> if it is a mobile phone |
-| `phoneName` | Name of mobile phone |
 | `isTablet` | <code>true</code> if it is a table |
-| `tabletName` | Name of tablet |
-| `mobileGrade` | <a href="http://jquerymobile.com/gbs">Mobile Grade (A, B, C)</a> |
-| `userAgent` | Browser (only for mobile devices) |
 | `isWindows` | <code>true</code> if it is Windows OS |
 | `isIos` | <code>true</code> if it is iOS |
 | `isAndroid` | <code>true</code> if it is Android OS |
-| `os` | Operating System (only for mobile devices) |
 | `browser_version` | Browser and version as string. E.g. `Firefox 41` |
-
-
-#### Methods
-
-All the methods of [mobile-detect.js] can be reached using the `.mobileDetect` object,e.g.: 
-
-	var version = myModernizrDevice.mobileDetect.version('Chrome');
 
 
 ### Modernizr tests
