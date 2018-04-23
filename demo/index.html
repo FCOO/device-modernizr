@@ -22,7 +22,7 @@
 	<p>This is a test of the ModernizrDevice to be used in FCOOs applications</p>
 
 <hr>
-	
+
 	<div class="show-for-desktop">This device IS a DESKTOP device.. <code>class="show-for-desktop"</code></div>
 
 	<div class="show-for-mobile">This device IS a MOBILE device.. <code>class="show-for-mobile"</code></div>
@@ -34,7 +34,7 @@
 
 
 
-	
+
 	<br>
 	<br>
 	<div id="info"></div>
@@ -59,9 +59,9 @@
 	<script>
 		(function ($, window, document, undefined) {
 			/******************************************
-			Initialize/ready 
+			Initialize/ready
 			*******************************************/
-			$(function() { 
+			$(function() {
 
 			    var md = new window.ModernizrDevice({scale:true, modernizr:{device:true, os:true, ie:true}});
 
@@ -78,21 +78,21 @@
 			    var property, propertyList = ['isDesktop', 'isMobile', 'isPhone', 'isTablet', 'isWindows', 'isIos', 'isAndroid', 'browser_version'];
 			    for (var i=0; i<propertyList.length; i++ ){
 				    property = propertyList[i];
-				    info += '<tr><td>'+property+'</td><td>'+md[property]+'</td></tr>';			
+				    info += '<tr><td>'+property+'</td><td>'+md[property]+'</td></tr>';
 			    }
-			
+
 			    /*
 			    http://www.w3schools.com: 97% of our visitors have a screen resolution of 1024x768 pixels or higher:
 			    Google: > 30% has 1366*768
 			    */
 
 			    info += '</table>';
-			    $('#info').html(info);		
+			    $('#info').html(info);
 
 			    $('#scaled').css('font-size', md.scale+'%');
 
 		    }); //End of initialize/ready
-	    }(jQuery, this, document));	
+	    }(jQuery, this, document));
     </script>
 </body>
 </html>

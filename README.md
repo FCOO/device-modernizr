@@ -43,7 +43,7 @@ Collects a number of difference values regarding the device and screen
         modernizr: {
             device: false,  //When true: Add Modernizr-tests desktop mobile phone tablet
             os    : true,   //When true: Add Modernizr-tests windows ios android
-            ie    : false   //When true: Add Modernizr-tests ie7 ie8 ie9 ie10
+            ie    : false   //When true: Add Modernizr-tests ie10 ie11
         }
     }
 
@@ -70,7 +70,7 @@ The following [Modernizr] tests are added when the option is set
 | :--: | :--: | :--- |
 | `device` | `false` | `desktop mobile phone tablet` |
 | `os` | `true` | `windows ios android` |
-| `ie` | `false` | `ie7 ie8 ie9 ie10` |
+| `ie` | `false` | `ie10 ie11` |
 
 
 

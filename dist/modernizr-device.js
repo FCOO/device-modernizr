@@ -14,7 +14,7 @@
     var ns = window;
 
     function ModernizrDevice( options ) {
-        this.VERSION = "3.0.2";
+        this.VERSION = "4.0.0";
 
         this.modernizr = Modernizr;
 
@@ -63,8 +63,8 @@
         this.mobile             = function () { return this.androidPhone() || this.iphone() || this.ipod() || this.windowsPhone() || this.blackberryPhone() || this.fxosPhone() || this.meego(); };
         this.tablet             = function () { return this.ipad() || this.androidTablet() || this.blackberryTablet() || this.windowsTablet() || this.fxosTablet(); };
         this.desktop            = function () { return !this.tablet() && !this.mobile(); };
-        
-        
+
+
         if (this.options.scale){
             var docEl = document.documentElement;
             //this.devicePixelRatio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
@@ -161,10 +161,13 @@
                 android: this.isAndroid
             });
 
-        if (this.options.modernizr.ie)
-            //Adding test for Internet Explore versions
-            for (var version=7; version<=10; version++ )
-                Modernizr.addTest('ie'+version, this.browser_version == 'MSIE '+version );        
+        if (this.options.modernizr.ie){
+            //Adding test for Internet Explore versions 10
+            Modernizr.addTest('ie10', this.browser_version == 'MSIE 10' );
+
+            //Adding test for Internet Explore versions 11
+            Modernizr.addTest('ie11', this.browser_version == 'IE 11');
+        }
     }
 
     // expose access to the constructor
